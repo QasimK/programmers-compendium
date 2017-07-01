@@ -1,3 +1,14 @@
-# My Awesome API
+# The Programmer's Compendium
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Let's do:
+
+* A set of recipes for quickly context-switching from Python to JavaScript
+* A SQL reference manual that makes sense.
+
+Other resources include:
+
+* [My Setup guide](https://github.com/QasimK/my-setup "How to setup a computer for software development") - How to setup a computer for software development.
+* [Learn It](https://github.com/QasimK/learn-it) - The predecessor to this book.
+
+
+

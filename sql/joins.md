@@ -1,0 +1,2 @@
+![](/assets/sql-joins.png)
+
