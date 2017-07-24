@@ -3,6 +3,7 @@
 ## Overview
 
 * [The Programmer's Compendium](README.md)
+* [SystemD](systemd.md)
 
 ## Methods
 
