@@ -7,7 +7,7 @@ Let's do:
 
 Other resources include:
 
-* [My Setup guide](https://github.com/QasimK/my-setup "How to setup a computer for software development") - How to setup a computer for software development.
+* [My Setup](https://github.com/QasimK/my-setup "How to setup a computer for software development") - How to setup a computer for software development.
 * [Learn It](https://github.com/QasimK/learn-it) - The predecessor to this book.
 
 
