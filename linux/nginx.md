@@ -22,17 +22,23 @@ server {
     server_name {{ domain }};
     charset utf-8;
 
+    # Certificate
     ssl_certificate /etc/letsencrypt/live/spacer.fustra.co.uk/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/spacer.fustra.co.uk/privkey.pem;
     ssl_session_cache shared:SSL:10M;
     ssl_session_timeout 180m;
+    ssl_session_tickets off;
 
-    # Secure SSL
+    # Secure SSL config - https://mozilla.github.io/server-side-tls/ssl-config-generator/
+    # Be sure to generate your own set of DH params on the server
     ssl_protocols TLSv1.2;
+    # Be sure to generate your own set of DH params on the server
     ssl_dhparam /etc/ssl/certs/dhparam.pem;
     ssl_prefer_server_ciphers on;
     ssl_ciphers ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDH   CDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256;
-    # Lets Encrypt Certificate path
+    ssl_prefer_server_ciphers on;
+
+    # OSCP Stapling
     ssl_trusted_certificate /etc/letsencrypt/live/{{ domain }}/chain.pem;
     ssl_stapling on;
     ssl_stapling_verify on;
@@ -92,7 +98,7 @@ server {
 ```
 server {
     ...
-    
+
     # Proxying connections to application servers
     location / {
         proxy_pass         http://localhost:8080;
