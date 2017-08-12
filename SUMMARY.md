@@ -16,6 +16,7 @@
 ## Linux
 
 * [SystemD](linux/systemd.md)
+* [Nginx](linux/nginx.md)
 
 ## Software Architecture
 
