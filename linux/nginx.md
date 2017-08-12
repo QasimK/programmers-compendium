@@ -103,7 +103,7 @@ server {
     location / {
         proxy_pass         http://localhost:8080;
         # Required to rewrite "Location" header for Jenkins
-        proxy_redirect     http://localhost:8080 https://jenkins.fustra.co.uk;
+        proxy_redirect     http://localhost:8080 https://{{ domain }};
         proxy_read_timeout 60;
         proxy_http_version 1.1;
 
