@@ -19,10 +19,6 @@ Host MACHINE1
    IdentityFile ~/.ssh/id_ed25519_MACHINE1
 ```
 
-## Authorised Keys
-
-
-
 ## TODO: SSH agent
 
 
