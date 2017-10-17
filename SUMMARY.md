@@ -17,7 +17,7 @@
 
 * [SystemD](linux/systemd.md)
 * [Nginx](linux/nginx.md)
-* SSH
+* [SSH](linux/ssh.md)
 
 ## Software Architecture
 
