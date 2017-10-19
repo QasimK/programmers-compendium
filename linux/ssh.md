@@ -14,8 +14,8 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub username@remote-server.domain
 For the config file, take a look at [my-setup](https://github.com/QasimK/my-setup/)
 
 ```
-# Add all new SSH key passphrases to ssh agent (confirm first)
-AddKeysToAgent confirm
+# Add all new SSH key passphrases to ssh agent (doesn't seem to work)
+AddKeysToAgent [yes|ask|confirm|no]
 # This is default and unnecessary
 IdentityFile ~/.ssh/id_rsa
 
@@ -26,7 +26,7 @@ Host MACHINE1
 
 ## TODO: SSH agent
 
-https://wiki.archlinux.org/index.php/SSH\_keys\#Start\_ssh-agent\_with\_systemd\_user
+[https://wiki.archlinux.org/index.php/SSH\_keys\#Start\_ssh-agent\_with\_systemd\_user](https://wiki.archlinux.org/index.php/SSH_keys#Start_ssh-agent_with_systemd_user)
 
-.pam\_environment may require reboot \(or manual source?\)
+.pam\_environment may require reboot !!! \(or manual source?\)
 
