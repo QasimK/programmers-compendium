@@ -24,4 +24,5 @@
 
 * [Composition over Inheritance](software-architecture/composition-over-inheritance.md)
 * [How to Mock](software-architecture/how-to-mock.md)
+* [Python](software-architecture/python.md)
 
