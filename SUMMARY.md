@@ -27,3 +27,7 @@
 * [How to Mock](software-architecture/how-to-mock.md)
 * [Python](software-architecture/python.md)
 
+## Core
+
+* [Sorting](core/sorting.md)
+
