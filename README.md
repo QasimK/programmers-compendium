@@ -4,7 +4,7 @@ Let's do:
 
 * A SQL reference manual that actually makes sense
 * Recipes for Linux.
-* How-To software properly
+* How-to software properly
 * The fundamentals of programming \(computer science\)
 
 Other resources include:
