@@ -30,4 +30,5 @@
 ## Core
 
 * [Sorting](core/sorting.md)
+* [Misc](misc.md)
 
