@@ -1,4 +1,4 @@
-# Defining Methods
+# GitBook dual pane layout.
 
 Methods allow you to smoothly display code examples in different languages.
 

@@ -4,10 +4,6 @@
 
 * [The Programmer's Compendium](README.md)
 
-## Methods
-
-* [Defining Methods](methods.md)
-
 ## SQL
 
 * [Query Summary](sql/query-summary.md)
@@ -23,12 +19,16 @@
 
 ## Software Development
 
-* [Composition over Inheritance](software-architecture/composition-over-inheritance.md)
-* [How to Mock](software-architecture/how-to-mock.md)
-* [Python](software-architecture/python.md)
+* [Composition over Inheritance](software-development/composition-over-inheritance.md)
+* [How to Mock](software-development/how-to-mock.md)
+* [Python](software-development/python.md)
 
 ## Core
 
 * [Sorting](core/sorting.md)
-* [Misc](misc.md)
+* [Misc](core/misc.md)
+
+## IgnoreMe
+
+* [GitBook](gitbook.md)
 

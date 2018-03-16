@@ -2,8 +2,10 @@
 
 Let's do:
 
-* A set of recipes for quickly context-switching from Python to JavaScript
-* A SQL reference manual that makes sense.
+* A SQL reference manual that actually makes sense
+* Recipes for Linux.
+* How-To software properly
+* The fundamentals of programming \(computer science\)
 
 Other resources include:
 
