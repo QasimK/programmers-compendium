@@ -21,7 +21,7 @@
 * [SSH](linux/ssh.md)
 * [Security](linux/security.md)
 
-## Software Architecture
+## Software Development
 
 * [Composition over Inheritance](software-architecture/composition-over-inheritance.md)
 * [How to Mock](software-architecture/how-to-mock.md)
