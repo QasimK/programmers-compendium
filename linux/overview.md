@@ -5,5 +5,9 @@
   * Alt: [bropages](http://bropages.org/)
 * [explainshell](https://explainshell.com/) explain commands
 
+## Development
+
+* [direnv](https://direnv.net/) - manage environment variables per-project
+
 
 
