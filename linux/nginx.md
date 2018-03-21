@@ -22,28 +22,30 @@ server {
     server_name {{ domain }};
     charset utf-8;
 
+    # Check if this certificate is really served for this server_name
+    # https://serverfault.com/questions/578648/properly-setting-up-a-default-nginx-server-for-https
+    if ($host != $server_name) {
+        return 444;
+    }
+
     # Certificate
-    ssl_certificate /etc/letsencrypt/live/spacer.fustra.co.uk/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/spacer.fustra.co.uk/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/{{ domain }}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/{{ domain }}/privkey.pem;
     ssl_session_cache shared:SSL:10M;
     ssl_session_timeout 180m;
     ssl_session_tickets off;
 
     # Secure SSL config - https://mozilla.github.io/server-side-tls/ssl-config-generator/
-    # Be sure to generate your own set of DH params on the server
     ssl_protocols TLSv1.2;
-    # Be sure to generate your own set of DH params on the server
-    ssl_dhparam /etc/ssl/certs/dhparam.pem;
+    ssl_dhparam /etc/ssl/certs/dhparam.pem;  # Must generate this manually
     ssl_prefer_server_ciphers on;
-    ssl_ciphers ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDH   CDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256;
-    ssl_prefer_server_ciphers on;
+    ssl_ciphers ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256;
 
-    # OSCP Stapling
+    # SSL OSCP Stapling
     ssl_trusted_certificate /etc/letsencrypt/live/{{ domain }}/chain.pem;
     ssl_stapling on;
     ssl_stapling_verify on;
     resolver 8.8.8.8 8.8.4.4;
-    ssl_session_tickets off;
 
     # Force SSL to this domain (+subdomains) for 6 months (+ preload list)
     add_header Strict-Transport-Security "max-age=15768000; includeSubDomains; preload" always;
@@ -56,8 +58,9 @@ server {
 
     # Additional security
     add_header X-Content-Type-Options "nosniff" always;
-    add_header X-Frame-Options "sameorigin" always;
+    add_header X-Frame-Options "DENY" always;
     add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
 }
 ```
 
