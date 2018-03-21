@@ -15,7 +15,7 @@
 * [SystemD](linux/systemd.md)
 * [Nginx](linux/nginx.md)
 * [SSH](linux/ssh.md)
-* [Security](linux/security.md)
+* [External tools](linux/security.md)
 
 ## Software Development
 
