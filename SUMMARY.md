@@ -14,7 +14,7 @@
 * [Overview](linux/overview.md)
 * [SystemD](linux/systemd.md)
 * [Nginx](linux/nginx.md)
-* [SSH](linux/ssh.md)
+* [SSH/Mosh](linux/ssh.md)
 
 ## Software Development
 
