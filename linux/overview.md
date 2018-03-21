@@ -3,7 +3,6 @@
 * The [filesystem hierarchy](https://www.freedesktop.org/software/systemd/man/file-hierarchy.html)
 * [tl;dr](https://tldr.ostera.io/) how-to guide to commands
   * Alt: [bropages](http://bropages.org/)
-* [explainshell](https://explainshell.com/) explain commands
 
 ## Development
 
@@ -13,6 +12,7 @@
 
 * [Hardenize](https://www.hardenize.com/) - domain/email/web **security** checks
 * [crobtab.guru](https://crontab.guru/) - write cron schedules
+* [explainshell](https://explainshell.com/) - explain \(long\) shell commands
 
 
 
