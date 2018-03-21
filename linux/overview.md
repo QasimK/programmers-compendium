@@ -11,6 +11,7 @@
 ## External Tools
 
 * [Hardenize](https://www.hardenize.com/) - domain/email/web **security** checks
+* [SecurityHeaders](https://securityheaders.io/) - **security** checks on HTTP headers
 * [crobtab.guru](https://crontab.guru/) - write cron schedules
 * [explainshell](https://explainshell.com/) - explain \(long\) shell commands
 
