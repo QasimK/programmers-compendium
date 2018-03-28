@@ -60,7 +60,8 @@ AllowUsers qasim
 
 ### Mosh
 
-Mosh uses SSH for initial authentication.
+* Mosh uses SSH for initial authentication.
+* Requires UDP ports 60000–61000 to be open \(you can get away with 60000-60010\).
 
 
 
