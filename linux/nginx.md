@@ -123,7 +123,7 @@ server {
 * Ubuntu's Nginx configuration does a lot of things itself including: sendfile, tcp\_nopush, tcpnodelay, keepalive\_timeout, gzip, basic SSL configuration.
 * Doing `listen [::]:443 ipv6only=off` does not seem to work well \(maybe due to use of IP addresses on other servers?\). It is also Linux-only.
 
-## Upstream Proxies
+## Serving Files & Upstream Proxies
 
 ### uWSGI Proxy
 
@@ -131,9 +131,7 @@ server {
 upstream uwsgicluster {
     server unix://var/run/app.sock;
 }
-```
 
-```nginx
 server {
     ...
 
@@ -185,6 +183,46 @@ server {
         proxy_hide_header  X-Frame-Options;
         proxy_hide_header  X-XSS-Protection;
     }
+}
+```
+
+### Serving Static Files
+
+```nginx
+server {
+    ...
+
+    # Serve static files
+    location /static/ {    
+        alias /var/www-data/static/;
+        disable_symlinks if_not_owner;  # Extra-security
+        # Performance
+        # access_log off;
+        open_file_cache         max=1000;
+        open_file_cache_errors  on;    
+        disable_symlinks  if_not_owner;   # Security
+    }
+}
+```
+
+## Performance
+
+* sendfile - directly from kernel to network socket - covered by Ubuntu, but consider adding `sendfile_max_chunk`
+* gzip - covered by Ubuntu... Mostly
+* open\_file\_cache - do not recheck filesystem for file on every request
+* gzip\_static - do not compress on the fly, serve static .gz files
+* limit\_rate - consider for limiting a individual request by limiting the network speed
+* limit\_req - consider for [rate limiting number-of-requests](https://www.nginx.com/blog/rate-limiting-nginx/) by IP
+
+```nginx
+# Rate limit all requests for a server by IP address
+limit_req_zone $binary_remote_addr zone=myzone:10m rate=1r/s;
+
+server {
+    ...
+
+    limit_req_status 429;
+    limit_req zone=myzone burst=60 nodelay;
 }
 ```
 
