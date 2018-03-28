@@ -205,7 +205,7 @@ server {
 }
 ```
 
-## Performance
+## Performance/Tuning
 
 * sendfile - directly from kernel to network socket - covered by Ubuntu, but consider adding `sendfile_max_chunk`
 * gzip - covered by Ubuntu... Mostly
