@@ -139,14 +139,21 @@ server {
 
     # Proxying connections to application servers
     location / {
-        include            uwsgi_params;
-        uwsgi_pass         uwsgicluster;
+        include         uwsgi_params;
+        uwsgi_pass      uwsgicluster;
+
+        uwsgi_param     Host $host;
+        uwsgi_param     X-Real-IP $remote_addr;
+        uwsgi_param     X-Forwarded-For $proxy_add_x_forwarded_for;
+        uwsgi_param     X-Forwarded-Host $server_name;
+        uwsgi_param     X-Forwarded-Proto $scheme;
+        uwsgi_param     X-Forwarded-Port $server_port;
 
         # Correct handling of fallbacks for HTTP headers
-        uwsgi_hide_header  Referrer-Policy;
-        uwsgi_hide_header  X-Content-Type-Options;
-        uwsgi_hide_header  X-Frame-Options;
-        uwsgi_hide_header  X-XSS-Protection;
+        uwsgi_hide_header   Referrer-Policy;
+        uwsgi_hide_header   X-Content-Type-Options;
+        uwsgi_hide_header   X-Frame-Options;
+        uwsgi_hide_header   X-XSS-Protection;
     }
 }
 ```
