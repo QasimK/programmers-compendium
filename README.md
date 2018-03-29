@@ -3,7 +3,7 @@
 Let's do:
 
 * A SQL reference manual that actually makes sense
-* Recipes for Linux.
+* Recipes for Linux and other software
 * How-to software properly
 * The fundamentals of programming \(computer science\)
 
