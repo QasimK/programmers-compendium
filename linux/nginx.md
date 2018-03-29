@@ -193,14 +193,13 @@ server {
     ...
 
     # Serve static files
-    location /static/ {    
+    location /static/ {
         alias /var/www-data/static/;
         disable_symlinks if_not_owner;  # Extra-security
         # Performance
         # access_log off;
         open_file_cache         max=1000;
-        open_file_cache_errors  on;    
-        disable_symlinks  if_not_owner;   # Security
+        open_file_cache_errors  on;
     }
 }
 ```
