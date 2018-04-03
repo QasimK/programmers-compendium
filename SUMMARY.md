@@ -21,6 +21,7 @@
 * [Composition over Inheritance](software-development/composition-over-inheritance.md)
 * [How to Mock](software-development/how-to-mock.md)
 * [Python](software-development/python.md)
+* [Git](software-development/git.md)
 
 ## Core
 
