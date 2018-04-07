@@ -129,7 +129,7 @@ server {
 
 ```nginx
 upstream uwsgicluster {
-    server unix://var/run/app.sock;
+    server unix://var/run/app/sock;
 }
 
 server {
