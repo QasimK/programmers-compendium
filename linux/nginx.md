@@ -207,11 +207,14 @@ server {
 ## Performance/Tuning
 
 * sendfile - directly from kernel to network socket - covered by Ubuntu, but consider adding `sendfile_max_chunk`
-* gzip - covered by Ubuntu... Mostly
+  * Note that this does not work with gzip!
 * open\_file\_cache - do not recheck filesystem for file on every request
-* gzip\_static - do not compress on the fly, serve static .gz files
+* gzip - covered by Ubuntu for HTML only...
+* gzip\_static - do not compress on the fly, serve pre-generated .gz files
 * limit\_rate - consider for limiting a individual request by limiting the network speed
 * limit\_req - consider for [rate limiting number-of-requests](https://www.nginx.com/blog/rate-limiting-nginx/) by IP
+* \(limit\_conn - consider for rate limiting number-of-requests by connections - alternative to above?
+* limit\_rate - consider for limiting a individual request by limiting the network speed
 
 ```nginx
 # Rate limit all requests for a server by IP address
