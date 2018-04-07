@@ -197,7 +197,7 @@ server {
         alias /var/www-data/static/;
         disable_symlinks if_not_owner;  # Extra-security
         gzip_static on;
-    
+
         # Performance
         # access_log off;
         open_file_cache         max=1000;
@@ -206,7 +206,7 @@ server {
 }
 ```
 
-A neat command to compress static files: `find -L . -type f ! -name "*.gz" -exec gzip -kf {} \;`
+A neat command to compress static files: `find -L . -type f ! -name "*.gz" -exec gzip --best -kf {} \;`
 
 ## Performance/Tuning
 
@@ -215,7 +215,6 @@ A neat command to compress static files: `find -L . -type f ! -name "*.gz" -exec
 * open\_file\_cache - do not recheck filesystem for file on every request
 * gzip - covered by Ubuntu for HTML only...
 * gzip\_static - do not compress on the fly, serve pre-generated .gz files
-* limit\_rate - consider for limiting a individual request by limiting the network speed
 * limit\_req - consider for [rate limiting number-of-requests](https://www.nginx.com/blog/rate-limiting-nginx/) by IP
 * \(limit\_conn - consider for rate limiting number-of-requests by connections - alternative to above?
 * limit\_rate - consider for limiting a individual request by limiting the network speed
