@@ -196,6 +196,8 @@ server {
     location /static/ {
         alias /var/www-data/static/;
         disable_symlinks if_not_owner;  # Extra-security
+        gzip_static on;
+    
         # Performance
         # access_log off;
         open_file_cache         max=1000;
@@ -203,6 +205,8 @@ server {
     }
 }
 ```
+
+A neat command to compress static files: `find -L . -type f ! -name "*.gz" -exec gzip -kf {} \;`
 
 ## Performance/Tuning
 
