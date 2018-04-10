@@ -12,7 +12,7 @@
 ## Linux
 
 * [Overview](linux/overview.md)
-* [SystemD](linux/systemd.md)
+* [Systemd](linux/systemd.md)
 * [Nginx](linux/nginx.md)
 * [SSH/Mosh](linux/ssh.md)
 
