@@ -4,6 +4,18 @@
 
 * [The Programmer's Compendium](README.md)
 
+## Core
+
+* [Sorting](core/sorting.md)
+* [Misc](core/misc.md)
+
+## Software Development
+
+* [Composition over Inheritance](software-development/composition-over-inheritance.md)
+* [How to Mock](software-development/how-to-mock.md)
+* [Python](software-development/python.md)
+* [Git](software-development/git.md)
+
 ## SQL
 
 * [Query Summary](sql/query-summary.md)
@@ -15,18 +27,6 @@
 * [Systemd](linux/systemd.md)
 * [Nginx](linux/nginx.md)
 * [SSH/Mosh](linux/ssh.md)
-
-## Software Development
-
-* [Composition over Inheritance](software-development/composition-over-inheritance.md)
-* [How to Mock](software-development/how-to-mock.md)
-* [Python](software-development/python.md)
-* [Git](software-development/git.md)
-
-## Core
-
-* [Sorting](core/sorting.md)
-* [Misc](core/misc.md)
 
 ## IgnoreMe
 
