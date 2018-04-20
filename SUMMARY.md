@@ -15,6 +15,7 @@
 * [How to Mock](software-development/how-to-mock.md)
 * [Python](software-development/python.md)
 * [Git](software-development/git.md)
+* [Anti-patterns](software-development/anti-patterns.md)
 
 ## SQL
 
