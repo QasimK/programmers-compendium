@@ -15,7 +15,6 @@
 * [How to Mock](software-development/how-to-mock.md)
 * [Python](software-development/python.md)
 * [Git](software-development/git.md)
-* [Anti-patterns](software-development/anti-patterns.md)
 
 ## SQL
 
@@ -31,6 +30,8 @@
 
 ## IgnoreMe
 
+* [Anti-patterns](software-development/anti-patterns.md)
 * [GitBook](gitbook.md)
 * [Maybes](maybes.md)
+* [You.](software-development/you.md)
 
