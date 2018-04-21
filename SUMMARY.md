@@ -34,4 +34,5 @@
 * [GitBook](gitbook.md)
 * [Maybes](maybes.md)
 * [You.](software-development/you.md)
+* [References](software-development/references.md)
 
