@@ -1,6 +1,6 @@
 # SQL
 
-https://pgexercises.com/
+[https://pgexercises.com/](https://pgexercises.com/)
 
 | Data Description Language \(DDL\) | Data Manipulation Language \(DML\) | Data Control Language \(DCL\) | Transaction Control Language \(TCL\) |
 | :--- | :--- | :--- | :--- |
@@ -29,6 +29,16 @@ DELETE ...
 **UNION** adds the rows of different queries
 
 **HAVING** allows aggregate functions.
+
+The order is in fact:
+
+1. FROM
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. ORDER BY
+7. LIMIT
 
 ## Operations
 
@@ -75,7 +85,7 @@ SUM
 ## Misc.
 
 ```SQL
-- comment
+-- comment
 /* block comment */
 ```
 
