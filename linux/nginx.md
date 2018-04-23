@@ -193,6 +193,7 @@ server {
     ...
 
     # Serve static files
+    rewrite ^/robots.txt /static/$request_uri last;
     location /static/ {
         alias /var/www-data/static/;
         disable_symlinks if_not_owner;  # Extra-security

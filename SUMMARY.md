@@ -28,6 +28,7 @@
 * [Systemd](linux/systemd.md)
 * [Nginx](linux/nginx.md)
 * [SSH/Mosh](linux/ssh.md)
+* [uWSGI](linux/uwsgi.md)
 
 ## IgnoreMe
 
