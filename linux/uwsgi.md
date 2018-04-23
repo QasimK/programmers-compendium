@@ -22,6 +22,7 @@ route-if-not = equal:${HTTP_HOST};HOST_NAME return:421
 ```
 
 * Due to uWSGI's default pre-forking behaviour, you may want `lazy-apps` or a postfork fix function.
+* Note on `harakiri` and "post buffering" - the web server should take entire request body before passing it on, otherwise a slow upload could be killed due to the harakiri timer.
 
 ## Features
 
