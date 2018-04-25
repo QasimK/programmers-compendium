@@ -1,6 +1,6 @@
-# Misc
+# Reading Materials
 
-Everything else that doesn't quite deserve its own page
+A collection of further, high-quality reading material:
 
 * [Git Branching Tutorial](https://learngitbranching.js.org/) - learn git properly
 * [Git Book](https://git-scm.com/book/) - learn git thoroughly

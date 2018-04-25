@@ -7,7 +7,6 @@
 ## Core
 
 * [Sorting](core/sorting.md)
-* [Misc](core/misc.md)
 
 ## Software Development
 
@@ -35,10 +34,14 @@
 * [SSH/Mosh](linux/ssh.md)
 * [uWSGI](linux/uwsgi.md)
 
+## Appendix
+
+* [Reading Materials](core/misc.md)
+* [References](software-development/references.md)
+
 ## IgnoreMe
 
 * [GitBook](gitbook.md)
-* [Maybes](maybes.md)
+* [Maybes-todos-snippets](maybes.md)
 * [You.](software-development/you.md)
-* [References](software-development/references.md)
 
