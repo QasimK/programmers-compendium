@@ -2,13 +2,12 @@
 
 Let's do:
 
-* Recipes for Linux and other software
+* The underlying fundamentals of programming \(computer science\)
 * How-to software properly
-* The fundamentals of programming \(computer science\)
-* How-to software properly
+* Basic language switching
+  A SQL reference manual that actually makes sense
 * Recipes for Linux and other software \(DevOps\)
 * A SQL reference manual that actually makes sense
-* Basic language switching
 
 Other resources include:
 

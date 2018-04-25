@@ -15,7 +15,7 @@
 * [Anti-patterns](software-development/anti-patterns.md)
 * [Testing](software-development/how-to-mock.md)
 
-## Practical Development
+## Programming
 
 * [Python](software-development/python.md)
 * [Git](software-development/git.md)

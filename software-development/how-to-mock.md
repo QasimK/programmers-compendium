@@ -1,11 +1,11 @@
 # Testing
 
-Tests can be divided technically:
+Tests can be divided by size:
 
-* unit-tests - tiny, no IO, no other components involved
-* integration tests - test combined units 
+* unit-tests - tiny, no IO, no other components involved \(small\)
+* integration tests - test combined units \(medium-large\)
 
-They can be divided by purpose:
+They can be divided by methodology:
 
 * functional tests - functional programming, test output based on input
 * acceptance tests - the final end result tested at the highest, outer-most level \(e.g. using your web app with a web browser\)
