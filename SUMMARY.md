@@ -11,8 +11,13 @@
 
 ## Software Development
 
-* [Composition over Inheritance](software-development/composition-over-inheritance.md)
-* [How to Mock](software-development/how-to-mock.md)
+* [Principles](software-development/principles.md)
+* [Design Patterns](software-development/design-patterns.md)
+* [Anti-patterns](software-development/anti-patterns.md)
+* [Testing](software-development/how-to-mock.md)
+
+## Practical Development
+
 * [Python](software-development/python.md)
 * [Git](software-development/git.md)
 
@@ -32,7 +37,6 @@
 
 ## IgnoreMe
 
-* [Anti-patterns](software-development/anti-patterns.md)
 * [GitBook](gitbook.md)
 * [Maybes](maybes.md)
 * [You.](software-development/you.md)

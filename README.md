@@ -2,10 +2,13 @@
 
 Let's do:
 
-* A SQL reference manual that actually makes sense
 * Recipes for Linux and other software
 * How-to software properly
 * The fundamentals of programming \(computer science\)
+* How-to software properly
+* Recipes for Linux and other software \(DevOps\)
+* A SQL reference manual that actually makes sense
+* Basic language switching
 
 Other resources include:
 
