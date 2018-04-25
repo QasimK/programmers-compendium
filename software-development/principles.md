@@ -25,3 +25,5 @@ Applies to object-orientated programming.
 
 Starting point: [https://www.youtube.com/watch?v=3MNVP9-hglc](https://www.youtube.com/watch?v=3MNVP9-hglc)
 
+Inheritance is difficult with Liskov's substitution principle anyway.
+
