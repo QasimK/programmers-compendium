@@ -31,8 +31,11 @@
 
 * [Overview](linux/overview.md)
 * [Systemd](linux/systemd.md)
-* [Nginx](linux/nginx.md)
 * [SSH/Mosh](linux/ssh.md)
+
+## Recipes
+
+* [Nginx](linux/nginx.md)
 * [uWSGI](linux/uwsgi.md)
 
 ## Appendix

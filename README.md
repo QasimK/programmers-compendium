@@ -6,8 +6,8 @@ Let's do:
 * How-to software properly
 * Basic language switching
   A SQL reference manual that actually makes sense
-* Recipes for Linux and other software \(DevOps\)
-* A SQL reference manual that actually makes sense
+* An overview of Linux and the environment your software sits in
+* Recipes for setting up or configuring particular software \(at-risk of becoming outdated!\)
 
 Other resources include:
 
