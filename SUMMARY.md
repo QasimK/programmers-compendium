@@ -14,6 +14,7 @@
 * [Design Patterns](software-development/design-patterns.md)
 * [Anti-patterns](software-development/anti-patterns.md)
 * [Testing](software-development/how-to-mock.md)
+* [Architecture Patterns](software-development/architecture-patterns.md)
 
 ## Programming
 

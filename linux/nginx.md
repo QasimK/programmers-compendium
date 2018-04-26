@@ -9,7 +9,8 @@ Global configuration \(`http` block-level\) can be placed inside `/etc/nginx/con
 ### TLS
 
 ```nginx
-# Force TLS
+# tls.conf
+# Configure TLS security (requires setting parameters in server blocks to activate)
 
 # USAGE:
 # You must generate a dhparam.pem file.
@@ -42,6 +43,7 @@ add_header Strict-Transport-Security "max-age=15768000; includeSubDomains; prelo
 There are several headers used for security, which can be set by Nginx or by your application. The following global configuration file will set a default if upstream has not provided one.
 
 ```nginx
+# security_headers.conf
 # Ensure HTTP headers that are important for security are set.
 # We set some defaults which can be overridden by the upstream server.
 
