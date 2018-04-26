@@ -219,7 +219,7 @@ A neat command to compress static files: `find -L . -type f ! -name "*.gz" -exec
 * gzip - covered by Ubuntu for HTML only...
 * gzip\_static - do not compress on the fly, serve pre-generated .gz files
 * limit\_req - consider for [rate limiting number-of-requests](https://www.nginx.com/blog/rate-limiting-nginx/) by IP
-* \(limit\_conn - consider for rate limiting number-of-requests by connections - alternative to above?
+* \(limit\_conn - consider for rate limiting number-of-requests by connections - alternative to above?\)
 * limit\_rate - consider for limiting a individual request by limiting the network speed
 
 ```nginx
