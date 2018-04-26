@@ -16,8 +16,9 @@ Remember the scope and context of the project. Is it a script? Is it huge? Is it
 * Open-Closed Principle
   * "An object should be open for extension, but closed for modification"
 * Liskov Substitution Principle
-  * "A type may be replaced by its sub-types without causing any harm to the program"
+  * "A _type_ may be replaced by its _sub-types_ without causing any harm to the program"
   * Otherwise [your method must alter its behaviour](https://softwareengineering.stackexchange.com/questions/170222/what-can-go-wrong-if-the-liskov-substitution-principle-is-violated) by investigating the type of object its been given
+  * It [works slightly differently in dynamic languages](https://stefanroock.wordpress.com/2010/11/08/the-liskov-substitution-principle-lsp-in-duck-typed-programming-languages/).
 * Interface Segregation Principle
   * ???
 * Dependency Inversion Principle
