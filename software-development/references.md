@@ -6,8 +6,11 @@
 
 * [http://istqbexamcertification.com/what-is-acceptance-testing/](http://istqbexamcertification.com/what-is-acceptance-testing/)
 
-* http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
+* [http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven](http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven)
 
-* 
+* [http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod](http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
+
+* https://code.tutsplus.com/tutorials/solid-part-2-the-openclosed-principle--net-36600
+
 
 
