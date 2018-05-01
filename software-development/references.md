@@ -10,7 +10,15 @@
 
 * [http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod](http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
 
-* https://code.tutsplus.com/tutorials/solid-part-2-the-openclosed-principle--net-36600
+* [https://code.tutsplus.com/tutorials/solid-part-2-the-openclosed-principle--net-36600](https://code.tutsplus.com/tutorials/solid-part-2-the-openclosed-principle--net-36600)
+
+* [http://www.informit.com/articles/article.aspx?p=1566460](http://www.informit.com/articles/article.aspx?p=1566460)
+
+* [https://githubengineering.com/the-github-graphql-api/](https://githubengineering.com/the-github-graphql-api/)
+
+* https://capnproto.org/
+
+* https://restful-api-design.readthedocs.io/
 
 
 
