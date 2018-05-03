@@ -24,7 +24,9 @@
 
 * [https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api) \#rest \#api
 
-* https://medium.com/@rdsubhas/pitiful-restful-urls-5d576ffccb98 \#rest \#api
+* [https://medium.com/@rdsubhas/pitiful-restful-urls-5d576ffccb98](https://medium.com/@rdsubhas/pitiful-restful-urls-5d576ffccb98) \#rest \#api
+
+* http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven \#rest \#api
 
 
 

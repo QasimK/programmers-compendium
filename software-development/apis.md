@@ -4,11 +4,11 @@ RESTful API, HTTP/Web API, TCP/Socket API - RPCs
 
 ## REST
 
-A set of patterns and guidelines. Universally used as REST-over-HTTP.
+A set of patterns and guidelines \(a software architectural style\). The transport protocol is not defined, but universally REST is used as REST-over-HTTP.
 
 A RESTful API[^1] is about _resources_[^2]_,_ where resources are _hypermedia_. Note that URLs are resources \(not verbs/actions\). You should spend your time defining the [media types](https://www.iana.org/assignments/media-types/media-types.xhtml) used for resource representations, which includes the [link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) that the resource may contain.
 
-HATEOAS means clients know one entry point \(the bookmark\) and the media types used for resource representations beforehand. What does the entry point return? In theory this allows you to control your namespace at will; in practise clients may hardcode URLs and you need backwards-compatibility during the transition to a new URL namespace anyway. It also allows you to specify actions that may dynamically change depending on the resource's state. You may want to use [links in headers](https://tools.ietf.org/html/rfc5988 "IETF RFC describing link relations between resources"). In practise, decisions are made when the api integration code is written, not at run-time, as opposed to how we use links in web. HATEOAS requires hypermedia-aware media types such as HTML, Atom and SVG - hyperlinks, which XML and JSON don't define though there certain extensions to these that do.
+HATEOAS means clients know one entry point \(the bookmark\) and the media types used for resource representations beforehand. What does the entry point return? In theory this allows you to control your namespace at will \(i.e. changing object hierarchies or resource names at will\); in practise clients may hardcode URLs and you need backwards-compatibility during the transition to a new URL namespace anyway. It also allows you to specify actions that may dynamically change depending on the resource's state. You may want to use [links in headers](https://tools.ietf.org/html/rfc5988 "IETF RFC describing link relations between resources"). In practise, decisions are made when the api integration code is written, not at run-time, as opposed to how we use links in web. HATEOAS requires hypermedia-aware media types such as HTML, Atom and SVG - hyperlinks, which XML and JSON don't define though there certain extensions to these that do.
 
 Version via content-type headers: `application/vnd.mycompany.myapp.myresource+json; version=1.0` \(or just a completely custom header\); or inside the URL \(hostname, **path** or query parameter\).
 
