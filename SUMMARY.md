@@ -7,6 +7,7 @@
 ## Core
 
 * [Sorting](core/sorting.md)
+* [Strings](core/strings.md)
 
 ## Software Development
 

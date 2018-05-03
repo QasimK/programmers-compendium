@@ -32,7 +32,7 @@ DELETE ...
 
 The order is in fact:
 
-1. FROM
+1. FROM \[UNION/JOIN\]
 2. WHERE
 3. GROUP BY
 4. HAVING
