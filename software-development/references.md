@@ -16,11 +16,13 @@
 
 * [https://githubengineering.com/the-github-graphql-api/](https://githubengineering.com/the-github-graphql-api/)
 
-* [https://capnproto.org/](https://capnproto.org/)
+* [https://capnproto.org/](https://capnproto.org/) \#api
 
-* [https://restful-api-design.readthedocs.io/](https://restful-api-design.readthedocs.io/)
+* [https://restful-api-design.readthedocs.io/](https://restful-api-design.readthedocs.io/) \#rest \#api
 
-* https://www.troyhunt.com/your-api-versioning-is-wrong-which-is/
+* [https://www.troyhunt.com/your-api-versioning-is-wrong-which-is/](https://www.troyhunt.com/your-api-versioning-is-wrong-which-is/) \#rest \#api
+
+* [https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api) \#rest \#api
 
 
 
