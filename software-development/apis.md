@@ -16,11 +16,11 @@ Version via content-type headers: `application/vnd.mycompany.myapp.myresource+js
 
 * Don't use HATEOAS.
 * Version inside the URL path, `/api/v1/`.
-* Consider allowing media types to be specified with extensions, e.g. `/people/1.xml`, rather than just with `Accept` HTTP headers??? \(for debugging, perhaps query parameter??\).
+* Use the `Accept` HTTP header \(and perhaps a query parameter\) to change the media type of the response, e.g. XML.
 * Requests should be URL-encoded by default, JSON-encoded requests should require `Content-Type: application/json`.
-* Use HTTP status codes: 200, 201, 204, 304, 400, 401, 403, 404, 405, 409, 410, 415, 422, 429.
+* Use HTTP status codes: 200, 201, 202, 204, 304, 400, 401, 403, 404, 405, 409, 410, 415, 422, 429.
 * Specify a consistent error response on 4xx which includes a code, a human-readable message, and in the case of validation errors, a list of them.
-* Use explicit `Idempotency-Key`  HTTP headers for POST when necessary.
+* Use explicit `Idempotency-Key`  HTTP headers for POST when necessary. \(NB: every write should be idempotent due to network partitions.\)
 * Always use plural forms for collections even when it doesn't make sense, e.g. `/people`.
 * Allow nested objects to be expanded, e.g. with an `?expand[]=friends.name` query parameter.
 * Allow fields to be explicitly specified, e.g. with a `?fields[]=age` query parameter.
@@ -29,7 +29,7 @@ Version via content-type headers: `application/vnd.mycompany.myapp.myresource+js
 * Avoid envelopes - HTTP already has them. For example, for pagination use links-in-headers, e.g. `Link: <https://example.com/v1/people?page=3>; rel="next", <https://example.com/v1/people?page=50>; rel="last"`, and a custom HTTP header for the total count like `X-Total-Count` .
 * How to paginate exactly?
 * Use POST/PUT/PATCH appropriately.
-* Use POST on collections to insert. Use PUT \(idempotent\) on specific resource path to create/update.
+* Use POST on collections to insert. Use PUT \(idempotent\) on specific resource path to create/update, and PATCH for partial updates.
 * PUT/POST/PATCH should return the new resource representation. In the case of HTTP 201, use the `Location` header.
 * If rate-limiting, use headers like `X-Rate-Limit-Limit` , `X-Rate-Limit-Remaining` , and `X-Rate-Limit-Reset`  \(in seconds\).
 * Use HTTP Basic Auth, if possible.
@@ -48,7 +48,7 @@ Representational State Transfer \(REST\):
 * is stateless - the request must contain all the information and cannot take advantage of stored context on the server, allowing for increased reliability \(eases recovery\), visibility \(eases debugging\) and scalability \(no persistent state on server to preserve\)
 * has a cache
 * uniform interface - simplifies and improves visibility _**despite decreased efficiency due to standardised formats**_
-* layered
+* layered \(e.g. load-balancers\)
 
 ### Examples
 
@@ -58,6 +58,18 @@ Representational State Transfer \(REST\):
 ## Versioning Pattern
 
 Adapt new response to old response - pipeline, infinite support. See stripe &lt;TBD&gt;.
+
+## Safety
+
+Pure Read \[REST:GET\]
+
+Stateful Reads \[GET\] - pure functions that need computational resources of server; cursor in databases; logging/analytics/paywalls; rate limiting APIs.
+
+Idempotent Write \[PUT/DELETE\]
+
+Non-idempotent Write \(dangerous\) \[POST-made idempotent with UUID\]
+
+
 
 [^1]: Originally introduced by Roy Fielding in his [dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) in 2000.
 

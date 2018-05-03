@@ -24,5 +24,7 @@
 
 * [https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api) \#rest \#api
 
+* https://medium.com/@rdsubhas/pitiful-restful-urls-5d576ffccb98 \#rest \#api
+
 
 
