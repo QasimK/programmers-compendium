@@ -4,7 +4,7 @@ RESTful API, HTTP/Web API, TCP/Socket API - RPCs
 
 ## REST
 
-A set of patterns and guidelines.
+A set of patterns and guidelines. Universally used as REST-over-HTTP.
 
 A RESTful API[^1] is about _resources_[^2]_,_ where resources are _hypermedia_. Note that URLs are resources \(not verbs/actions\). You should spend your time defining the [media types](https://www.iana.org/assignments/media-types/media-types.xhtml) used for resource representations, which includes the [link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) that the resource may contain.
 
@@ -47,13 +47,13 @@ Representational State Transfer \(REST\):
 * separates concerns - data storage from user interface - client-server, allowing components to evolve separately.
 * is stateless - the request must contain all the information and cannot take advantage of stored context on the server, allowing for increased reliability \(eases recovery\), visibility \(eases debugging\) and scalability \(no persistent state on server to preserve\)
 * has a cache
-* uniform interface - simplifies and improves visibility _**despite decreased efficiency due to standardised formats**_
+* uniform interface - _**simplifies development despite inefficiency due to standardised formats**_
 * layered \(e.g. load-balancers\)
 
 ### Examples
 
 * [Twilio](https://www.twilio.com/docs/usage/api)
-* Stripe.
+* Stripe
 
 ## Versioning Pattern
 
@@ -65,13 +65,11 @@ Pure Read \[REST:GET\]
 
 Stateful Reads \[GET\] - pure functions that need computational resources of server; cursor in databases; logging/analytics/paywalls; rate limiting APIs.
 
-Idempotent Write \[PUT/DELETE\]
+_**Idempotent Write**_ \[PUT/DELETE\]
 
 Non-idempotent Write \(dangerous\) \[POST-made idempotent with UUID\]
 
-
-
-[^1]: Originally introduced by Roy Fielding in his [dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) in 2000.
+[^1]: Originally described by Roy Fielding in his [dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) in 2000.
 
 [^2]: The exact meanings of words like "representation" are described in Fielding's [REST data elements table](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#tab_5_1).
 
