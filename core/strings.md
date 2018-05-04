@@ -9,7 +9,9 @@
 
 When you're searching for "abad" and you fail a match at the last d, you already know an a \(the second one\) is matching so don't lose that information, just check for b next!
 
-### Aho-Corasick 
+[Clearest explanation](https://www.youtube.com/watch?v=GTJr8OvyEVQ).
+
+### Aho-Corasick
 
 Extends KMP to search for a dictionary of words inside another string.
 
