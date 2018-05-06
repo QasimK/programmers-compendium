@@ -55,11 +55,7 @@ Representational State Transfer \(REST\):
 * [Twilio](https://www.twilio.com/docs/usage/api)
 * Stripe
 
-## Versioning Pattern
-
-Adapt new response to old response - pipeline, infinite support. See stripe &lt;TBD&gt;.
-
-## Safety
+### Safety
 
 Pure Read \[REST:GET\]
 
@@ -68,6 +64,10 @@ Stateful Reads \[GET\] - pure functions that need computational resources of ser
 _**Idempotent Write**_ \[PUT/DELETE\]
 
 Non-idempotent Write \(dangerous\) \[POST-made idempotent with UUID\]
+
+## Versioning Pattern
+
+Adapt new response to old response - pipeline, infinite support. See stripe &lt;TBD&gt;
 
 [^1]: Originally described by Roy Fielding in his [dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) in 2000.
 

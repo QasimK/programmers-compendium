@@ -26,7 +26,9 @@
 
 * [https://medium.com/@rdsubhas/pitiful-restful-urls-5d576ffccb98](https://medium.com/@rdsubhas/pitiful-restful-urls-5d576ffccb98) \#rest \#api
 
-* http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven \#rest \#api
+* [http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven](http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) \#rest \#api
+
+* http://blog.codepipes.com/testing/software-testing-antipatterns.html \#tdd \#antipattern
 
 
 

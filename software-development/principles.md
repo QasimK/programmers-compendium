@@ -44,9 +44,9 @@ Inheritance is difficult with Liskov's substitution principle anyway.
 
 ## Law of Demeter
 
-The _principle of least knowledge_, in particular for OOD, says to loosely couple the design by having objects only talk to their immediate "friends". 
+The _principle of least knowledge_, in particular for OOD, says to loosely couple the design by having objects only talk to their immediate "friends".
 
 Code Smell: `self.friend.internal_variable.dobla()`
 
-Alternative: `self.friend.dobla()`
+Better: `self.friend.dobla()`
 

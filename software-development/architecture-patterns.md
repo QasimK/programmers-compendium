@@ -1,6 +1,6 @@
 # Architecture Patterns
 
-* functional core, stateful surface
+* Functional core, stateful surface
 
 
 
