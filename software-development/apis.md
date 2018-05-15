@@ -29,7 +29,7 @@ Version via content-type headers: `application/vnd.mycompany.myapp.myresource+js
 * Allow fields to be explicitly specified, e.g. with a `?fields[]=age` query parameter.
 * Handle filtering, sorting and searching on collections via query parameters, e.g. `/people?q=john&state=active&sort[]=name,-date`.
 * Consider aliasing query common parameters as a sub-resource path.
-* Avoid envelopes - HTTP already has them. For example, for pagination use links-in-headers, e.g. `Link: <https://example.com/v1/people?page=3>; rel="next", <https://example.com/v1/people?page=50>; rel="last"`, and a custom HTTP header for the total count like `X-Total-Count` .
+* Avoid envelopes - HTTP already has them. For example, for pagination use links-in-headers, e.g. `Link: <https://example.com/v1/people?page=3>; rel="next", <https://example.com/v1/people?page=50>; rel="last"` \(first, last, next, previous\), and a custom HTTP header for the total count like `X-Total-Count` .
 * How to paginate exactly?
 * Use POST/PUT/PATCH appropriately.
 * Use POST on collections to insert. Use PUT \(idempotent\) on specific resource path to create/update, and PATCH for partial updates.
