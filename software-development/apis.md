@@ -45,7 +45,7 @@ Version via content-type headers: `application/vnd.mycompany.myapp.myresource+js
 
 Alternative: GraphQL \(see [GitHub's blog post](https://githubengineering.com/the-github-graphql-api/)\).
 
-TBD: [REST without PUT and PATCH](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling). The idea that clients shouldn't even manipulate the resource representation directly, but instead signal intents via new creation or update resources, e.g. an intent to change the resource, ChangeOfName vs PATCH person.name. The former allows for clear auditing/question asking of the process, eventual consistency and 
+TBD: [REST without PUT and PATCH](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling). The idea that clients shouldn't even manipulate the resource representation directly, but instead signal intents via new creation or update resources, e.g. an intent to change the resource, ChangeOfName vs PATCH person.name. The former allows for clear auditing/question asking of the process, eventual consistency and
 
 Representational State Transfer \(REST\):
 
@@ -62,7 +62,9 @@ Representational State Transfer \(REST\):
 
 ### Safety
 
-Pure Read \[REST:GET\]
+Safe: No side-effects; Idempotent: Safely Repeatable.
+
+Pure Read \[REST:GET\] - Safe
 
 Stateful Reads \[GET\] - pure functions that need computational resources of server; cursor in databases; logging/analytics/paywalls; rate limiting APIs.
 
