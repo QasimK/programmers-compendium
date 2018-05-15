@@ -14,7 +14,7 @@
 
 * [http://www.informit.com/articles/article.aspx?p=1566460](http://www.informit.com/articles/article.aspx?p=1566460)
 
-* [https://githubengineering.com/the-github-graphql-api/](https://githubengineering.com/the-github-graphql-api/)
+* [https://githubengineering.com/the-github-graphql-api/](https://githubengineering.com/the-github-graphql-api/) \#rest \#graphql \#api
 
 * [https://capnproto.org/](https://capnproto.org/) \#api
 
@@ -28,7 +28,13 @@
 
 * [http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven](http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) \#rest \#api
 
-* http://blog.codepipes.com/testing/software-testing-antipatterns.html \#tdd \#antipattern
+* [http://blog.codepipes.com/testing/software-testing-antipatterns.html](http://blog.codepipes.com/testing/software-testing-antipatterns.html) \#tdd \#antipattern
+
+* [https://www.programmableweb.com/news/rest-api-design-put-type-content-type/2011/11/18](https://www.programmableweb.com/news/rest-api-design-put-type-content-type/2011/11/18) \#rest \#api
+
+* [https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling) \#rest \#api
+
+* https://github.com/tfredrich/RestApiTutorial.com/blob/master/media/RESTful%20Best%20Practices-v2\_0.odt \#rest \#api
 
 
 
