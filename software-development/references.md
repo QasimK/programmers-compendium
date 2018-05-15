@@ -34,7 +34,7 @@
 
 * [https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling) \#rest \#api
 
-* https://github.com/tfredrich/RestApiTutorial.com/blob/master/media/RESTful%20Best%20Practices-v2\_0.odt \#rest \#api
+* [https://github.com/tfredrich/RestApiTutorial.com/blob/master/media/RESTful Best Practices-v2\_0.odt](https://github.com/tfredrich/RestApiTutorial.com/blob/master/media/RESTful Best Practices-v2_0.odt) \#rest \#api
 
 
 
