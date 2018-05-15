@@ -18,7 +18,7 @@ Version via content-type headers: `application/vnd.mycompany.myapp.myresource+js
 
 * Don't use HATEOAS.
 * Version inside the URL path, `/api/v1/`.
-* Use the `Accept` HTTP header \(and perhaps a query parameter\) to change the media type of the response, e.g. XML.
+* Use the `Accept` HTTP header \(and perhaps a query parameter\) to change the media type of the response, e.g. XML. \(Perhaps even an extension `/123.json`.\)
 * Requests should be URL-encoded by default, JSON-encoded requests should require `Content-Type: application/json`.
 * Use HTTP status codes: 200, 201, 202, 204, 304, 400, 401, 403, 404, 405, 409, 410, 415, 422, 429.
 * Use the `Location` header for 201.
@@ -62,7 +62,7 @@ Representational State Transfer \(REST\):
 
 ### Safety
 
-Safe: No side-effects; Idempotent: Safely Repeatable.
+Safe: No side-effects \(no server state change beyond trivial things like logging\); Idempotent: Safely Repeatable.
 
 Pure Read \[REST:GET\] - Safe
 
