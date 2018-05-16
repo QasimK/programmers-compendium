@@ -1,6 +1,6 @@
 # Trust in your database
 
-Transactions.
+Transactions. TBD: Serialisation levels
 
 ## CAP
 

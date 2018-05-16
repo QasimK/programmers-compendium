@@ -10,9 +10,9 @@ A RESTful API[^1] is about _resources_[^2]_,_ where resources are _hypermedia_. 
 
 The resources should not depend on the underlying domain/implementation objects. Create resources that make sense in the context of the API - they can be anything you can think of, for example a _process_ can be a resource, especially if you want to ask questions about the state of the process.
 
-HATEOAS means clients know one entry point \(the bookmark\) and the media types used for resource representations beforehand. What does the entry point return? In theory this allows you to control your namespace at will \(i.e. changing object hierarchies or resource names at will\); in practise clients may hardcode URLs and you need backwards-compatibility during the transition to a new URL namespace anyway. It also allows you to specify actions that may dynamically change depending on the resource's state. You may want to use [links in headers](https://tools.ietf.org/html/rfc5988 "IETF RFC describing link relations between resources"). In practise, decisions are made when the api integration code is written, not at run-time, as opposed to how we use links in web. HATEOAS requires hypermedia-aware media types such as HTML, Atom and SVG - hyperlinks, which XML and JSON don't define though there certain extensions to these that do.
+HATEOAS means clients know one entry point \(the bookmark\) and the media types used for resource representations beforehand. What does the entry point return? In theory this allows you to control your namespace at will \(i.e. changing object hierarchies or resource names at will\); in practise clients may hardcode URLs and you need backwards-compatibility during the transition to a new URL namespace anyway. It also allows you to specify actions that may dynamically change depending on the resource's state. You may want to use [links in headers](https://tools.ietf.org/html/rfc5988 "IETF RFC describing link relations between resources"). In practise, decisions are made when the api integration code is written, not at run-time, as opposed to how we use links in web. HATEOAS requires hypermedia-aware media types such as HTML, Atom and SVG - hyperlinks, which XML and JSON don't define though there certain extensions to these that do. It genuinely puts theory over practise, and as it is uncommon it is actually slightly developer unfriendly.
 
-Version via content-type headers: `application/vnd.mycompany.myapp.myresource+json; version=1.0` \(or just a completely custom header\); or inside the URL \(hostname, **path** or query parameter\). Note that, `application/json` is indeed a media type, but it is incomplete because it would only describe the data format, while \(almost always\) special processing is required for the content.
+Version via content-type headers: `application/vnd.mycompany.myapp.myresource+json; version=1.0` \(or just a completely custom header\); or inside the URL \(hostname, **path** or query parameter\). Note that, `application/json` is indeed a media type, but it is incomplete because it would only describe the data format, while \(almost always\) special processing is required for the content. Roy Fieldings says to version inside the hostname as the next version is a new system.
 
 ### Pragmatic Advice
 
@@ -20,14 +20,15 @@ Version via content-type headers: `application/vnd.mycompany.myapp.myresource+js
 * Version inside the URL path, `/api/v1/`.
 * Use the `Accept` HTTP header \(and perhaps a query parameter\) to change the media type of the response, e.g. XML. \(Perhaps even an extension `/123.json`.\)
 * Requests should be URL-encoded by default, JSON-encoded requests should require `Content-Type: application/json`.
-* Use HTTP status codes: 200, 201, 202, 204, 304, 400, 401, 403, 404, 405, 409, 410, 415, 422, 429.
+* Use HTTP status codes. Consider: 200, 201, 202, 204, 301, 304, 400, 401, 403, 404, 405, 409, 410, 412, 415, 422, 429.
 * Use the `Location` header for 201.
 * Specify a consistent error response on 4xx which includes a code, a human-readable message, and in the case of validation errors, a list of them.
 * Use explicit `Idempotency-Key`  HTTP headers for POST when necessary. \(NB: every write should be idempotent due to network partitions.\)
+* Prevent race-conditions with `ETag` and `If-Match` headers.
 * Always use plural forms for collections even when it doesn't make sense, e.g. `/people`.
 * Allow nested objects to be expanded, e.g. with an `?expand[]=friends.name` query parameter.
 * Allow fields to be explicitly specified, e.g. with a `?fields[]=age` query parameter.
-* Handle filtering, sorting and searching on collections via query parameters, e.g. `/people?q=john&state=active&sort[]=name,-date`.
+* Handle filtering, sorting and searching on collections via query parameters, e.g. `/people?q=john&state=active&sort[]=name,-date`. \(i.e. not hierarchical sub-paths\)
 * Consider aliasing query common parameters as a sub-resource path.
 * Avoid envelopes - HTTP already has them. For example, for pagination use links-in-headers, e.g. `Link: <https://example.com/v1/people?page=3>; rel="next", <https://example.com/v1/people?page=50>; rel="last"` \(first, last, next, previous\), and a custom HTTP header for the total count like `X-Total-Count` .
 * How to paginate exactly?
