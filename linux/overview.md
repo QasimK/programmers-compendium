@@ -5,6 +5,7 @@
   * Alt: [bropages](http://bropages.org/)
 * Use `.pam_environment` to [set environment variables](https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.pam_environment).
 * [thefuck](https://github.com/nvbn/thefuck) corrects your previous console command
+* An [overview of dotfiles](https://github.com/grawity/dotfiles/blob/master/.dotfiles.notes)
 
 ## Development
 
