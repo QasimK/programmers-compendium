@@ -2,7 +2,8 @@
   * HTTP Client -&gt; \[Unix Socket Server\] ---- \| Network Namespace Barrier \| ----&gt; HTTP Server \(localhost listening\)
 * strace -p PID - Look at calls between the process and the kernel
 * gdb, python-dbg - Look at stack traces live
-* TIL: https://news.ycombinator.com/item?id=17083879 "My registrar suspended my domain because an abusive user was using a subdomain for phishing"
+* TIL: [https://news.ycombinator.com/item?id=17083879](https://news.ycombinator.com/item?id=17083879) "My registrar suspended my domain because an abusive user was using a subdomain for phishing"
+* Make Vim respect XDG - https://tlvince.com/vim-respect-xdg
 
 
 
