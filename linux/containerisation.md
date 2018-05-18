@@ -14,3 +14,7 @@ Kubernetes can be used for orchestration.
 
 You also have things like Firejail, Snap/Flatpak, and AppImage.
 
+## Developing with Vagrant
+
+This is useful if you are working on conflicting projects, or want to keep your computer tidy. Keep your setup on your host \(text editor and IDE appliations and their config files\), and run the project \(any executables\) within the container. A shared folder can be used to store the repository.
+
