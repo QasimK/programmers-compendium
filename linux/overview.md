@@ -3,6 +3,7 @@
 * The [filesystem hierarchy](https://www.freedesktop.org/software/systemd/man/file-hierarchy.html)
 * [tl;dr](https://tldr.ostera.io/) how-to guide to commands
   * Alt: [bropages](http://bropages.org/)
+  * Alt: [cheat](https://github.com/chrisallenlane/cheat)
 * Use `.pam_environment` to [set environment variables](https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.pam_environment)
 * [thefuck](https://github.com/nvbn/thefuck) corrects your previous console command
 * An [overview of dotfiles](https://wiki.archlinux.org/index.php/XDG_Base_Directory_support) proliferation control
