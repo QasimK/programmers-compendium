@@ -38,7 +38,9 @@
 
 * [http://mark-kirby.co.uk/2013/creating-a-true-rest-api/](http://mark-kirby.co.uk/2013/creating-a-true-rest-api/) \#rest \#api
 
-* https://sookocheff.com/post/testing/improving-test-coverage-with-exploratory-outcomes/ \#tdd
+* [https://sookocheff.com/post/testing/improving-test-coverage-with-exploratory-outcomes/](https://sookocheff.com/post/testing/improving-test-coverage-with-exploratory-outcomes/) \#tdd
+
+* https://www.youtube.com/watch?v=Api6dFMlxAA \(presentation on tiling window managers\) \#wms \#twms
 
 
 
