@@ -40,7 +40,9 @@
 
 * [https://sookocheff.com/post/testing/improving-test-coverage-with-exploratory-outcomes/](https://sookocheff.com/post/testing/improving-test-coverage-with-exploratory-outcomes/) \#tdd
 
-* https://www.youtube.com/watch?v=Api6dFMlxAA \(presentation on tiling window managers\) \#wms \#twms
+* [https://www.youtube.com/watch?v=Api6dFMlxAA](https://www.youtube.com/watch?v=Api6dFMlxAA) \(presentation on tiling window managers\) \#wms \#twms
+
+* https://www.youtube.com/watch?v=S1bJpsS27Qk \(configuring VyOS - open source router\) \#router
 
 
 
