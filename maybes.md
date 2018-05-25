@@ -21,6 +21,7 @@ Python Ecosystem
 JavaScript Ecosystem
 
 * [https://prettier.io/](https://prettier.io/) \(there was another opinionated one?\)
+  * https://standardjs.com/
 
 
 
