@@ -49,9 +49,13 @@ You also have operation acceptance tests, which test things like failover, backu
 
 Don't. Ref: [https://www.youtube.com/watch?v=Xu5EhKVZdV8](https://www.youtube.com/watch?v=Xu5EhKVZdV8)
 
-Stubs - Mock/Fake implementations.
+Stubs - Fake/Shortcutted implementations, for testing the state of the object
 
-Mocks - Empty "implementations".
+Mocks - Empty "implementations", for testing interactions with the object
 
-How to Test: https://www.destroyallsoftware.com/talks/boundaries
+How to Test: [https://www.destroyallsoftware.com/talks/boundaries](https://www.destroyallsoftware.com/talks/boundaries)
+
+Imperative shell = integration tests of the shell which tie together all the dependencies \(no logic; no code paths to test\) - that's what they're good at.
+
+Functional core = unit-tests of all that messy logic \(that's what they're good at\)
 
