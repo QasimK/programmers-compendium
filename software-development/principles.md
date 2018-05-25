@@ -50,3 +50,9 @@ Code Smell: `self.friend.internal_variable.dobla()`
 
 Better: `self.friend.dobla()`
 
+## Tech Debt
+
+TBD: https://engineering.riotgames.com/news/taxonomy-tech-debt
+
+
+
