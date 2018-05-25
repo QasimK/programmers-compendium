@@ -1,6 +1,6 @@
 # Architecture Patterns
 
-* Functional core, stateful surface
+* Functional core, imperative shell/stateful surface
 
 
 

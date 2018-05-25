@@ -44,11 +44,11 @@
 
 * [https://www.youtube.com/watch?v=S1bJpsS27Qk](https://www.youtube.com/watch?v=S1bJpsS27Qk) \(configuring VyOS - open source router\) \#router
 
-* https://www.youtube.com/watch?v=wf-BqAjZb8M \("Beyond PEP8" @Raymond Hettinger\) \#python
+* [https://www.youtube.com/watch?v=wf-BqAjZb8M](https://www.youtube.com/watch?v=wf-BqAjZb8M) \("Beyond PEP8" @Raymond Hettinger\) \#python
 
-* https://www.youtube.com/watch?v=9zinZmE3Ogk \("Keynote on Concurrency" @Raymond Hettinger\) \#python
+* [https://www.youtube.com/watch?v=9zinZmE3Ogk](https://www.youtube.com/watch?v=9zinZmE3Ogk) \("Keynote on Concurrency" @Raymond Hettinger\) \#python
 
-* https://www.youtube.com/watch?v=EiOglTERPEo \("Super Considered Super" @Raymond Hettinger\) \#python
+* [https://www.youtube.com/watch?v=EiOglTERPEo](https://www.youtube.com/watch?v=EiOglTERPEo) \("Super Considered Super" @Raymond Hettinger\) \#python
 
 * 
 
