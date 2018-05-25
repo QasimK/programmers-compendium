@@ -7,6 +7,7 @@ There's a neat interactive branching tutorial somewhere...
 Because git is huge.
 
 * `git log --first-parent` Show only the first parent commit for merge commits.
+* TBD: git hyper-blame
 
 ## Security
 
@@ -14,7 +15,7 @@ Sign tags not commits: [http://git.661346.n2.nabble.com/GPG-signing-for-git-comm
 
 [https://github.com/NicoHood/gpgit](https://github.com/NicoHood/gpgit)
 
-\(Interesting read: [https://mikegerwitz.com/papers/git-horror-story.html\](https://mikegerwitz.com/papers/git-horror-story.html\)\)
+\(Interesting read: [https://mikegerwitz.com/papers/git-horror-story.html\](https://mikegerwitz.com/papers/git-horror-story.html%29\)
 
 # Comparison
 

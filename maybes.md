@@ -4,16 +4,22 @@
 * gdb, python-dbg - Look at stack traces live
 * TIL: [https://news.ycombinator.com/item?id=17083879](https://news.ycombinator.com/item?id=17083879) "My registrar suspended my domain because an abusive user was using a subdomain for phishing"
 * Make Vim respect XDG - [https://tlvince.com/vim-respect-xdg](https://tlvince.com/vim-respect-xdg)
-* Write scripts, just flipping write them! https://www.youtube.com/watch?v=Jd8ulMb6\_ls "Solve Your Problem with Sloppy Python" @Larry Hastings
+* Write scripts, just flipping write them! [https://www.youtube.com/watch?v=Jd8ulMb6\_ls](https://www.youtube.com/watch?v=Jd8ulMb6_ls) "Solve Your Problem with Sloppy Python" @Larry Hastings
 
 Python Ecosystem
 
 * stdlib 3.7 dataclasses \([https://www.youtube.com/watch?v=T-TwcmT6Rcw](https://www.youtube.com/watch?v=T-TwcmT6Rcw) "Dataclasses" @Raymond Hettinger\)
   * previously and still alternatively: attrs lib \(has validators, converters and a few other features\) 
-* pipenv \(https://www.youtube.com/watch?v=GBQAKldqgZs "Pipenv" @Kenneth Reitz\)
+* pipenv \([https://www.youtube.com/watch?v=GBQAKldqgZs](https://www.youtube.com/watch?v=GBQAKldqgZs) "Pipenv" @Kenneth Reitz\)
 * pytest
-* typing: \(mypy or pyre, MonkeyType\) \(https://www.youtube.com/watch?v=pMgmKJyWKn8 "Real World" @Carl Meyer\)
+* typing: \(mypy or pyre, MonkeyType\) \([https://www.youtube.com/watch?v=pMgmKJyWKn8](https://www.youtube.com/watch?v=pMgmKJyWKn8) "Real World" @Carl Meyer\)
 * Instagram 2018 1.5mil lines of Python
+
+https://github.com/ambv/black - pycodestyle auto
+
+JavaScript Ecosystem
+
+* https://prettier.io/ \(there was another opinionated one?\)
 
 
 
