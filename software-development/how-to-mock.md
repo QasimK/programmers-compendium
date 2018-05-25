@@ -41,17 +41,30 @@ You also have operation acceptance tests, which test things like failover, backu
 
 ## Automated Code Review
 
+Who? The machine runs it for everyone
+
+What?
+
 * Static code analysis
 * Data-flow analysis?
 * Code coverage
+
+When?
+
+* Git pre-commit hook
+* Local \(manual run\)
+* Code review interface
+* Continuous Integration \(merger\) runner
 
 ## How to Mock
 
 Don't. Ref: [https://www.youtube.com/watch?v=Xu5EhKVZdV8](https://www.youtube.com/watch?v=Xu5EhKVZdV8)
 
+https://www.youtube.com/watch?v=3MNVP9-hglc "The End Of Object Inheritance & The Beginning Of A New Modularity" here?
+
 Stubs - Mock/Fake implementations.
 
 Mocks - Empty "implementations".
 
-How to Test: https://www.destroyallsoftware.com/talks/boundaries
+How to Test: [https://www.destroyallsoftware.com/talks/boundaries](https://www.destroyallsoftware.com/talks/boundaries)
 
