@@ -4,14 +4,15 @@
 * gdb, python-dbg - Look at stack traces live
 * TIL: [https://news.ycombinator.com/item?id=17083879](https://news.ycombinator.com/item?id=17083879) "My registrar suspended my domain because an abusive user was using a subdomain for phishing"
 * Make Vim respect XDG - [https://tlvince.com/vim-respect-xdg](https://tlvince.com/vim-respect-xdg)
+* Instagram 2018 1.5mil lines of Python
 
 Python Ecosystem
 
 * std 3.7 dataclasses \([https://www.youtube.com/watch?v=T-TwcmT6Rcw](https://www.youtube.com/watch?v=T-TwcmT6Rcw) "Dataclasses" @Raymond Hettinger\)
-  * previously and still alternatively: attrs lib \(has validators, converters and a few other features\)
+  * previously and still alternatively: attrs lib \(has validators, converters and a few other features\) 
 * pipenv
 * py.test
-* typing: \(mypy, MonkeyType\)
+* typing: \(mypy or pyre, MonkeyType\)
 
 
 
