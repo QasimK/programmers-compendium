@@ -18,3 +18,5 @@ You also have things like Firejail, Snap/Flatpak, and AppImage.
 
 This is useful if you are working on conflicting projects, or want to keep your computer tidy. Keep your setup on your host \(text editor and IDE appliations and their config files\), and run the project \(any executables\) within the container. A shared folder can be used to store the repository.
 
+Vagrant is easy if you use the default Virtualbox provider. And, apparently, impossible with vagrant-lxc :/
+
