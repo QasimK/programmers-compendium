@@ -20,3 +20,9 @@ This is useful if you are working on conflicting projects, or want to keep your 
 
 Vagrant is easy if you use the default Virtualbox provider. And, apparently, impossible with vagrant-lxc :/
 
+## Developing with Docker
+
+https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3
+
+
+
