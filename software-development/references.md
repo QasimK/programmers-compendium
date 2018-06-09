@@ -50,9 +50,13 @@
 
 * [https://www.youtube.com/watch?v=EiOglTERPEo](https://www.youtube.com/watch?v=EiOglTERPEo) \("Super Considered Super" @Raymond Hettinger\) \#python
 
-* Once: https://www.youtube.com/watch?v=T-TwcmT6Rcw \("Dataclasses" @Raymond Hettinger\) \#python
+* Once: [https://www.youtube.com/watch?v=T-TwcmT6Rcw](https://www.youtube.com/watch?v=T-TwcmT6Rcw) \("Dataclasses" @Raymond Hettinger\) \#python
 
-* Once: https://www.youtube.com/watch?v=p33CVV29OG8 \("Modern Dictionaries" @Raymond Hettinger\) \#python
+* Once: [https://www.youtube.com/watch?v=p33CVV29OG8](https://www.youtube.com/watch?v=p33CVV29OG8) \("Modern Dictionaries" @Raymond Hettinger\) \#python
+
+* https://software-carpentry.org/lessons/ \#learning
+
+* https://swcarpentry.github.io/make-novice/ \#learning
 
 
 
