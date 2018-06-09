@@ -15,13 +15,15 @@ Python Ecosystem
 * pytest
 * typing: \(mypy or pyre, MonkeyType\) \([https://www.youtube.com/watch?v=pMgmKJyWKn8](https://www.youtube.com/watch?v=pMgmKJyWKn8) "Real World" @Carl Meyer\)
 * Instagram 2018 1.5mil lines of Python
+* linting complete: https://jeffknupp.com/blog/2016/12/09/how-python-linters-will-save-your-large-python-project/
+  * Create based on project Daedalus.
 
 [https://github.com/ambv/black](https://github.com/ambv/black) - pycodestyle auto
 
 JavaScript Ecosystem
 
 * [https://prettier.io/](https://prettier.io/) \(there was another opinionated one?\)
-  * https://standardjs.com/
+  * [https://standardjs.com/](https://standardjs.com/)
 
 
 
