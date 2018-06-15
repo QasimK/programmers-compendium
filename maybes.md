@@ -6,7 +6,7 @@
 * Make Vim respect XDG - [https://tlvince.com/vim-respect-xdg](https://tlvince.com/vim-respect-xdg)
 * Write scripts, just flipping write them! [https://www.youtube.com/watch?v=Jd8ulMb6\_ls](https://www.youtube.com/watch?v=Jd8ulMb6_ls) "Solve Your Problem with Sloppy Python" @Larry Hastings
 * A product manager can buy software from their team, but they can also buy information like, "Is X possible?" or "How many points to build Y?" or "How much support would be reduced if we did Z?".
-* Fira code for this ligatures: https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e
+* Fira code for this ligatures: [https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e](https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e)
 
 Python Ecosystem
 
