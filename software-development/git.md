@@ -7,7 +7,7 @@ There's a neat interactive branching tutorial somewhere...
 Because git is huge.
 
 * `git log --first-parent` Show only the first parent commit for merge commits.
-* TBD: git hyper-blame
+* TBD: [git hyper-blame](https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/git-hyper-blame.html).
 
 ## Security
 
