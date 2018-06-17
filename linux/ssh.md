@@ -55,6 +55,7 @@ AllowUsers qasim
 
 * Rate-limit attempts: `sudo ufw limit OpenSSH`  \(NB: check auto correct port?\)
 * Use `ssh-geoip` \(blacklist IPs rather than whitelist to prevent lockout\) \(not tested; IPv6?\)
+* Use an [SSH bastion](https://blog.scottlowe.org/2016/09/13/ssh-bastion-host-follow-up/).
 * Use fail2ban \(not needed with SSH keys; lockout risk\)
 * [Require 2FA](http://www.justgohome.co.uk/blog/2013/07/better-two-factor-ssh-authentication-on-ubuntu.html): `libpam-google-authenticator` \(longer setup; not tested; yes there are backup codes\)
 
