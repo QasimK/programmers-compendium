@@ -54,9 +54,11 @@
 
 * Once: [https://www.youtube.com/watch?v=p33CVV29OG8](https://www.youtube.com/watch?v=p33CVV29OG8) \("Modern Dictionaries" @Raymond Hettinger\) \#python
 
-* https://software-carpentry.org/lessons/ \#learning
+* [https://software-carpentry.org/lessons/](https://software-carpentry.org/lessons/) \#learning
 
-* https://swcarpentry.github.io/make-novice/ \#learning
+* [https://swcarpentry.github.io/make-novice/](https://swcarpentry.github.io/make-novice/) \#learning
+
+* https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying \#data \#data \#data
 
 
 
