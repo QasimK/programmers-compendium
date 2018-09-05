@@ -21,8 +21,8 @@
 ## Programming
 
 * [Python](software-development/python.md)
-* [Git](software-development/git.md)
 * [Web](software-development/web.md)
+* [Git](software-development/git.md)
 
 ## SQL
 
