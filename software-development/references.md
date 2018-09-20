@@ -58,7 +58,9 @@
 
 * [https://swcarpentry.github.io/make-novice/](https://swcarpentry.github.io/make-novice/) \#learning
 
-* https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying \#data \#data \#data
+* [https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying) \#data \#data \#data
+
+* https://www.obeythetestinggoat.com/book/preface.html \#tdd \#book
 
 
 
