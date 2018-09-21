@@ -20,9 +20,13 @@ This is useful if you are working on conflicting projects, or want to keep your 
 
 Vagrant is easy if you use the default Virtualbox provider. And, apparently, impossible with vagrant-lxc :/
 
+Plugins:
+
+* [vagrant-share](https://www.vagrantup.com/docs/share/) to be able to share your container
+* [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) to keep VirtualBox's Guest Additions up-to-date on the Vagrant box
+* [vagrant-lxc](https://github.com/fgrehm/vagrant-lxc/) for LXC boxes _that don't work_
+
 ## Developing with Docker
 
-https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3
-
-
+[https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3](https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3)
 
