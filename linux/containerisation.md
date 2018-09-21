@@ -25,6 +25,9 @@ Plugins:
 * [vagrant-share](https://www.vagrantup.com/docs/share/) to be able to share your container
 * [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) to keep VirtualBox's Guest Additions up-to-date on the Vagrant box
 * [vagrant-lxc](https://github.com/fgrehm/vagrant-lxc/) for LXC boxes _that don't work_
+* [vagrant-notify-forwarder](https://github.com/mhallin/vagrant-notify-forwarder/) is not reliable
+
+Create a [merging custom Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) in `~/vagrant.d/`.
 
 ## Developing with Docker
 
