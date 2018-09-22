@@ -60,7 +60,9 @@
 
 * [https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying) \#data \#data \#data
 
-* https://www.obeythetestinggoat.com/book/preface.html \#tdd \#book
+* [https://www.obeythetestinggoat.com/book/preface.html](https://www.obeythetestinggoat.com/book/preface.html) \#tdd \#book
+
+* https://www.youtube.com/watch?v=DJtef410XaM \("The Clean Architecture in Python" @Brandon Rhodes\) \#architecture \#python
 
 
 
