@@ -62,7 +62,9 @@
 
 * [https://www.obeythetestinggoat.com/book/preface.html](https://www.obeythetestinggoat.com/book/preface.html) \#tdd \#book
 
-* https://www.youtube.com/watch?v=DJtef410XaM \("The Clean Architecture in Python" @Brandon Rhodes\) \#architecture \#python
+* [https://www.youtube.com/watch?v=DJtef410XaM](https://www.youtube.com/watch?v=DJtef410XaM) \("The Clean Architecture in Python" @Brandon Rhodes\) \#architecture \#python
+
+* https://www.youtube.com/watch?v=PpyPa92r44s \("Practical Design Patterns in Docker Networking"\) \#docker \#networking
 
 
 
