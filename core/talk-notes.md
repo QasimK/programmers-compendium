@@ -24,6 +24,8 @@
   * A function that takes an opaque, complex data structure is actually a disguised method.
   * Brief Python-specific details at the very end \(generators, iterators, context managers\).
 
+
+
 * [Microservices + Events + Docker = A Perfect Trio](https://www.youtube.com/watch?v=sSm2dRarhPo) - Chris Richardson @ DockerCon 2016
 
   * Monolithic applications become large, and you lose team autonomy and fast development because of conflicts between teams that contribute to the same codebase.
@@ -36,7 +38,7 @@
   * But, querying the event store directly can be extremely challenging.
   * So, resolve with Command Query Responsibility Segregation \(CQRS\) by splitting commands on the aggregate which produce events, from materialised views which consume events and provide a query API \(backed with type of database\)
   * Use Docker to simplify development and deployment.
-  * https://microservices.io
+  * [https://microservices.io](https://microservices.io)
 
 
 
