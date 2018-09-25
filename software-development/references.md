@@ -64,7 +64,9 @@
 
 * [https://www.youtube.com/watch?v=DJtef410XaM](https://www.youtube.com/watch?v=DJtef410XaM) \("The Clean Architecture in Python" @Brandon Rhodes\) \#architecture \#python
 
-* https://www.youtube.com/watch?v=PpyPa92r44s \("Practical Design Patterns in Docker Networking"\) \#docker \#networking
+* [https://www.youtube.com/watch?v=PpyPa92r44s](https://www.youtube.com/watch?v=PpyPa92r44s) \("Practical Design Patterns in Docker Networking"\) \#docker \#networking
+
+* https://www.youtube.com/watch?v=sSm2dRarhPo \("Microservices + Events + Docker = A PerfectTrio"\) \#DDD \#microservices \#architecture
 
 
 
