@@ -9,9 +9,10 @@ Private networks:
 Connections\(?\):
 
 * Bridge
-  * One side of bridge gets IP addresses 10.0.0.2+
+  * One side of bridge gets IP addresses 10.0.0.2+. The bridge gateway would be 10.0.0.1
   * The other side is, i.e. the host IP 192.168.1.2+
-  * Port mapping required
+  * NAT Port mapping required
+  * Anything connected to the bridge can communicate with each other
 * MACVLAN
   * Connect directly to network, get IP address on network
   * MAC address is virtualised on the NIC - requires promiscuous mode, usually not allowed on cloud
