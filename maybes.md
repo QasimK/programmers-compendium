@@ -7,7 +7,7 @@
 * Write scripts, just flipping write them! [https://www.youtube.com/watch?v=Jd8ulMb6\_ls](https://www.youtube.com/watch?v=Jd8ulMb6_ls) "Solve Your Problem with Sloppy Python" @Larry Hastings
 * A product manager can buy software from their team, but they can also buy information like, "Is X possible?" or "How many points to build Y?" or "How much support would be reduced if we did Z?".
 * Fira code for this ligatures: [https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e](https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e)
-* http://learnyouanagda.liamoc.net/pages/introduction.html
+* [http://learnyouanagda.liamoc.net/pages/introduction.html](http://learnyouanagda.liamoc.net/pages/introduction.html)
 
 Python Ecosystem
 
@@ -27,6 +27,17 @@ JavaScript Ecosystem
 
 * [https://prettier.io/](https://prettier.io/) \(there was another opinionated one?\)
   * [https://standardjs.com/](https://standardjs.com/)
+
+How to apologise\(!\). [Source](https://www.thecut.com/2017/06/these-apology-critics-want-to-teach-you-how-to-say-sorry.html)
+
+* An expression of regret, i.e. "I'm sorry"
+* An explanation \(but not a justification\)
+* An acknowledgement of responsibility \(most important\)
+* A declaration of repentance
+* An offer of repair
+* A request for forgiveness \(least importance\)
+
+Don't say: "IF", "I regret", Don't use passive voice. Say how you're going to make sure this doesn't happen again.
 
 
 
