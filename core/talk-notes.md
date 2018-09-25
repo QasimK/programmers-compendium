@@ -1,6 +1,6 @@
 # Talk Notes
 
-* [The Clean Architecture in Python](https://www.youtube.com/watch?v=DJtef410XaM) - Brandon Rhodes PyOhio 2014
+* [The Clean Architecture in Python](https://www.youtube.com/watch?v=DJtef410XaM) - Brandon Rhodes @ PyOhio 2014
 
   * A soft introduction to domain-driven development, imperative shell/functional core
   * Burying I/O into a sub-procedure hides the complexity of the procedure
@@ -23,6 +23,20 @@
   * Immutable data structures lead to distributed computing: if you modify memory, you cannot move that code to another machine, but if you just accept data and return data then you can move that to another machine.
   * A function that takes an opaque, complex data structure is actually a disguised method.
   * Brief Python-specific details at the very end \(generators, iterators, context managers\).
+
+* [Microservices + Events + Docker = A Perfect Trio](https://www.youtube.com/watch?v=sSm2dRarhPo) - Chris Richardson @ DockerCon 2016
+
+  * Monolithic applications become large, and you lose team autonomy and fast development because of conflicts between teams that contribute to the same codebase.
+  * So, accelerate development with microservices.
+  * But, microservices mean a distributed system: communication between services, partial failures, consistency between databases \(no distributed transactions\), testing is complicated, and DevOps is complex.
+  * A shared database is not microservices because of tight coupling - conflicts between teams result in slowdowns and loss of team autonomy.
+  * So, use event-driven architecture to maintain data consistency.
+  * But you still have a dual-write problem \(write to database and write to message broker\).
+  * So, use Event-Sourcing: it resolves data consistency, gives you reliable event publishing, gives you auditing, and eliminates ORM problems.
+  * But, querying the event store directly can be extremely challenging.
+  * So, resolve with Command Query Responsibility Segregation \(CQRS\) by splitting commands on the aggregate which produce events, from materialised views which consume events and provide a query API \(backed with type of database\)
+  * Use Docker to simplify development and deployment.
+  * https://microservices.io
 
 
 
