@@ -23,6 +23,7 @@
 * [Python](software-development/python.md)
 * [Web](software-development/web.md)
 * [Git](software-development/git.md)
+* [Networking](software-development/networking.md)
 
 ## SQL
 
