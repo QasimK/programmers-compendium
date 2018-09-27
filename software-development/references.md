@@ -66,7 +66,9 @@
 
 * [https://www.youtube.com/watch?v=PpyPa92r44s](https://www.youtube.com/watch?v=PpyPa92r44s) \("Practical Design Patterns in Docker Networking"\) \#docker \#networking
 
-* https://www.youtube.com/watch?v=sSm2dRarhPo \("Microservices + Events + Docker = A PerfectTrio"\) \#DDD \#microservices \#architecture
+* [https://www.youtube.com/watch?v=sSm2dRarhPo](https://www.youtube.com/watch?v=sSm2dRarhPo) \("Microservices + Events + Docker = A PerfectTrio"\) \#DDD \#microservices \#architecture
+
+* https://www.youtube.com/watch?v=KVKufdTphKs \("Python's Infamous GIL" @Larry Hastings PyCon 2015\) \#python
 
 
 
