@@ -17,3 +17,21 @@ Async I/O clearly delineates the context switch locations.
 
 Python 2 -&gt; 3: Strings/Bytes, Print, Super\(\) - new style classes, division.
 
+## Linting
+
+* flake8
+  * pycodestyle \(formerly pep8\)
+  * pyflakes
+  * mccabe
+* pylint
+* bandit/dodgy/safety\(pipenv\)
+* prospector
+* isort
+* [Layer Linter](https://github.com/seddonym/layer_linter) \(not tried\)
+* pydocstyle
+* mypy
+* vulture
+* pyroma for libraries \(setup.py\)
+
+
+
