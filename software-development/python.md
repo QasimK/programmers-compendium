@@ -33,5 +33,38 @@ Python 2 -&gt; 3: Strings/Bytes, Print, Super\(\) - new style classes, division.
 * vulture
 * pyroma for libraries \(setup.py\)
 
+## History
+
+Python 3.7:
+
+* Dataclasses TBD: talk link.
+* contextvars
+* breakpoint\(\)
+* Postponed evaluation of type annotations
+* dicts officially respect insertion-order
+* time - nanosecond resolution functions
+
+Python 3.6:
+
+* f-string literals
+* underscores in numeric literals
+* extended variable annotations
+* \(async generators & comprehensions\)
+* Local Time Disambiguation
+* secrets module
+
+Python 3:
+
+* unicode vs bytes
+* print\(\) vs print
+* division float vs int
+* new-style vs classic classes
+* relative imports \(?\)
+* views and iterators vs lists \(e.g. dict.items\(\) == dict.iteritems\(\)\)
+* nonlocal
+* extended iterable unpacking
+* set literals
+* removed tuple parameter unpacking
+
 
 
