@@ -24,6 +24,7 @@
 * [Web](software-development/web.md)
 * [Git](software-development/git.md)
 * [Networking](software-development/networking.md)
+* [Databases](software-development/databases.md)
 
 ## SQL
 
