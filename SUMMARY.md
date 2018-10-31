@@ -17,6 +17,7 @@
 * [Testing](software-development/how-to-mock.md)
 * [Architecture Patterns](software-development/architecture-patterns.md)
 * [APIs](software-development/apis.md)
+* [Agile](software-development/agile.md)
 
 ## Programming
 
