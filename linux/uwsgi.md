@@ -4,7 +4,7 @@ The documentation that likes telling stories. uWSGI has a stupid _insane_ number
 
 ```ini
 [uwsgi]
-; Increased efficiency for larger number of processes/threads (no reason not to).
+; Increased efficiency for larger number of processes(/threads) (no reason not to).
 thunder-lock = True
 
 ; (Threads disabled)
@@ -17,15 +17,17 @@ memory-report = True
 ; Clear environment on exit
 vacuum = True
 
-; Only allow this HOST_NAME otherwise return HTTP 421 (security)
-route-if-not = equal:${HTTP_HOST};HOST_NAME return:421
+REPLACE_ME_HOST_NAME otherwise return HTTP 421 Misdirected Request (security)
+route-if-not = equal:${HTTP_HOST};REPLACE_ME_HOST_NAME return:421
 ```
 
-* Due to uWSGI's default pre-forking behaviour, you may want `lazy-apps` or a postfork fix function.
+* Due to uWSGI's default pre-forking behaviour, you may want `lazy-apps` or a `@postfork` fix function when running more than one process.
 * Note on `harakiri` and "post buffering" - the web server should take entire request body before passing it on, otherwise a slow upload could be killed due to the harakiri timer.
+* When using threads, e.g.`threads=2`, will automatically set `enable-threads = true`.
 
 ## Features
 
+* Standard HTTP/TLS/SNI/WebSocket/Static Files/Async Apps
 * [Notifications](https://uwsgi-docs.readthedocs.io/en/latest/AlarmSubsystem.html)
 * [Remote Procedure Call](https://uwsgi-docs.readthedocs.io/en/latest/RPC.html)
 * [Stats Server](https://uwsgi-docs.readthedocs.io/en/latest/StatsServer.html)
@@ -34,7 +36,6 @@ route-if-not = equal:${HTTP_HOST};HOST_NAME return:421
 * [App Resource Limits](https://uwsgi-docs.readthedocs.io/en/latest/Cgroups.html) \(Cgroups\)
 * Auto-scaling \([Zergs](https://uwsgi-docs.readthedocs.io/en/latest/Zerg.html), [Broodlord](https://uwsgi-docs.readthedocs.io/en/latest/Broodlord.html), [Cheaper](https://uwsgi-docs.readthedocs.io/en/latest/Cheaper.html)\)
 * [Memory deduplication](https://uwsgi-docs.readthedocs.io/en/latest/KSM.html)
-* HTTP/TLS/SNI/WebSocket/Static Files
 * [Custom Signals](https://uwsgi-docs.readthedocs.io/en/latest/Signals.html) \(target: workers/spoolers/mules/farms; event: custom/filesystem/timers/cron\)
 * [Caches](https://uwsgi-docs.readthedocs.io/en/latest/Caching.html) \(SharedMemory\)
 * [Queues](https://uwsgi-docs.readthedocs.io/en/latest/Queue.html)
@@ -43,9 +44,8 @@ route-if-not = equal:${HTTP_HOST};HOST_NAME return:421
 * [Locks](https://uwsgi-docs.readthedocs.io/en/latest/Locks.html)
 * [Routing](https://uwsgi-docs.readthedocs.io/en/latest/InternalRouting.html) \(requests, cache\)
 * [Legion](https://uwsgi-docs.readthedocs.io/en/latest/Legion.html) \(Failover?\)
-* ​HTTP/TLS/SNI/WebSocket/Static Files/Async Apps
 
-## Python
+## Python-Specific Configuration
 
 uWSGI has an easy interface \([uwsgidecorators](https://pypi.python.org/pypi/uwsgidecorators/)\) to:
 
@@ -67,8 +67,12 @@ module = APP_NAME.wsgi:application
 spooler = /home/APP_NAME/tasks/
 import = APP_NAME.tasks
 
+; Real time tracebacks (inc. for harakiri'd requests)
 ; uwsgi --connect-and-read /run/uwsgi/app/APP_NAME/tracebacker1
 py-tracebacker = /run/uwsgi/app/APP_NAME/tracebacker
+
+; Only when running  application
+; single-interpreter = true
 ```
 
 
