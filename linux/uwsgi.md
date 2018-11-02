@@ -2,6 +2,8 @@
 
 The documentation that likes telling stories. uWSGI has a stupid _insane_ number of features.
 
+uWSGI is best combined with a reverse proxy like Nginx: better at serving static files, and buffers requests before forwarding to avoid wasting app-workers' time. Other app-servers may not have the latter issue.
+
 ```ini
 [uwsgi]
 ; Increased efficiency for larger number of processes(/threads) (no reason not to).
