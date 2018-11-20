@@ -8,6 +8,7 @@
 * A product manager can buy software from their team, but they can also buy information like, "Is X possible?" or "How many points to build Y?" or "How much support would be reduced if we did Z?".
 * Fira code for this ligatures: [https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e](https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e)
 * [http://learnyouanagda.liamoc.net/pages/introduction.html](http://learnyouanagda.liamoc.net/pages/introduction.html)
+* camelCase, PascalCase, snake\_case, kebab-case, CAPS\_CASE.
 
 Python Ecosystem
 
@@ -38,6 +39,4 @@ How to apologise\(!\). [Source](https://www.thecut.com/2017/06/these-apology-cri
 * A request for forgiveness \(least importance\)
 
 Don't say: "IF", "I regret", Don't use passive voice. Say how you're going to make sure this doesn't happen again.
-
-
 
