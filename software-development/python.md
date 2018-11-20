@@ -66,5 +66,12 @@ Python 3:
 * set literals
 * removed tuple parameter unpacking
 
+## Libraries
+
+### SQLAlchemy
+
+* Remember to index on ForeignKeys. Postgres does not do this automatically. MySQL always does this.
+* Remember to set `onupdate` and `ondelete` cascades on ForeignKeys.
+
 
 
