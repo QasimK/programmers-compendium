@@ -9,6 +9,15 @@
 * Fira code for this ligatures: [https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e](https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e)
 * [http://learnyouanagda.liamoc.net/pages/introduction.html](http://learnyouanagda.liamoc.net/pages/introduction.html)
 * camelCase, PascalCase, snake\_case, kebab-case, CAPS\_CASE.
+* Sudoers:`pccuser ALL=(ALL:ALL) NOPASSWD:/path/to/command ""`
+  pcuser = user or %group we are giving permission to  
+  ALL= is the host \(ALL works unless you are sharing file across hosts\)  
+  \(ALL:ALL\) is \(user-we-can-command-as:group-we-can-command-as\), i.e. sudo -u user -g group. If omitted only root. Can use just \(ALL\)  
+  NOPASSWD: is tags  
+  command may be "ALL".  
+  "" prevents command parameters.  
+  
+  -&gt; User Host = \(Runas\) Command
 
 Python Ecosystem
 
