@@ -82,6 +82,8 @@ AVG
 SUM
 ```
 
+Be aware, that the aggregate selects on the column, and [will not select the entire row](https://bernardoamc.github.io/sql/2015/05/04/group-by-non-aggregate-columns/).
+
 ## Misc.
 
 ```SQL
