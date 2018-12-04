@@ -38,6 +38,7 @@
 
 * [Overview](linux/overview.md)
 * [Systemd](linux/systemd.md)
+* [Shells](linux/shells.md)
 * [SSH/Mosh](linux/ssh.md)
 * [Containers](linux/containerisation.md)
 
