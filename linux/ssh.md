@@ -42,7 +42,7 @@ The following settings are ordered starting from the most significant, least inv
 
 * Prevent root login
 * Use SSH keys only
-* Use a less common port, e.g. 23
+* Use a less common port, e.g. 24
 * Only allow particular groups/users to login \(such as `wheel`, the administrative group\)
 
 ```
@@ -57,7 +57,7 @@ AllowUsers qasim
 * Use `ssh-geoip` \(blacklist IPs rather than whitelist to prevent lockout\) \(not tested; IPv6?\)
 * Use an [SSH bastion](https://blog.scottlowe.org/2016/09/13/ssh-bastion-host-follow-up/).
 * Use fail2ban \(not needed with SSH keys; lockout risk\)
-* [Require 2FA](http://www.justgohome.co.uk/blog/2013/07/better-two-factor-ssh-authentication-on-ubuntu.html): `libpam-google-authenticator` \(longer setup; not tested; yes there are backup codes\)
+* [Require 2FA](http://www.justgohome.co.uk/blog/2013/07/better-two-factor-ssh-authentication-on-ubuntu.html): `libpam-google-authenticator` \(longer setup; not tested; has backup codes\)
 
 ### Mosh
 
