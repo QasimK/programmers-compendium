@@ -2,7 +2,7 @@
 
 ## Bulk Insert with two columns matching sequence value
 
-> **Note this doesn't work **_**LOL**_**.**
+> **Note this doesn't work **_**LOL**_**. **func.nextval\('outbound\_messages\_transaction\_id\_seq'\) + 1 may need to be -1, and I don't know how you can work that out. Apparently postgres has a column order, but it doesn't seem to be respected.
 
 I had a table with two columns: `transaction_id` and `xml`, but the `xml` text also contains the `transaction_id`. If you generate the `transaction_id` value client-side, then you can of course set the two columns on your INSERT.
 
