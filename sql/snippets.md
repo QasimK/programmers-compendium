@@ -2,6 +2,8 @@
 
 ## Bulk Insert with two columns matching sequence value
 
+> **Note this doesn't work **_**LOL**_**.**
+
 I had a table with two columns: `transaction_id` and `xml`, but the `xml` text also contains the `transaction_id`. If you generate the `transaction_id` value client-side, then you can of course set the two columns on your INSERT.
 
 However, I wanted the `transaction_id` value to be a "semi-unique" identifier. It is semi-unique because an external system requires a value between 1-999,999,999 only. So, for that column I use a bounded Integer Sequence that will cycle back to 1 when it reaches the maximum value of 999,999,999.
