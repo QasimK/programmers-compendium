@@ -46,6 +46,7 @@
 
 * [Nginx](linux/nginx.md)
 * [uWSGI](linux/uwsgi.md)
+* [Kubernetes](linux/kubernetes.md)
 
 ## Appendix
 
