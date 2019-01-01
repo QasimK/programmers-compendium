@@ -15,11 +15,11 @@
   \(ALL:ALL\) is \(user-we-can-command-as:group-we-can-command-as\), i.e. sudo -u user -g group. If omitted only root. Can use just \(ALL\)  
   NOPASSWD: is tags  
   command may be "ALL".  
-  "" prevents command parameters.
+  "" prevents command parameters \(do not use when specifying parameters\)
 
   -&gt; User Host = \(Runas\) Command
 
-  * Example: `%wheel ALL=(root) NOPASSWD:/usr/bin/pacmatic -syu ""`
+  * Example \(placed after NO-NOPASSWD\): `%wheel ALL=(root) NOPASSWD:/usr/bin/pacmatic -Syu`
 
 Python Ecosystem
 
