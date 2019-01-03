@@ -26,6 +26,7 @@
 * [Git](software-development/git.md)
 * [Networking](software-development/networking.md)
 * [Databases](software-development/databases.md)
+* [Crypto](software-development/crypto.md)
 
 ## SQL
 
