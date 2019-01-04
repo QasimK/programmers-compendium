@@ -22,7 +22,7 @@ ssl_session_timeout 180m;
 ssl_session_tickets off;
 
 # Secure SSL config - https://mozilla.github.io/server-side-tls/ssl-config-generator/
-ssl_protocols TLSv1.2;
+ssl_protocols TLSv1.2 TLSv1.3;
 ssl_dhparam /etc/ssl/certs/dhparam.pem;  # Must generate this manually
 ssl_ciphers ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256;
 
