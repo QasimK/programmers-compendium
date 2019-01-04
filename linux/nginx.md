@@ -209,7 +209,7 @@ server {
 }
 ```
 
-A neat command to compress static files: `find -L . -type f ! -name "*.gz" -exec gzip --best -kf {} \;`
+A neat command to compress static files: `find -L . -type f ! -name "*.gz" -exec gzip --best -kf "{}" \;`
 
 ## Performance/Tuning
 
