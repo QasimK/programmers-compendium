@@ -8,7 +8,9 @@ Private networks:
 
 Connections\(?\):
 
-* Bridge
+https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking/
+
+* Bridge \(Like a Physical Network Switch\)
   * One side of bridge gets IP addresses 10.0.0.2+. The bridge gateway would be 10.0.0.1
   * The other side is, i.e. the host IP 192.168.1.2+
   * NAT Port mapping required
