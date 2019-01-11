@@ -14,5 +14,9 @@
 <p>Annddd we're done
 ```
 
+## Tools
+
+* [Hardenize](https://www.hardenize.com/) - domain/email/web **security** checks
+* [SecurityHeaders](https://securityheaders.io/) - **security** checks on HTTP headers
 
 
