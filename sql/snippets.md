@@ -1,5 +1,21 @@
 # Snippets
 
+## Postgres
+
+### Get cell as file
+
+Use `With CSV` for CSV files.
+
+```psql
+\copy (Select * From foo) To 'test.csv' With BINARY;
+```
+
+When dealing with XMLs \(NB: double spaces EVERY space\):
+
+`CSV QUOTE AS ' '`
+
+This us better: `CSV DELIMITER AS '|'`
+
 ## Bulk Insert with two columns matching sequence value
 
 > **Note this doesn't work **_**LOL**_**. **func.nextval\('outbound\_messages\_transaction\_id\_seq'\) + 1 may need to be -1, and I don't know how you can work that out. Apparently postgres has a column order, but it doesn't seem to be respected.
