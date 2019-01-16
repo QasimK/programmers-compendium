@@ -14,7 +14,7 @@ When dealing with XMLs \(NB: double spaces EVERY space\):
 
 `CSV QUOTE AS ' '`
 
-This us better: `CSV DELIMITER AS '|'`
+This us better: `CSV QUOTE AS '|'`
 
 ## Bulk Insert with two columns matching sequence value
 
