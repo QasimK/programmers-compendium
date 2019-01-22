@@ -14,7 +14,7 @@
 * [direnv](https://direnv.net/) - manage environment variables per-project
 * [fish](https://fishshell.com/)/[xiki](http://xiki.org/) - alternative shells
 
-## External Tools
+## Web Tools
 
 * [crobtab.guru](https://crontab.guru/) - write cron schedules
 * [explainshell](https://explainshell.com/) - explain \(long\) shell commands

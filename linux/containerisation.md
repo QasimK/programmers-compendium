@@ -22,20 +22,22 @@ Containers may conflate:
 
 ## Developing with Vagrant
 
+> Consider LXD as a lightweight, non-portable alternative.
+
 This is useful if you are working on conflicting projects, or want to keep your computer tidy. Keep your setup on your host \(text editor and IDE appliations and their config files\), and run the project \(any executables\) within the container. A shared folder can be used to store the repository.
 
 Vagrant is easy if you use the default Virtualbox provider. And, apparently, impossible with vagrant-lxc :/
 
 Plugins:
 
-* [vagrant-share](https://www.vagrantup.com/docs/share/) to be able to share your container
 * [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) to keep VirtualBox's Guest Additions up-to-date on the Vagrant box
+* [vagrant-share](https://www.vagrantup.com/docs/share/) to be able to share your container with others
 * [vagrant-lxc](https://github.com/fgrehm/vagrant-lxc/) for LXC boxes _that don't work_
-* [vagrant-notify-forwarder](https://github.com/mhallin/vagrant-notify-forwarder/) is not reliable
+* [vagrant-notify-forwarder](https://github.com/mhallin/vagrant-notify-forwarder/) is _not reliable_
 
 Create a [merging custom Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) in `~/vagrant.d/`.
 
-If you encounter an issue with double port-forwarding \(i.e. a port-forward inside the guest and then using Vagrant's port-forward to forward it to your host\): https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant. TODO: I have no idea what that is doing ATM.
+If you encounter an issue with double port-forwarding \(i.e. a port-forward inside the guest and then using Vagrant's port-forward to forward it to your host\): [https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant](https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant). TODO: I have no idea what that is doing ATM.
 
 ## Developing with Docker
 
