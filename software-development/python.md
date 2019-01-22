@@ -53,7 +53,7 @@ Python 3.6:
 * Local Time Disambiguation
 * secrets module
 
-Python 3:
+Python 3000:
 
 * unicode vs bytes
 * print\(\) vs print
@@ -67,6 +67,8 @@ Python 3:
 * removed tuple parameter unpacking
 
 ## Libraries
+
+* [passlib](https://passlib.readthedocs.io/)
 
 ### SQLAlchemy
 

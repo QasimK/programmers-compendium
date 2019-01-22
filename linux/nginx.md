@@ -1,5 +1,7 @@
 # Nginx
 
+Nginx is a reverse proxy, allowing a single port to host multiple websites.
+
 * `add_header` [does not inherit](https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header) properly.
 
 ## Global configurations

@@ -8,6 +8,7 @@
 * [thefuck](https://github.com/nvbn/thefuck) corrects your previous console command
 * Controlling the [proliferation of dotfiles](https://wiki.archlinux.org/index.php/XDG_Base_Directory_support)
 * \(A way-too-big list of tools to make an [awesome shell](https://github.com/alebcay/awesome-shell).\)
+* [ip cheat sheat](https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf) \(pdf\)
 
 ## Development
 
