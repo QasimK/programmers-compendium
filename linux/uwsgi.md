@@ -1,5 +1,7 @@
 # uWSGI
 
+> gunicorn is an alternative that may be simpler to use.
+
 The documentation that likes telling stories. uWSGI has a stupid _insane_ number of features.
 
 uWSGI is best combined with a web-server like Nginx: better at serving static files, the reverse-proxy buffers requests before forwarding to avoid wasting app-workers' time \([Slowloris](https://en.wikipedia.org/wiki/Slowloris) DOS\), and possibly better security. Other app-servers may not have the latter issue.
