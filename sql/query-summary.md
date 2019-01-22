@@ -15,9 +15,10 @@ SELECT [DISTINCT] ... FROM ...
 UNION
 [INNER|LEFT|RIGHT|OUTER] JOIN ... ON ...
 WHERE ...
+GROUP BY ...
 HAVING ...
 ORDER BY ... [ASC|DESC]
-LIMIT ...
+LIMIT ... OFFSET ...
 
 INSERT INTO ... VALUES ...
 UPDATE ... SET ... [WHERE ...]
@@ -28,7 +29,7 @@ DELETE ...
 
 **UNION** adds the rows of different queries
 
-**HAVING** allows aggregate functions.
+**HAVING** allows aggregate functions. WHERE filters individual rows before the GROUP BY, while HAVING filters group rows created by the GROUP BY.
 
 The order is in fact:
 
@@ -40,6 +41,10 @@ The order is in fact:
 6. ORDER BY
 7. LIMIT
 
+> ORDER BY clause = e.g. ORDER BY x DESC, y NULLS FIRST
+>
+> **SQL:2008** LIMIT clause = OFFSET n ROWS FETCH FIRST m ROWS ONLY
+
 ## Operations
 
 We have the arithmetic operators +, -, \*, /, and %.
@@ -47,8 +52,7 @@ We have the arithmetic operators +, -, \*, /, and %.
 Logical/Comparison operators include:
 
 ```SQL
-IS NULL
-IS NOT NULL
+IS (NOT) NULL
 UNIQUE?
 =, <, >
 <>, !=
