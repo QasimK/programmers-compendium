@@ -16,7 +16,9 @@
 
 ## Tools
 
+* [SSL Labs](https://www.ssllabs.com/ssltest/) - TLS **security** checker
 * [Hardenize](https://www.hardenize.com/) - domain/email/web **security** checks
 * [SecurityHeaders](https://securityheaders.io/) - **security** checks on HTTP headers
+
 
 
