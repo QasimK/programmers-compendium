@@ -1,5 +1,7 @@
 # Web
 
+Learning: [https://hpbn.co/](https://hpbn.co/)
+
 [Google's Style Guide](https://google.github.io/styleguide/htmlcssguide.html) has basic formatting and other guidance.
 
 ## Minimal HTML
