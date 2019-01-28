@@ -80,6 +80,8 @@ add_header X-Frame-Options $x_frame_options always;
 add_header X-XSS-Protection $x_xss_protection always;
 ```
 
+> TODO: X-XSS-Protection has been superseded with Content Security Policys \(CSPs\).
+
 ## Servers
 
 Servers can be configured inside `/etc/nginx/sites-available/`, but a symlink should be created inside `/etc/nginx/sites-enabled/` for them to become active.
