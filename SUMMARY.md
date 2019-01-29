@@ -42,6 +42,7 @@
 * [Shells](linux/shells.md)
 * [SSH/Mosh](linux/ssh.md)
 * [Containers](linux/containerisation.md)
+* [Terminal Pro](linux/terminal.md)
 
 ## Recipes
 
