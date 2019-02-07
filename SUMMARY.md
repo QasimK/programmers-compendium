@@ -25,15 +25,16 @@
 * [Web](software-development/web.md)
 * [Git](software-development/git.md)
 * [Networking](software-development/networking.md)
-* [Databases](software-development/databases.md)
 * [Crypto](software-development/crypto.md)
 
-## SQL
+## SQL/DB
 
+* [Databases](software-development/databases.md)
 * [Query Summary](sql/query-summary.md)
 * [Joins](sql/joins.md)
 * [Trust](sql/trust.md)
 * [Snippets](sql/snippets.md)
+* [Migrations](sql/migrations.md)
 
 ## Linux
 
