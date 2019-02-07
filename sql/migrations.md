@@ -14,8 +14,8 @@ An excellent article: [https://benchling.engineering/move-fast-and-migrate-thing
   * Migrate to NULL before removing code
 * Creating an index locks the entire table, preventing writes
   * Use CREATE INDEX CONCURRENTLY
-* Creating constraints \(inc. NOT NULL\) locks the entire table? \[It at least scans\]
-  * Use 2-step creation: ... NOT VALID and VALIDATE CONSTRAINT
+* Creating constraints \(inc. NOT NULL\) locks the entire table.
+  * Use 2-step creation: ... NOT VALID and VALIDATE CONSTRAINT - NOT VALID uses ACCESS EXCLUSIVE, but VALIDATE only uses SHARE UPDATE EXCLUSIVE and a full table scan.
 * Most `ALTER TABLE` operations \(including `ADD COLUMN`, `DROP COLUMN`\) require an `ACCESS EXCLUSIVE` lock which waits for ALL other queries to complete \(including `SELECT`!\)
   * Set a very low `lock_timeout` and `statement_timeout` \(&lt; 10 seconds\) to allow migration to fail without affecting normal operation.
   * Reduce size of transactions/queries; beware of SQLAlchemy's automatic start of transaction even on a first select.
