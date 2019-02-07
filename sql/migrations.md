@@ -8,6 +8,8 @@ An excellent article: [https://benchling.engineering/move-fast-and-migrate-thing
 
 * Adding a `NOT NULL` field , or one with a dynamic default value \(NB: &lt; Postgres 11\) causes the entire table and its indexes to be rewritten
   * Do multi-step deploy
+* Adding a new NOT NULL with DEFAULT applies default to all existing rows
+  * Add default after column is created applies it to new rows only
 * Removing a NOT NULL field can cause the ORM to read/write a non-existant field
   * Migrate to NULL before removing code
 * Creating an index locks the entire table, preventing writes
