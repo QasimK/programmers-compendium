@@ -29,7 +29,7 @@ _You aren't gonna need it_/_keep it simple stupid_ tells you _when_ to do someth
   * When to use: You cannot predict the future so "modifications may be done once, maybe twice, but not thrice before I used OCP"
 * Liskov Substitution Principle
   * "A _type_ may be replaced by its _sub-types_ without causing any harm to the program"
-  * Otherwise [your method must alter its behaviour](https://softwareengineering.stackexchange.com/questions/170222/what-can-go-wrong-if-the-liskov-substitution-principle-is-violated) by investigating the type of object its been given
+  * Otherwise [your method must alter its behaviour](https://softwareengineering.stackexchange.com/questions/170222/what-can-go-wrong-if-the-liskov-substitution-principle-is-violated) by investigating the type of object it has been given
   * It [works slightly differently in dynamic languages](https://stefanroock.wordpress.com/2010/11/08/the-liskov-substitution-principle-lsp-in-duck-typed-programming-languages/).
 * Interface Segregation Principle
   * ???
@@ -52,7 +52,5 @@ Better: `self.friend.dobla()`
 
 ## Tech Debt
 
-TBD: https://engineering.riotgames.com/news/taxonomy-tech-debt
-
-
+TBD: [https://engineering.riotgames.com/news/taxonomy-tech-debt](https://engineering.riotgames.com/news/taxonomy-tech-debt)
 
