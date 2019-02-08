@@ -10,11 +10,11 @@ Use `With CSV` for CSV files.
 \copy (Select * From foo) To 'test.csv' With BINARY;
 ```
 
-When dealing with XMLs \(NB: double spaces EVERY space\):
+XMLs:
 
-`CSV QUOTE AS ' '`
-
-This us better: `CSV QUOTE AS '|'`
+```
+\copy (SELECT xml_field FROM table_name) TO 'output.xml' WITH CSV QUOTE AS '|';
+```
 
 ## Bulk Insert with two columns matching sequence value
 

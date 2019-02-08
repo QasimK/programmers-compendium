@@ -33,8 +33,8 @@
 * [Query Summary](sql/query-summary.md)
 * [Joins](sql/joins.md)
 * [Trust](sql/trust.md)
-* [Snippets](sql/snippets.md)
 * [Migrations](sql/migrations.md)
+* [Snippets](sql/snippets.md)
 
 ## Linux
 
