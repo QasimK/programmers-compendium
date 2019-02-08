@@ -81,6 +81,8 @@ add_header X-XSS-Protection $x_xss_protection always;
 ```
 
 > TODO: X-XSS-Protection has been superseded with Content Security Policys \(CSPs\).
+>
+> TODO: Deny the use of browser features \(Feature-Policy\)
 
 ## Servers
 
