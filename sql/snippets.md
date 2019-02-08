@@ -10,7 +10,7 @@ Use `With CSV` for CSV files.
 \copy (Select * From foo) To 'test.csv' With BINARY;
 ```
 
-XMLs:
+XMLs, manually remove `|` from the front and end of the file:
 
 ```
 \copy (SELECT xml_field FROM table_name) TO 'output.xml' WITH CSV QUOTE AS '|';
