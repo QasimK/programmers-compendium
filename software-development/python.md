@@ -75,5 +75,19 @@ Python 3000:
 * Remember to index on ForeignKeys. Postgres does not do this automatically. MySQL always does this.
 * Remember to set `onupdate` and `ondelete` cascades on ForeignKeys.
 
+## Gotchas
+
+Probably the last one you will learn:
+
+```
+x = [1,2,3,4]
+lambdas = [
+   lambda: x[i]
+   for i in range(4)
+]
+
+[f() for f in lambdas]
+```
+
 
 
