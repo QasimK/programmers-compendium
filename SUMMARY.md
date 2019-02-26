@@ -56,6 +56,7 @@
 * [Reading Materials](core/misc.md)
 * [References](software-development/references.md)
 * [Talk Notes](core/talk-notes.md)
+* [Know Thy History](core/know-thy-history.md)
 
 ## IgnoreMe
 
