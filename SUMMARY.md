@@ -51,6 +51,10 @@
 * [uWSGI](linux/uwsgi.md)
 * [Kubernetes](linux/kubernetes.md)
 
+## Misc
+
+* [Audio](misc/audio.md)
+
 ## Appendix
 
 * [Reading Materials](core/misc.md)
