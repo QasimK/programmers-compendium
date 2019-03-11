@@ -1,6 +1,6 @@
 # Time
 
-Use [RFC3339](https://tools.ietf.org/html/rfc3339).
+Use [RFC 3339](https://tools.ietf.org/html/rfc3339) for dates and times, it is simpler than ISO 8601. However, it does not support durations.
 
 There is a good article that I need to fine. I think the rules were:
 
