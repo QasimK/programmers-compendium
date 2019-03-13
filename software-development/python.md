@@ -1,6 +1,6 @@
 # Python
 
-https://pypi.org/project/pipx/
+[https://pypi.org/project/pipx/](https://pypi.org/project/pipx/)
 
 Hey, there's already a [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/)! This is quite comprehensive on the Python _development_ basics.
 
@@ -71,6 +71,10 @@ Python 3000:
 ## Libraries
 
 * [passlib](https://passlib.readthedocs.io/)
+
+### Pytest
+
+See [my cheat sheet.](https://github.com/QasimK/learn-it/blob/master/pytest-cheat-sheet.md)
 
 ### SQLAlchemy
 
