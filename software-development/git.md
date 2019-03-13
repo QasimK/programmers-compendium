@@ -1,6 +1,8 @@
 # Git
 
-> Squash merging is terrible and awful. It destroys histories and trashes attempts at re-using a branch https://stackoverflow.com/a/14343784. It is especially a bad idea on a large branch because git blame is likely far less usable. It is useful to ensure all commits pass tests for git bisect though. git slap everyone who introduced it in GitHub/BitBucket UIs.
+> Sometimes it feels like [git doesn't make sense](/stevelosh.com/blog/2013/04/git-koans/).
+
+> Squash merging is terrible and awful. It destroys histories and trashes attempts at re-using a branch [https://stackoverflow.com/a/14343784](https://stackoverflow.com/a/14343784). It is especially a bad idea on a large branch because git blame is likely far less usable. It is useful to ensure all commits pass tests for git bisect though. git slap everyone who introduced it in GitHub/BitBucket UIs.
 
 There's a neat interactive branching tutorial somewhere...
 
