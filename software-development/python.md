@@ -81,6 +81,10 @@ See [my cheat sheet.](https://github.com/QasimK/learn-it/blob/master/pytest-chea
 * Remember to index on ForeignKeys. Postgres does not do this automatically. MySQL always does this.
 * Remember to set `onupdate` and `ondelete` cascades on ForeignKeys.
 
+### Pandas
+
+Understanding [SettingWithCopyWarning](https://towardsdatascience.com/understanding-settingwithcopywarning-7142952a01fa).
+
 ## Gotchas
 
 Probably the last one you will learn:
