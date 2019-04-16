@@ -31,6 +31,7 @@ Vagrant is easy if you use the default Virtualbox provider. And, apparently, imp
 Plugins:
 
 * [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) to keep VirtualBox's Guest Additions up-to-date on the Vagrant box
+* [vagrant-disksize](https://github.com/sprotheroe/vagrant-disksize/) to easily increase the size of your Virtualbox disk
 * [vagrant-share](https://www.vagrantup.com/docs/share/) to be able to share your container with others
 * [vagrant-lxc](https://github.com/fgrehm/vagrant-lxc/) for LXC boxes _that don't work_
 * [vagrant-notify-forwarder](https://github.com/mhallin/vagrant-notify-forwarder/) is _not reliable_
@@ -38,6 +39,10 @@ Plugins:
 Create a [merging custom Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) in `~/vagrant.d/`.
 
 If you encounter an issue with double port-forwarding \(i.e. a port-forward inside the guest and then using Vagrant's port-forward to forward it to your host\): [https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant](https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant). TODO: I have no idea what that is doing ATM.
+
+> \# Port Forward from local port 8000 to remote port 80, listening on all addresses so that Vagrant's port forwarding works.
+>
+> kubectl port-forward --address 0.0.0.0 8000:80
 
 ## Developing with Docker
 
