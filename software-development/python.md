@@ -70,7 +70,8 @@ Python 3000:
 
 ## Libraries
 
-* [passlib](https://passlib.readthedocs.io/)
+* [passlib](https://passlib.readthedocs.io/) - high-level secrets library
+* [pysnooper](https://github.com/cool-RR/pysnooper) - line-by-line print debugging
 
 ### Pytest
 
@@ -89,7 +90,7 @@ Understanding [SettingWithCopyWarning](https://towardsdatascience.com/understand
 
 Probably the last one you will learn:
 
-```
+```py
 x = [1,2,3,4]
 lambdas = [
    lambda: x[i]
