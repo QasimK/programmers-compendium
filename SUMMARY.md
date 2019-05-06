@@ -55,6 +55,7 @@
 ## Misc
 
 * [Audio](misc/audio.md)
+* [Encoding](misc/encoding.md)
 
 ## Appendix
 
