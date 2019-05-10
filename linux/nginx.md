@@ -82,9 +82,13 @@ add_header X-Frame-Options $x_frame_options always;
 add_header X-XSS-Protection $x_xss_protection always;
 ```
 
-> TODO: X-XSS-Protection has been superseded with Content Security Policys \(CSPs\).
+> Note:: X-XSS-Protection has been superseded with Content Security Policies \(CSPs\)
 >
-> TODO: Deny the use of browser features \(Feature-Policy\)
+> Note: X-Frame-Options has been superseded with the frame-ancestors CSP
+>
+> TODO: Deny the use of browser features \(Feature Policies\)
+>
+> TODO: Deny the use of cross-site features \(Content Security Policies\)
 
 ## Servers
 
