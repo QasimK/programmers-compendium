@@ -18,9 +18,15 @@ Learning: [https://hpbn.co/](https://hpbn.co/)
 
 ## Tools
 
+* [Mozilla Observatory](https://observatory.mozilla.org/) - web security checks \(also links to a couple of the below\)
 * [SSL Labs](https://www.ssllabs.com/ssltest/) - TLS **security** checker
 * [Hardenize](https://www.hardenize.com/) - domain/email/web **security** checks
 * [SecurityHeaders](https://securityheaders.io/) - **security** checks on HTTP headers
+
+## Web Security
+
+* Same-Origin Security.
+* CSRF
 
 
 
