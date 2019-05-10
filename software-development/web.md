@@ -25,7 +25,7 @@ Learning: [https://hpbn.co/](https://hpbn.co/)
 
 ## Web Security
 
-* Same-Origin Security.
+* Same-Origin Security. \(Related [CORS](https://stackoverflow.com/a/43973018/197488) - not really security, just DRM.\)
 * CSRF
 
 
