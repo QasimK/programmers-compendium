@@ -40,8 +40,10 @@ Learning: [https://hpbn.co/](https://hpbn.co/)
 * CSRF - server accepting requests it believe came from the user \(exploit server's trust in client\)
 * XSS - inject scripts into the attacked website to bypass SOP \(exploit client's trust in server - for XSS originating from server\)
   * Reflected XSS, Persistent XSS, Self-XSS.
+  * This game might be helpful: [https://xss-game.appspot.com/](https://xss-game.appspot.com/)
 * Clickjacking
 * Storage access \(cookies, sessionStorage, localStorage, IndexDB\)
+* Remember: many \(all?\) of these headers are only needed on rendered content \(HTML, not images\)
 
 
 
