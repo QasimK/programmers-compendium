@@ -31,10 +31,10 @@ Vagrant is easy if you use the default Virtualbox provider. And, apparently, imp
 Plugins:
 
 * [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) to keep VirtualBox's Guest Additions up-to-date on the Vagrant box
+* [vagrant-notify-forwarder](https://github.com/mhallin/vagrant-notify-forwarder/) for filesystem event forwarding _that is_ _not reliable_
 * [vagrant-disksize](https://github.com/sprotheroe/vagrant-disksize/) to easily increase the size of your Virtualbox disk
 * [vagrant-share](https://www.vagrantup.com/docs/share/) to be able to share your container with others _that I've never used_
 * [vagrant-lxc](https://github.com/fgrehm/vagrant-lxc/) for LXC boxes _that don't work_
-* [vagrant-notify-forwarder](https://github.com/mhallin/vagrant-notify-forwarder/) for filesystem event forwarding _that is_ _not reliable_
 
 Create a [merging custom Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) in `~/vagrant.d/`.
 
