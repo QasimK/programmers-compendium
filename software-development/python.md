@@ -1,6 +1,6 @@
 # Python
 
-[https://pypi.org/project/pipx/](https://pypi.org/project/pipx/)
+[https://pypi.org/project/pipx/](https://pypi.org/project/pipx/) - Run PyPi binaries in isolated environments.
 
 Hey, there's already a [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/)! This is quite comprehensive on the Python _development_ basics.
 
