@@ -2,7 +2,7 @@
 
 ## NNN
 
-The terminal file manager 
+The terminal file manager
 
 ## XDG-Mime
 
