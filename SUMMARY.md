@@ -18,6 +18,7 @@
 * [Architecture Patterns](software-development/architecture-patterns.md)
 * [APIs](software-development/apis.md)
 * [Agile](software-development/agile.md)
+* [Refactoring](software-development/refactoring.md)
 
 ## Programming
 
