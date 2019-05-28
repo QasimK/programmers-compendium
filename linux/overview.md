@@ -40,13 +40,13 @@
 Template:
 
 ```makefile
-##	help:	This.
+##    help:    This.
 .PHONY: help
 .DEFAULT: help
 help: Makefile
-#	Find all double comments and treat them as docstrings
-	@echo "make <command>"
-	@sed -n 's/^##//p' $<
+#    Find all double comments and treat them as docstrings
+    @echo "make <command>"
+    @sed -n 's/^##//p' $<
 
 ##      watch:  Hot-reload web-app server.
 .PHONY: watch
