@@ -35,5 +35,26 @@
 * ncdu \(du -smh, df -l\)
 * [nnn](https://github.com/jarun/nnn) - Terminal File Browser
 
+## Makefiles
+
+Template:
+
+```makefile
+##	help:	This.
+.PHONY: help
+.DEFAULT: help
+help: Makefile
+#	Find all double comments and treat them as docstrings
+	@echo "make <command>"
+	@sed -n 's/^##//p' $<
+
+##      watch:  Hot-reload web-app server.
+.PHONY: watch
+watch:
+#       Build files in case they changed while we were not watching
+        $(MAKE) build
+        watchman-make -p '*.py' 'Makefile' 'Dockerfile.web' '.dockerignore' -t build
+```
+
 
 
