@@ -15,6 +15,10 @@
 * [direnv](https://direnv.net/) - manage environment variables per-project
 * [fish](https://fishshell.com/)/[xiki](http://xiki.org/) - alternative shells
 
+### Packaging
+
+If you ever want to package something for Linux, [Repology](https://repology.org/) covers where.
+
 ## Web Tools
 
 * [crobtab.guru](https://crontab.guru/) - write cron schedules
