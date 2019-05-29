@@ -72,6 +72,7 @@ Python 3000:
 
 * [passlib](https://passlib.readthedocs.io/) - high-level secrets library
 * [pysnooper](https://github.com/cool-RR/pysnooper) - line-by-line print debugging
+* [boltons](https://boltons.readthedocs.io/en/latest/) - "boltons should be buitins" \(stdlib additions\)
 
 ### Pytest
 

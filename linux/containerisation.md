@@ -48,3 +48,10 @@ If you encounter an issue with double port-forwarding \(i.e. a port-forward insi
 
 [https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3](https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3)
 
+### Best Practises
+
+* Use [hadolint](https://github.com/hadolint/hadolint), a docker file linter
+* Use [tini](https://github.com/krallin/tini) as the correct `init` \(forwards signals and reaps zombies\) \([article](https://hynek.me/articles/docker-signals/)\)
+
+
+
