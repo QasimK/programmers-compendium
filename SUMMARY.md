@@ -28,6 +28,7 @@
 * [Networking](software-development/networking.md)
 * [Crypto](software-development/crypto.md)
 * [Time](software-development/time.md)
+* [Bash/sh](software-development/bashsh.md)
 
 ## SQL/DB
 
