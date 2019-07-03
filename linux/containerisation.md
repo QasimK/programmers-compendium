@@ -1,7 +1,7 @@
 # Containers
 
 1. Programming-level, e.g. Python's Virtualenv
-2. OS-level
+2. Kernel-level
    1. Application encapsulating:, e.g.Docker \(ephemeral, separate storage\)
    2. OS encapsulating, e.g. LXC, LXD, and kind-of chroot \(UNIX\)
 3. Hardware virtualisation
