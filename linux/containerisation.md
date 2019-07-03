@@ -48,7 +48,7 @@ config.ssh.extra_args = ["-D", "1632"]
 
 Using the Firefox extension [SmartProxy](https://addons.mozilla.org/en-GB/firefox/addon/smartproxy/), add the SOCKSv5 Proxy Server \(Vagrant; SOCKS5; 127.0.0.1; 1632\). Then when browsing to a particular `localhost:<port>`, click on the toolbar icon and enable "Enable proxy on `localhost:<port>`".
 
-It is also possible to connect the VM directly on `172.16.3.2`.
+It is also possible to connect the VM's shared private network directly on `172.16.3.2`.
 
 This is easier than forwarding each individual application \(which you may not know in advance\) with:
 
