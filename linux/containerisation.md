@@ -28,7 +28,7 @@ This is useful if you are working on conflicting projects, or want to keep your 
 
 Vagrant is easy if you use the default Virtualbox provider. And, apparently, impossible with vagrant-lxc :/
 
-Plugins:
+Plugins \(they have been a disaster for me\):
 
 * [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) to keep VirtualBox's Guest Additions up-to-date on the Vagrant box
 * [vagrant-notify-forwarder](https://github.com/mhallin/vagrant-notify-forwarder/) for filesystem event forwarding _that is_ _not reliable_
@@ -47,6 +47,8 @@ config.ssh.extra_args = ["-D", "1632"]
 ```
 
 Using the Firefox extension [SmartProxy](https://addons.mozilla.org/en-GB/firefox/addon/smartproxy/), add the SOCKSv5 Proxy Server \(Vagrant; SOCKS5; 127.0.0.1; 1632\). Then when browsing to a particular `localhost:<port>`, click on the toolbar icon and enable "Enable proxy on `localhost:<port>`".
+
+It is also possible to connect the VM directly on `172.16.3.2`.
 
 This is easier than forwarding each individual application \(which you may not know in advance\) with:
 
