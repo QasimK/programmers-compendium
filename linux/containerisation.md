@@ -33,10 +33,26 @@ Plugins:
 * [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) to keep VirtualBox's Guest Additions up-to-date on the Vagrant box
 * [vagrant-notify-forwarder](https://github.com/mhallin/vagrant-notify-forwarder/) for filesystem event forwarding _that is_ _not reliable_
 * [vagrant-disksize](https://github.com/sprotheroe/vagrant-disksize/) to easily increase the size of your Virtualbox disk
+  * `config.disksize.size = '20GB'`
 * [vagrant-share](https://www.vagrantup.com/docs/share/) to be able to share your container with others _that I've never used_
 * [vagrant-lxc](https://github.com/fgrehm/vagrant-lxc/) for LXC boxes _that don't work_
 
 Create a [merging custom Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) in `~/vagrant.d/`.
+
+Many applications inside the virtual machine will bind to `localhost` making them difficult to connect to from the host. We can configure a SOCKS5 proxy with SSH, and use a new profile of Firefox which always connect via that proxy.
+
+```ruby
+config.vm.network "private_network", ip: "172.16.3.2"
+config.ssh.extra_args = ["-D", "1632"]
+```
+
+This is easier than forwarding each individual application with:
+
+```ruby
+config.vm.network "forwarded_port", guest: 8000, host: 8000, host_ip: "127.0.0.1"
+```
+
+**Issue with Kubectl**
 
 If you encounter an issue with double port-forwarding \(i.e. a port-forward inside the guest and then using Vagrant's port-forward to forward it to your host\): [https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant](https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant). TODO: I have no idea what that is doing ATM.
 
