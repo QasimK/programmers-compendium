@@ -30,7 +30,7 @@ Vagrant is easy if you use the default Virtualbox provider. And, apparently, imp
 
 Plugins \(they have been a disaster for me\):
 
-* [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) to keep VirtualBox's Guest Additions up-to-date on the Vagrant box
+* [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) to keep VirtualBox's Guest Additions up-to-date on the Vagrant box _that started failing_
 * [vagrant-notify-forwarder](https://github.com/mhallin/vagrant-notify-forwarder/) for filesystem event forwarding _that is_ _not reliable_
 * [vagrant-disksize](https://github.com/sprotheroe/vagrant-disksize/) to easily increase the size of your Virtualbox disk
   * `config.disksize.size = '20GB'`
