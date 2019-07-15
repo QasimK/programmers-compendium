@@ -2,6 +2,10 @@
 
 [https://pgexercises.com/](https://pgexercises.com/)
 
+[http://tatiyants.com/pev/](http://tatiyants.com/pev/) - Explain Visualiser
+
+
+
 | Data Description Language \(DDL\) | Data Manipulation Language \(DML\) | Data Control Language \(DCL\) | Transaction Control Language \(TCL\) |
 | :--- | :--- | :--- | :--- |
 | CREATE/ALTER/DROP/TRUNCATE/RENAME | SELECT/INSERT/UPDATE/DELETE | GRANT/REVOKE | BEGIN/COMMIT/ROLLBACK/SAVEPOINT |
