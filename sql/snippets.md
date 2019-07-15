@@ -16,6 +16,28 @@ XMLs, manually remove `|` from the front and end of the file:
 \copy (SELECT xml_field FROM table_name) TO 'output.xml' WITH CSV QUOTE AS '|';
 ```
 
+### Disk Space
+
+Free up disk space:
+
+```terminal
+vacuumdb --all --full --freeze
+```
+
+List total table sizes \(including indexes\):
+
+```sql
+SELECT nspname || '.' || relname AS "relation",
+    pg_size_pretty(pg_total_relation_size(C.oid)) AS "total_size"
+  FROM pg_class C
+  LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
+  WHERE nspname NOT IN ('pg_catalog', 'information_schema')
+    AND C.relkind <> 'i'
+    AND nspname !~ '^pg_toast'
+  ORDER BY pg_total_relation_size(C.oid) DESC
+  LIMIT 20;
+```
+
 ## Bulk Insert with two columns matching sequence value
 
 > **Note this doesn't work **_**LOL**_**. **func.nextval\('outbound\_messages\_transaction\_id\_seq'\) + 1 may need to be -1, and I don't know how you can work out which one \(+1 or -1\) it should be. Apparently postgres has a column order, but it doesn't seem to be respected.
