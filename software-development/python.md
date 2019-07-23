@@ -37,12 +37,19 @@ Python 2 -&gt; 3: Strings/Bytes, Print, Super\(\) - new style classes, division.
 
 ## History
 
+Python 3.8
+
+* assignment expressions `if (n := len(a)) > 10:`
+* improved f-strings `f"{x*9 + 15=}"`
+* positional and keyword only parameters
+* multiprocessing.shared\_memory
+
 Python 3.7:
 
-* Dataclasses TBD: talk link.
+* dataclasses TBD: talk link.
 * contextvars
 * breakpoint\(\)
-* Postponed evaluation of type annotations
+* postponed evaluation of type annotations
 * dicts officially respect insertion-order
 * time - nanosecond resolution functions
 
@@ -93,6 +100,14 @@ See [my cheat sheet.](https://github.com/QasimK/learn-it/blob/master/pytest-chea
 ### Pandas
 
 Understanding [SettingWithCopyWarning](https://towardsdatascience.com/understanding-settingwithcopywarning-7142952a01fa).
+
+Raising it as an error \(`setup.cfg`\)
+
+```ini
+[tool:pytest]
+filterwarnings =
+    error::pandas.core.common.SettingWithCopyWarning
+```
 
 ## Gotchas
 
