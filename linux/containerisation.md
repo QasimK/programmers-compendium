@@ -66,7 +66,7 @@ If you encounter an issue with double port-forwarding \(i.e. a port-forward insi
 
 ## Developing with Docker
 
-* Use [tini](https://github.com/krallin/tini) for your applications.
+* Use [tini](https://github.com/krallin/tini) for your applications to handle signals \([article](https://hynek.me/articles/docker-signals/)\).
 
 [https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3](https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3)
 
