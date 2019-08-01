@@ -21,6 +21,7 @@ Python 2 -&gt; 3: Strings/Bytes, Print, Super\(\) - new style classes, division.
 
 ## Linting
 
+* black \([how-to](https://engineering.depop.com/implementing-python-black-on-a-legacy-codebase-35b37f10ce18)\)
 * flake8
   * pycodestyle \(formerly pep8\)
   * pyflakes
