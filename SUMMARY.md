@@ -54,11 +54,11 @@
 * [uWSGI](linux/uwsgi.md)
 * [Kubernetes](linux/kubernetes.md)
 * [GCloud](linux/gcloud.md)
+* [Postgres](linux/postgres.md)
 
 ## Misc
 
 * [Audio](misc/audio.md)
-* [Encoding](misc/encoding.md)
 
 ## Appendix
 

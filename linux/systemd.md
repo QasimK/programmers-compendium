@@ -1,7 +1,7 @@
 # Systemd Files
 
 > Ubuntu 16.04 does not support **user** SystemD services.
-
+>
 > "The only thing more complicated and confusing than systemd is the planet's ecosystem." - Me
 
 This page is useless.
@@ -36,7 +36,7 @@ Type=simple - default, must not fork, considered to started immediately.
 
 ## Targets
 
-What do theydothey do?
+What do they do they do?
 
 default.target
 
