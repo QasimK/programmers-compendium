@@ -108,6 +108,7 @@ Raising it as an error \(`setup.cfg`\)
 [tool:pytest]
 filterwarnings =
     error::pandas.core.common.SettingWithCopyWarning
+    error::FutureWarning
 ```
 
 ## Gotchas
