@@ -53,6 +53,7 @@ Python 3.7:
 * postponed evaluation of type annotations
 * dicts officially respect insertion-order
 * time - nanosecond resolution functions
+* `f"{number:,}`
 
 Python 3.6:
 
