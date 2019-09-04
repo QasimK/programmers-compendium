@@ -72,13 +72,15 @@ If you encounter an issue with double port-forwarding \(i.e. a port-forward insi
 >
 > kubectl port-forward --address 0.0.0.0 8000:80
 
-## Developing with Docker
+## Deploying with Docker
 
 * Use [tini](https://github.com/krallin/tini) for your applications to handle signals \([article](https://hynek.me/articles/docker-signals/)\).
+* Set `ENV PYTHONUNBUFFERED 1` to ensure all logs are always forwarded.
+* Compile the Python files `python -m compileall .`
+
+Recommended: [https://pythonspeed.com/docker/](https://pythonspeed.com/docker/)
 
 [https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3](https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3)
-
-[https://pythonspeed.com/docker/](https://pythonspeed.com/docker/)
 
 [https://cloud.google.com/solutions/best-practices-for-building-containers](https://cloud.google.com/solutions/best-practices-for-building-containers)
 
