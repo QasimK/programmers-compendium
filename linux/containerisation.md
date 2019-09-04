@@ -56,6 +56,14 @@ This is easier than forwarding each individual application \(which you may not k
 config.vm.network "forwarded_port", guest: 8000, host: 8000, host_ip: "127.0.0.1"
 ```
 
+**Issue with vagrant-vbguest**
+
+```
+  if Vagrant.has_plugin?("vagrant-vbguest")
+    config.vbguest.auto_update = false
+  end
+```
+
 **Issue with Kubectl**
 
 If you encounter an issue with double port-forwarding \(i.e. a port-forward inside the guest and then using Vagrant's port-forward to forward it to your host\): [https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant](https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant). TODO: I have no idea what that is doing ATM.
