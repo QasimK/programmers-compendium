@@ -29,6 +29,7 @@
 * [Crypto](software-development/crypto.md)
 * [Time](software-development/time.md)
 * [Bash/sh](software-development/bashsh.md)
+* [XML](software-development/xml.md)
 
 ## SQL/DB
 
