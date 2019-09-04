@@ -77,6 +77,7 @@ If you encounter an issue with double port-forwarding \(i.e. a port-forward insi
 * Use [tini](https://github.com/krallin/tini) for your applications to handle signals \([article](https://hynek.me/articles/docker-signals/)\).
 * Set `ENV PYTHONUNBUFFERED 1` to ensure all logs are always forwarded.
 * Compile the Python files `python -m compileall .`.
+* Use [multi-stage builds](https://gist.github.com/QasimK/6f28a8a7ace4fdd0a23e90a652b6c6d8) for very large Python projects.
 
 Recommended: [https://pythonspeed.com/docker/](https://pythonspeed.com/docker/)
 
