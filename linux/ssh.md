@@ -36,7 +36,7 @@ Host MACHINE1
 
 ## SSHD
 
-Test config with `sudo sshd -T`.
+Test config with `sudo sshd -T` before restarting the daemon.
 
 The following settings are ordered starting from the most significant, least invasive and easiest to setup:
 
