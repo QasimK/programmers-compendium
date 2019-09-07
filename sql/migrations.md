@@ -22,6 +22,10 @@ An excellent article: [https://benchling.engineering/move-fast-and-migrate-thing
 * Default ORM queries select all columns to populate the full object, this is a problem because...
 * DROP COLUMN hides column, and _gradually_, as writes occur, replaces it with NULLs to free up space.
 
+### Versions
+
+* v11 - you can add a new column with a default without causing a full table re-write
+
 ## Automated Checks
 
 * Check indexes are created concurrently
