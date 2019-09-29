@@ -7,9 +7,10 @@
   * Alt: [pet](https://github.com/knqyf263/pet/)
 * Use `.pam_environment` to [set environment variables](https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.pam_environment) in a cross-shell manner
 * [thefuck](https://github.com/nvbn/thefuck) corrects your previous console command
-* Controlling the [proliferation of dotfiles](https://wiki.archlinux.org/index.php/XDG_Base_Directory_support)
+* How to control the [proliferation of dotfiles](https://wiki.archlinux.org/index.php/XDG_Base_Directory_support)
 * \(A way-too-big list of tools to make an [awesome shell](https://github.com/alebcay/awesome-shell).\)
 * [ip cheat sheat](https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf) \(pdf\)
+* A check list of [things to know about the command line](https://github.com/jlevy/the-art-of-command-line)
 
 ## Development
 
