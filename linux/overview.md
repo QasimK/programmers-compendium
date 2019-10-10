@@ -36,6 +36,7 @@ If you ever want to package something for Linux, [Repology](https://repology.org
 * `pgrep` to search for PID by name.
 * `script` to record shell session in file \(and `cat` or  `less -R` to view\).
 * From `less` to edit, press `v`.
+* Use `type -a` not `which` as the [latter is problematic](https://old.reddit.com/r/archlinux/comments/de1er6/arch_linux_news_base_group_replaced_by_mandatory/f2ynnho/)
 
 ### Alternative Tools
 
