@@ -106,7 +106,23 @@ server {
 }
 ```
 
-### HTTPS Server
+### Default Server - Prevent non-SNI Traffic
+
+```nginx
+# HTTPS default server for non-SNI requests
+# Prevents an otherwise random public server certificate being leaked
+# Also captures SNI requests where we are not hosting that domain here
+server {
+    listen {{ public_ipv4 }}:443 default_server;
+    listen [{{ public_ipv6 }}]:443 default_server;
+    server_name _;
+    ssl_certificate /etc/ssl/certs/ssl-cert-snakeoil.pem;
+    ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+    return 444;
+}
+```
+
+### A HTTPS Server
 
 ```nginx
 server {
