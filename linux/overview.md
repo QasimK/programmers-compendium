@@ -48,7 +48,10 @@ If you ever want to package something for Linux, [Repology](https://repology.org
 Template:
 
 ```makefile
-##    help:    This.
+MAKEFLAGS += --warn-undefined-variables
+MAKEFLAGS += --no-builtin-rules
+
+##     help:   This.
 .PHONY: help
 .DEFAULT: help
 help: Makefile
@@ -56,12 +59,19 @@ help: Makefile
         @echo "make <command>"
         @sed -n 's/^##//p' $<
 
-##      watch:  Hot-reload web-app server.
+##     watch:  Hot-reload web-app server.
 .PHONY: watch
 watch:
 #       Build files in case they changed while we were not watching
         $(MAKE) build
         watchman-make -p '*.py' 'Makefile' 'Dockerfile.web' '.dockerignore' -t build
+
+
+##
+##Run make with VERBOSE=1 for additional output.
+$(VERBOSE).SILENT:
+# Delete targets on failure
+.DELETE_ON_ERROR:
 ```
 
 
