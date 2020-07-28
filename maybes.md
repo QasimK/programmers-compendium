@@ -20,6 +20,7 @@
   -&gt; User Host = \(Runas\) Command
 
   * Example \(placed after NO-NOPASSWD\): `%wheel ALL=(root) NOPASSWD:/usr/bin/pacmatic -Syu`
+* microservices.io
 
 Python Ecosystem
 
