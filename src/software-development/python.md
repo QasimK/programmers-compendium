@@ -12,7 +12,7 @@ GIL required to run bytecode, but not when waiting on I/O - can switch to differ
 
 Pure CPU: Process &lt;---&gt; Threads &lt;---&gt; Async: Pure I/O \(Many "Connections"/Slow I/O\).
 
-Async I/O clearly delineates the context switch locations.
+Async I/O clearly delineates the context switch locations, in theory.
 
 | Processes | Threads | Async I/O |
 | :--- | :--- | :--- |
@@ -86,6 +86,7 @@ Python 3000:
 * [passlib](https://passlib.readthedocs.io/) - high-level secrets library
 * [pysnooper](https://github.com/cool-RR/pysnooper) - line-by-line print debugging
 * [boltons](https://boltons.readthedocs.io/en/latest/) - "boltons should be buitins" \(stdlib additions\)
+* [freezegun]
 
 ### Pytest
 
@@ -108,13 +109,21 @@ def stop_network_calls(monkeypatch)
 
 ```
 
-Randomise timestamps:
+Randomise time-zones:
 
 ```py
 import os, random, pytest
-@pytest.fixture(autouse=True)
-def randomise_timezone(monkeypatch):
-    os.environ["TZ"] = random.choice(["Europe/London"])
+from _pytest.monkeypatch import MonkeyPatch
+
+@pytest.fixture(scope="session")
+def monkeysession():
+    mpatch = MonkeyPatch()
+    yield mpatch
+    mpatch.undo()
+
+@pytest.fixture(autouse=True, scope="session")
+def randomise_timezone(monkeysession):
+    monkeysession.setenv("TZ", random.choice(["Europe/London"]))
 ```
 
 ### SQLAlchemy
