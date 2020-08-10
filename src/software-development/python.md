@@ -1,8 +1,12 @@
 # Python
 
-**pipx **\([https://pypi.org/project/pipx/](https://pypi.org/project/pipx/)\)** **- execute binaries from Python packages in isolated environments.
+* Use [pipx](https://pypi.org/project/pipx/) to install environment management tools and scripts. (Execute binaries installed in isolated virtual environments.)
+* Use [Poetry](https://python-poetry.org/) to manage packaging and dependencies.
+
 
 Hey, there's already a [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/)! This is quite comprehensive on the Python _development_ basics.
+
+## GIL
 
 GIL required to run bytecode, but not when waiting on I/O - can switch to different thread. CPython has macros to release and re-aquire GIL which can be used if extension does not need to run python bytecode/do any kind of ref-count changes \(e.g. sleep, read/write files, network socket, numpy, image processing\(?\)\). Cannot share GIL in CPU-bound code. CPU-bound "check" every 100 ticks to allow switching. Note: I/O doesn't often block unless you are flushing - OS buffers. Note: Threads/Processes result in CPU context switches, while async does not.
 
@@ -85,7 +89,33 @@ Python 3000:
 
 ### Pytest
 
-See [my cheat sheet.](https://github.com/QasimK/learn-it/blob/master/pytest-cheat-sheet.md)
+See [my cheat sheet](https://github.com/QasimK/learn-it/blob/master/pytest-cheat-sheet.md).
+
+Useful plugins:
+
+* pytest-randomly
+* pytest-datadir
+* pytest-bdd
+
+Stop network calls:
+
+```py
+import socket
+def stop_network_calls(monkeypatch)
+    def _socket(*_, **__):
+        raise Exception()
+    monkeypatch.setattr(socket, "socket", _socket)
+
+```
+
+Randomise timestamps:
+
+```py
+import os, random, pytest
+@pytest.fixture(autouse=True)
+def randomise_timezone(monkeypatch):
+    os.environ["TZ"] = random.choice(["Europe/London"])
+```
 
 ### SQLAlchemy
 
