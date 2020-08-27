@@ -6,10 +6,7 @@ There is a good article that I need to fine. I think the rules were:
 
 * Be liberal in what you accept.
 * Store time as UTC
-* Store the symbolic time zone \(i.e. Europe/London\) if you need it. This includes DST in summer for example, while +01:00 does not.
+* Store the symbolic time zone \(i.e. "Europe/London"\) if you need to know about daylight savings for further calculations.
 * Return time in UTC, and let the presentation layer convert it to the user's local time.
 
-Examples: [http://www.creativedeletion.com/2015/01/28/falsehoods-programmers-date-time-zones.html](http://www.creativedeletion.com/2015/01/28/falsehoods-programmers-date-time-zones.html)
-
-
-
+Examples: <http://www.creativedeletion.com/2015/01/28/falsehoods-programmers-date-time-zones.html>

@@ -1,13 +1,13 @@
 # The Programmer's Compendium
 
-Let's do:
+Broken out into:
 
-* The underlying fundamentals of programming \(computer science\)
-* How-to develop software properly
-* Basic language switching
-  A SQL reference manual that actually makes sense
-* An overview of Linux and the environment your software sits in
-* Recipes for setting up or configuring particular software \(always at-risk of becoming outdated!\)
+* Recipes for setting up or using particular software/services
+* Details about particular topics
+* Rundown of Linux
+* Miscellaneous information about particular domains
+* General guidelines on developing software
+* Underlying fundamentals of programming
 
 Other resources include:
 

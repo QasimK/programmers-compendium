@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euox pipefail
+set -euxo pipefail
 
 REPO="$(git rev-parse --show-toplevel)"
 BUILD="${REPO}/book"
@@ -13,10 +13,11 @@ function finish {
 }
 trap finish EXIT
 
+cd "$REPO"
+git add --all 'src/'
 git commit -am "Update The Programmer's Compendium"
 env GIT_ALLOW_MASTER=1 git push
 
-cd "$REPO"
 mdbook clean
 mdbook build
 

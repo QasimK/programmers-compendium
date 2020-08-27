@@ -8,7 +8,7 @@ This page is useless.
 
 For example, create `/etc/systemd/system/my-ssh-monitor.service`
 
-```
+```ini
 [Unit]
 description=My SSH monitor
 Requires=network-online.target
