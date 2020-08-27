@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Maybes-Todos-Snippets - The Programmer's Compendium</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="My knowledge relating to software engineering.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">2.</strong> Core</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../core/sorting.html"><strong aria-hidden="true">2.1.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="../core/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">3.</strong> Software Development</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/principles.html"><strong aria-hidden="true">3.1.</strong> Principles</a></li><li class="chapter-item expanded "><a href="../software-development/design-patterns.html"><strong aria-hidden="true">3.2.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/anti-patterns.html"><strong aria-hidden="true">3.3.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="../software-development/how-to-mock.html"><strong aria-hidden="true">3.4.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../software-development/architecture-patterns.html"><strong aria-hidden="true">3.5.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/apis.html"><strong aria-hidden="true">3.6.</strong> APIs</a></li><li class="chapter-item expanded "><a href="../software-development/agile.html"><strong aria-hidden="true">3.7.</strong> Agile</a></li><li class="chapter-item expanded "><a href="../software-development/refactoring.html"><strong aria-hidden="true">3.8.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="../software-development/documentation.html"><strong aria-hidden="true">3.9.</strong> Documentation</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">4.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/python.html"><strong aria-hidden="true">4.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../software-development/web.html"><strong aria-hidden="true">4.2.</strong> Web</a></li><li class="chapter-item expanded "><a href="../software-development/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li><li class="chapter-item expanded "><a href="../software-development/networking.html"><strong aria-hidden="true">4.4.</strong> Networking</a></li><li class="chapter-item expanded "><a href="../software-development/crypto.html"><strong aria-hidden="true">4.5.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="../software-development/time.html"><strong aria-hidden="true">4.6.</strong> Time</a></li><li class="chapter-item expanded "><a href="../software-development/bashsh.html"><strong aria-hidden="true">4.7.</strong> Bash/sh</a></li><li class="chapter-item expanded "><a href="../software-development/xml.html"><strong aria-hidden="true">4.8.</strong> XML</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">5.</strong> SQL/DB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sql/databases.html"><strong aria-hidden="true">5.1.</strong> Databases</a></li><li class="chapter-item expanded "><a href="../sql/query-summary.html"><strong aria-hidden="true">5.2.</strong> Query Summary</a></li><li class="chapter-item expanded "><a href="../sql/joins.html"><strong aria-hidden="true">5.3.</strong> Joins</a></li><li class="chapter-item expanded "><a href="../sql/trust.html"><strong aria-hidden="true">5.4.</strong> Trust</a></li><li class="chapter-item expanded "><a href="../sql/migrations.html"><strong aria-hidden="true">5.5.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="../sql/snippets.html"><strong aria-hidden="true">5.6.</strong> Snippets</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">6.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linux/overview.html"><strong aria-hidden="true">6.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../linux/systemd.html"><strong aria-hidden="true">6.2.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="../linux/shells.html"><strong aria-hidden="true">6.3.</strong> Shells</a></li><li class="chapter-item expanded "><a href="../linux/ssh.html"><strong aria-hidden="true">6.4.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="../linux/containerisation.html"><strong aria-hidden="true">6.5.</strong> Containers</a></li><li class="chapter-item expanded "><a href="../linux/terminal.html"><strong aria-hidden="true">6.6.</strong> Terminal Pro</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">7.</strong> Recipes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../recipes/nginx.html"><strong aria-hidden="true">7.1.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../recipes/uwsgi.html"><strong aria-hidden="true">7.2.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="../recipes/kubernetes.html"><strong aria-hidden="true">7.3.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="../recipes/gcloud.html"><strong aria-hidden="true">7.4.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="../recipes/postgres.html"><strong aria-hidden="true">7.5.</strong> Postgres</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">8.</strong> Misc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../misc/audio.html"><strong aria-hidden="true">8.1.</strong> Audio</a></li><li class="chapter-item expanded "><a href="../misc/encoding.html"><strong aria-hidden="true">8.2.</strong> Encoding</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/reading-materials.html"><strong aria-hidden="true">9.1.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="../appendix/references.html"><strong aria-hidden="true">9.2.</strong> References</a></li><li class="chapter-item expanded "><a href="../appendix/talk-notes.html"><strong aria-hidden="true">9.3.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="../appendix/know-thy-history.html"><strong aria-hidden="true">9.4.</strong> Know Thy History</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../ignore-me/maybes.html" class="active">Maybes-Todos-Snippets</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">The Programmer's Compendium</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li>
+<p>Socat - Create a listening service that forwards to a service inside a network namespace (socat is amazing): <code>/usr/bin/socat UNIX-LISTEN:/run/transmission.sock,fork exec:'ip netns exec NETNS socat STDIO tcp-connect\:127.0.0.1\:8080',nofork</code></p>
+<ul>
+<li>HTTP Client -&gt; [Unix Socket Server] ---- | Network Namespace Barrier | ----&gt; HTTP Server (localhost listening)</li>
+</ul>
+</li>
+<li>
+<p>strace -p PID - Look at calls between the process and the kernel</p>
+</li>
+<li>
+<p>gdb, python-dbg - Look at stack traces live</p>
+</li>
+<li>
+<p>TIL: <a href="https://news.ycombinator.com/item?id=17083879">https://news.ycombinator.com/item?id=17083879</a> &quot;My registrar suspended my domain because an abusive user was using a subdomain for phishing&quot;</p>
+</li>
+<li>
+<p>Make Vim respect XDG - <a href="https://tlvince.com/vim-respect-xdg">https://tlvince.com/vim-respect-xdg</a></p>
+</li>
+<li>
+<p>Write scripts, just flipping write them! <a href="https://www.youtube.com/watch?v=Jd8ulMb6_ls">https://www.youtube.com/watch?v=Jd8ulMb6_ls</a> &quot;Solve Your Problem with Sloppy Python&quot; @Larry Hastings</p>
+</li>
+<li>
+<p>A product manager can buy software from their team, but they can also buy information like, &quot;Is X possible?&quot; or &quot;How many points to build Y?&quot; or &quot;How much support would be reduced if we did Z?&quot;.</p>
+</li>
+<li>
+<p>Fira code for this ligatures: <a href="https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e">https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e</a></p>
+</li>
+<li>
+<p><a href="http://learnyouanagda.liamoc.net/pages/introduction.html">http://learnyouanagda.liamoc.net/pages/introduction.html</a></p>
+</li>
+<li>
+<p>camelCase, PascalCase, snake_case, kebab-case, CAPS_CASE.</p>
+</li>
+<li>
+<p>Sudoers:<code>pccuser ALL=(ALL:ALL) NOPASSWD:/path/to/command &quot;&quot;</code>
+pcuser = user or %group we are giving permission to
+ALL= is the host (ALL works unless you are sharing file across hosts)
+(ALL:ALL) is (user-we-can-command-as:group-we-can-command-as), i.e. sudo -u user -g group. If omitted only root. Can use just (ALL)
+NOPASSWD: is tags
+command may be &quot;ALL&quot;.
+&quot;&quot; prevents command parameters (do not use when specifying parameters)</p>
+<p>-&gt; User Host = (Runas) Command</p>
+<ul>
+<li>Example (placed after NO-NOPASSWD): <code>%wheel ALL=(root) NOPASSWD:/usr/bin/pacmatic -Syu</code></li>
+</ul>
+</li>
+<li>
+<p>microservices.io</p>
+</li>
+</ul>
+<h2><a class="header" href="#python-ecosystem" id="python-ecosystem">Python Ecosystem</a></h2>
+<ul>
+<li>stdlib 3.7 dataclasses (<a href="https://www.youtube.com/watch?v=T-TwcmT6Rcw">https://www.youtube.com/watch?v=T-TwcmT6Rcw</a> &quot;Dataclasses&quot; @Raymond Hettinger)
+<ul>
+<li>previously and still alternatively: attrs lib (has validators, converters and a few other features)</li>
+</ul>
+</li>
+<li>pipenv (<a href="https://www.youtube.com/watch?v=GBQAKldqgZs">https://www.youtube.com/watch?v=GBQAKldqgZs</a> &quot;Pipenv&quot; @Kenneth Reitz)</li>
+<li>pytest</li>
+<li>typing: (mypy or pyre, MonkeyType) (<a href="https://www.youtube.com/watch?v=pMgmKJyWKn8">https://www.youtube.com/watch?v=pMgmKJyWKn8</a> &quot;Real World&quot; @Carl Meyer)</li>
+<li>Instagram 2018 1.5mil lines of Python</li>
+<li>linting complete: <a href="https://jeffknupp.com/blog/2016/12/09/how-python-linters-will-save-your-large-python-project/">https://jeffknupp.com/blog/2016/12/09/how-python-linters-will-save-your-large-python-project/</a>
+<ul>
+<li>Create based on project Daedalus.</li>
+</ul>
+</li>
+<li><a href="https://awesome-python.com/">https://awesome-python.com/</a></li>
+</ul>
+<p><a href="https://github.com/ambv/black">https://github.com/ambv/black</a> - pycodestyle auto</p>
+<h2><a class="header" href="#javascript-ecosystem" id="javascript-ecosystem">JavaScript Ecosystem</a></h2>
+<ul>
+<li><a href="https://prettier.io/">https://prettier.io/</a> (there was another opinionated one?)
+<ul>
+<li><a href="https://standardjs.com/">https://standardjs.com/</a></li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#personality" id="personality">Personality</a></h2>
+<ul>
+<li>
+<p>Be likeable - <a href="https://news.ycombinator.com/item?id=16883882">https://news.ycombinator.com/item?id=16883882</a></p>
+</li>
+<li>
+<p>Don't be a hero - <a href="https://al3x.net/posts/2010/01/09/dont-be-a-hero.html">https://al3x.net/posts/2010/01/09/dont-be-a-hero.html</a></p>
+</li>
+<li>
+<p>On how to build an engineering culture - <a href="http://firstround.com/review/why-firing-brilliant-assholes-is-required-to-build-a-great-engineering-culture/">http://firstround.com/review/why-firing-brilliant-assholes-is-required-to-build-a-great-engineering-culture/</a></p>
+</li>
+<li>
+<p>How to apologise(!). <a href="https://www.thecut.com/2017/06/these-apology-critics-want-to-teach-you-how-to-say-sorry.html">Source</a></p>
+</li>
+<li>
+<p>An expression of regret, i.e. &quot;I'm sorry&quot;</p>
+</li>
+<li>
+<p>An explanation (but not a justification)</p>
+</li>
+<li>
+<p>An acknowledgement of responsibility (most important)</p>
+</li>
+<li>
+<p>A declaration of repentance</p>
+</li>
+<li>
+<p>An offer of repair</p>
+</li>
+<li>
+<p>A request for forgiveness (least importance)</p>
+</li>
+</ul>
+<p>Don't say: &quot;IF&quot;, &quot;I regret&quot;, Don't use passive voice. Say how you're going to make sure this doesn't happen again.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../appendix/know-thy-history.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../appendix/know-thy-history.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

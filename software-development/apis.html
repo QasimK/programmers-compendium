@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>APIs - The Programmer's Compendium</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="My knowledge relating to software engineering.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">2.</strong> Core</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../core/sorting.html"><strong aria-hidden="true">2.1.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="../core/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">3.</strong> Software Development</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/principles.html"><strong aria-hidden="true">3.1.</strong> Principles</a></li><li class="chapter-item expanded "><a href="../software-development/design-patterns.html"><strong aria-hidden="true">3.2.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/anti-patterns.html"><strong aria-hidden="true">3.3.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="../software-development/how-to-mock.html"><strong aria-hidden="true">3.4.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../software-development/architecture-patterns.html"><strong aria-hidden="true">3.5.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/apis.html" class="active"><strong aria-hidden="true">3.6.</strong> APIs</a></li><li class="chapter-item expanded "><a href="../software-development/agile.html"><strong aria-hidden="true">3.7.</strong> Agile</a></li><li class="chapter-item expanded "><a href="../software-development/refactoring.html"><strong aria-hidden="true">3.8.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="../software-development/documentation.html"><strong aria-hidden="true">3.9.</strong> Documentation</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">4.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/python.html"><strong aria-hidden="true">4.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../software-development/web.html"><strong aria-hidden="true">4.2.</strong> Web</a></li><li class="chapter-item expanded "><a href="../software-development/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li><li class="chapter-item expanded "><a href="../software-development/networking.html"><strong aria-hidden="true">4.4.</strong> Networking</a></li><li class="chapter-item expanded "><a href="../software-development/crypto.html"><strong aria-hidden="true">4.5.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="../software-development/time.html"><strong aria-hidden="true">4.6.</strong> Time</a></li><li class="chapter-item expanded "><a href="../software-development/bashsh.html"><strong aria-hidden="true">4.7.</strong> Bash/sh</a></li><li class="chapter-item expanded "><a href="../software-development/xml.html"><strong aria-hidden="true">4.8.</strong> XML</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">5.</strong> SQL/DB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sql/databases.html"><strong aria-hidden="true">5.1.</strong> Databases</a></li><li class="chapter-item expanded "><a href="../sql/query-summary.html"><strong aria-hidden="true">5.2.</strong> Query Summary</a></li><li class="chapter-item expanded "><a href="../sql/joins.html"><strong aria-hidden="true">5.3.</strong> Joins</a></li><li class="chapter-item expanded "><a href="../sql/trust.html"><strong aria-hidden="true">5.4.</strong> Trust</a></li><li class="chapter-item expanded "><a href="../sql/migrations.html"><strong aria-hidden="true">5.5.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="../sql/snippets.html"><strong aria-hidden="true">5.6.</strong> Snippets</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">6.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linux/overview.html"><strong aria-hidden="true">6.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../linux/systemd.html"><strong aria-hidden="true">6.2.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="../linux/shells.html"><strong aria-hidden="true">6.3.</strong> Shells</a></li><li class="chapter-item expanded "><a href="../linux/ssh.html"><strong aria-hidden="true">6.4.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="../linux/containerisation.html"><strong aria-hidden="true">6.5.</strong> Containers</a></li><li class="chapter-item expanded "><a href="../linux/terminal.html"><strong aria-hidden="true">6.6.</strong> Terminal Pro</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">7.</strong> Recipes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../recipes/nginx.html"><strong aria-hidden="true">7.1.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../recipes/uwsgi.html"><strong aria-hidden="true">7.2.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="../recipes/kubernetes.html"><strong aria-hidden="true">7.3.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="../recipes/gcloud.html"><strong aria-hidden="true">7.4.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="../recipes/postgres.html"><strong aria-hidden="true">7.5.</strong> Postgres</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">8.</strong> Misc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../misc/audio.html"><strong aria-hidden="true">8.1.</strong> Audio</a></li><li class="chapter-item expanded "><a href="../misc/encoding.html"><strong aria-hidden="true">8.2.</strong> Encoding</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/reading-materials.html"><strong aria-hidden="true">9.1.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="../appendix/references.html"><strong aria-hidden="true">9.2.</strong> References</a></li><li class="chapter-item expanded "><a href="../appendix/talk-notes.html"><strong aria-hidden="true">9.3.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="../appendix/know-thy-history.html"><strong aria-hidden="true">9.4.</strong> Know Thy History</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">The Programmer's Compendium</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#apis" id="apis">APIs</a></h1>
+<p>RESTful API, HTTP/Web API, TCP/Socket API - RPCs</p>
+<h2><a class="header" href="#rest" id="rest">REST</a></h2>
+<p>A set of patterns and guidelines (a software architectural style). The transport protocol is not defined, but universally REST is used as REST-over-HTTP.</p>
+<p>A RESTful API<sup class="footnote-reference"><a href="#1">1</a></sup> is about <em>resources</em><sup class="footnote-reference"><a href="#2">2</a></sup><em>,</em> where resources are <em>hypermedia</em>. Note that URLs are resources (not verbs/actions). You should spend your time defining the <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">media types</a> used for resource representations, which includes the <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relations</a> that the resource may contain.</p>
+<p>The resources should not depend on the underlying domain/implementation objects. Create resources that make sense in the context of the API - they can be anything you can think of, for example a <em>process</em> can be a resource, especially if you want to ask questions about the state of the process.</p>
+<p>HATEOAS means clients know one entry point (the bookmark) and the media types used for resource representations beforehand. What does the entry point return? In theory this allows you to control your namespace at will (i.e. changing object hierarchies or resource names at will); in practise clients may hardcode URLs and you need backwards-compatibility during the transition to a new URL namespace anyway. It also allows you to specify actions that may dynamically change depending on the resource's state. You may want to use <a href="https://tools.ietf.org/html/rfc5988" title="IETF RFC describing link relations between resources">links in headers</a>. In practise, decisions are made when the api integration code is written, not at run-time, as opposed to how we use links in web. HATEOAS requires hypermedia-aware media types such as HTML, Atom and SVG - hyperlinks, which XML and JSON don't define though there certain extensions to these that do. It genuinely puts theory over practise, and as it is uncommon it is actually slightly developer unfriendly.</p>
+<p>Version via content-type headers: <code>application/vnd.mycompany.myapp.myresource+json; version=1.0</code> (or just a completely custom header); or inside the URL (hostname, <strong>path</strong> or query parameter). Note that, <code>application/json</code> is indeed a media type, but it is incomplete because it would only describe the data format, while (almost always) special processing is required for the content. Roy Fieldings says to version inside the hostname as the next version is a new system.</p>
+<h3><a class="header" href="#pragmatic-advice" id="pragmatic-advice">Pragmatic Advice</a></h3>
+<ul>
+<li>Don't use HATEOAS.</li>
+<li>Version inside the URL path, <code>/api/v1/</code>.</li>
+<li>Use the <code>Accept</code> HTTP header (and perhaps a query parameter) to change the media type of the response, e.g. XML. (Perhaps even an extension <code>/123.json</code>.)</li>
+<li>Requests should be URL-encoded by default, JSON-encoded requests should require <code>Content-Type: application/json</code>.</li>
+<li>Use HTTP status codes. Consider: 200, 201, 202, 204, 301, 304, 400, 401, 403, 404, 405, 409, 410, 412, 415, 422, 429.</li>
+<li>Use the <code>Location</code> header for 201.</li>
+<li>Specify a consistent error response on 4xx which includes a code, a human-readable message, and in the case of validation errors, a list of them.</li>
+<li>Use explicit <code>Idempotency-Key</code>  HTTP headers for POST when necessary. (NB: every write should be idempotent due to network partitions.)</li>
+<li>Prevent race-conditions with <code>ETag</code> and <code>If-Match</code> headers.</li>
+<li>Always use plural forms for collections even when it doesn't make sense, e.g. <code>/people</code>.</li>
+<li>Allow nested objects to be expanded, e.g. with an <code>?expand[]=friends.name</code> query parameter.</li>
+<li>Allow fields to be explicitly specified, e.g. with a <code>?fields[]=age</code> query parameter.</li>
+<li>Handle filtering, sorting and searching on collections via query parameters, e.g. <code>/people?q=john&amp;state=active&amp;sort[]=name,-date</code>. (i.e. not hierarchical sub-paths)</li>
+<li>Consider aliasing query common parameters as a sub-resource path.</li>
+<li>Avoid envelopes - HTTP already has them. For example, for pagination use links-in-headers, e.g. <code>Link: &lt;https://example.com/v1/people?page=3&gt;; rel=&quot;next&quot;, &lt;https://example.com/v1/people?page=50&gt;; rel=&quot;last&quot;</code> (first, last, next, previous), and a custom HTTP header for the total count like <code>X-Total-Count</code> .</li>
+<li>How to paginate exactly?</li>
+<li>Use POST/PUT/PATCH appropriately.</li>
+<li>Use POST on collections to insert. Use PUT (idempotent) on specific resource path to create/update, and PATCH for partial updates.</li>
+<li>PUT/POST/PATCH should return the new resource representation. In the case of HTTP 201, use the <code>Location</code> header.</li>
+<li>If rate-limiting, use headers like <code>X-Rate-Limit-Limit</code> , <code>X-Rate-Limit-Remaining</code> , and <code>X-Rate-Limit-Reset</code>  (in seconds).</li>
+<li>Use HTTP Basic Auth, if possible.</li>
+<li>Use HTTP caching, e.g. <code>ETag</code> , and <code>Last-Modified</code> (with the appropriate vary and privacy settings).</li>
+<li>Return pretty (indented) responses (gzip covers size concerns).</li>
+<li>Return a request ID used for support queries as a HTTP header.</li>
+<li>Documentation should show examples of complete request-response cycles, including copy-and-pastable code.</li>
+<li>Clients should be informed of deprecation schedules (in the docs) and of updates (through blogs/changelogs/mailing lists).</li>
+<li>When all else fails, and you really need an action, PATCH a field on the resource, use a sub-resource path, or, in extreme cases, create a new non-RESTful endpoint.</li>
+</ul>
+<p>Alternative: GraphQL (see <a href="https://githubengineering.com/the-github-graphql-api/">GitHub's blog post</a>).</p>
+<p>TBD: <a href="https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling">REST without PUT and PATCH</a>. The idea that clients shouldn't even manipulate the resource representation directly, but instead signal intents via new creation or update resources, e.g. an intent to change the resource, ChangeOfName vs PATCH person.name. The former allows for clear auditing/question asking of the process, eventual consistency and</p>
+<p>Representational State Transfer (REST):</p>
+<ul>
+<li>separates concerns - data storage from user interface - client-server, allowing components to evolve separately.</li>
+<li>is stateless - the request must contain all the information and cannot take advantage of stored context on the server, allowing for increased reliability (eases recovery), visibility (eases debugging) and scalability (no persistent state on server to preserve)</li>
+<li>has a cache</li>
+<li>uniform interface - <em><strong>simplifies development despite inefficiency due to standardised formats</strong></em></li>
+<li>layered (e.g. load-balancers)</li>
+</ul>
+<h3><a class="header" href="#examples" id="examples">Examples</a></h3>
+<ul>
+<li><a href="https://www.twilio.com/docs/usage/api">Twilio</a></li>
+<li>Stripe</li>
+</ul>
+<h3><a class="header" href="#safety" id="safety">Safety</a></h3>
+<p>Safe: No side-effects (no server state change beyond trivial things like logging); Idempotent: Safely Repeatable.</p>
+<p>Pure Read [REST:GET] - Safe</p>
+<p>Stateful Reads [GET] - pure functions that need computational resources of server; cursor in databases; logging/analytics/paywalls; rate limiting APIs.</p>
+<p><em><strong>Idempotent Write</strong></em> [PUT/DELETE] - you can safely throw these at the server.</p>
+<p>Non-idempotent Write (dangerous) [POST-made idempotent with UUID] - in the event of a network partition you could have a serious problem.</p>
+<h2><a class="header" href="#versioning-pattern" id="versioning-pattern">Versioning Pattern</a></h2>
+<p>Adapt new response to old response - pipeline, infinite support. See stripe &lt;TBD&gt;</p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>Originally described by Roy Fielding in his <a href="https://www.ics.uci.edu/%7Efielding/pubs/dissertation/rest_arch_style.htm">dissertation</a> in 2000</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>The exact meanings of words like &quot;representation&quot; are described in Fielding's <a href="https://www.ics.uci.edu/%7Efielding/pubs/dissertation/rest_arch_style.htm#tab_5_1">REST data elements table</a></p>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../software-development/architecture-patterns.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../software-development/agile.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../software-development/architecture-patterns.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../software-development/agile.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Containers - The Programmer's Compendium</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="My knowledge relating to software engineering.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">2.</strong> Core</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../core/sorting.html"><strong aria-hidden="true">2.1.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="../core/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">3.</strong> Software Development</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/principles.html"><strong aria-hidden="true">3.1.</strong> Principles</a></li><li class="chapter-item expanded "><a href="../software-development/design-patterns.html"><strong aria-hidden="true">3.2.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/anti-patterns.html"><strong aria-hidden="true">3.3.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="../software-development/how-to-mock.html"><strong aria-hidden="true">3.4.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../software-development/architecture-patterns.html"><strong aria-hidden="true">3.5.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/apis.html"><strong aria-hidden="true">3.6.</strong> APIs</a></li><li class="chapter-item expanded "><a href="../software-development/agile.html"><strong aria-hidden="true">3.7.</strong> Agile</a></li><li class="chapter-item expanded "><a href="../software-development/refactoring.html"><strong aria-hidden="true">3.8.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="../software-development/documentation.html"><strong aria-hidden="true">3.9.</strong> Documentation</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">4.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/python.html"><strong aria-hidden="true">4.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../software-development/web.html"><strong aria-hidden="true">4.2.</strong> Web</a></li><li class="chapter-item expanded "><a href="../software-development/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li><li class="chapter-item expanded "><a href="../software-development/networking.html"><strong aria-hidden="true">4.4.</strong> Networking</a></li><li class="chapter-item expanded "><a href="../software-development/crypto.html"><strong aria-hidden="true">4.5.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="../software-development/time.html"><strong aria-hidden="true">4.6.</strong> Time</a></li><li class="chapter-item expanded "><a href="../software-development/bashsh.html"><strong aria-hidden="true">4.7.</strong> Bash/sh</a></li><li class="chapter-item expanded "><a href="../software-development/xml.html"><strong aria-hidden="true">4.8.</strong> XML</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">5.</strong> SQL/DB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sql/databases.html"><strong aria-hidden="true">5.1.</strong> Databases</a></li><li class="chapter-item expanded "><a href="../sql/query-summary.html"><strong aria-hidden="true">5.2.</strong> Query Summary</a></li><li class="chapter-item expanded "><a href="../sql/joins.html"><strong aria-hidden="true">5.3.</strong> Joins</a></li><li class="chapter-item expanded "><a href="../sql/trust.html"><strong aria-hidden="true">5.4.</strong> Trust</a></li><li class="chapter-item expanded "><a href="../sql/migrations.html"><strong aria-hidden="true">5.5.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="../sql/snippets.html"><strong aria-hidden="true">5.6.</strong> Snippets</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">6.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linux/overview.html"><strong aria-hidden="true">6.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../linux/systemd.html"><strong aria-hidden="true">6.2.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="../linux/shells.html"><strong aria-hidden="true">6.3.</strong> Shells</a></li><li class="chapter-item expanded "><a href="../linux/ssh.html"><strong aria-hidden="true">6.4.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="../linux/containerisation.html" class="active"><strong aria-hidden="true">6.5.</strong> Containers</a></li><li class="chapter-item expanded "><a href="../linux/terminal.html"><strong aria-hidden="true">6.6.</strong> Terminal Pro</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">7.</strong> Recipes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../recipes/nginx.html"><strong aria-hidden="true">7.1.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../recipes/uwsgi.html"><strong aria-hidden="true">7.2.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="../recipes/kubernetes.html"><strong aria-hidden="true">7.3.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="../recipes/gcloud.html"><strong aria-hidden="true">7.4.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="../recipes/postgres.html"><strong aria-hidden="true">7.5.</strong> Postgres</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">8.</strong> Misc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../misc/audio.html"><strong aria-hidden="true">8.1.</strong> Audio</a></li><li class="chapter-item expanded "><a href="../misc/encoding.html"><strong aria-hidden="true">8.2.</strong> Encoding</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/reading-materials.html"><strong aria-hidden="true">9.1.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="../appendix/references.html"><strong aria-hidden="true">9.2.</strong> References</a></li><li class="chapter-item expanded "><a href="../appendix/talk-notes.html"><strong aria-hidden="true">9.3.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="../appendix/know-thy-history.html"><strong aria-hidden="true">9.4.</strong> Know Thy History</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">The Programmer's Compendium</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#containers" id="containers">Containers</a></h1>
+<ol>
+<li>Programming-level, e.g. Python's Virtualenv</li>
+<li>Kernel-level
+<ol>
+<li>Application encapsulating:, e.g.Docker (ephemeral, separate storage)</li>
+<li>OS encapsulating, e.g. LXC, LXD, and kind-of chroot (UNIX)</li>
+</ol>
+</li>
+<li>Hardware virtualisation
+<ol>
+<li>Heavyweight OS (Type 2 hosted hypervisor), e.g. Vagrant (depending on back-end), Virtualbox</li>
+<li>(Type 1 bare metal) Hypervisor, e.g. KVM, Hyper-V</li>
+</ol>
+</li>
+</ol>
+<p>Docker, LXC, LXD (uses LXC) all use, on Linux, Linux cgroups and namespaces(net, user, pid, ipc, cgroup).</p>
+<p>Kubernetes can be used for orchestration.</p>
+<p>You also have things like Firejail, Snap/Flatpak, and AppImage.</p>
+<p>Containers may conflate:</p>
+<ul>
+<li>Security via isolation</li>
+<li>Packaging dependencies</li>
+<li>Efficient resource utilisation</li>
+</ul>
+<h2><a class="header" href="#developing-with-vagrant" id="developing-with-vagrant">Developing with Vagrant</a></h2>
+<blockquote>
+<p>Consider LXD as a lightweight, non-portable alternative.</p>
+</blockquote>
+<p>This is useful if you are working on conflicting projects, or want to keep your computer tidy. Keep your setup on your host (text editor and IDE appliations and their config files), and run the project (any executables) within the container. A shared folder can be used to store the repository.</p>
+<p>Vagrant is easy if you use the default Virtualbox provider. And, apparently, impossible with vagrant-lxc :/</p>
+<p>Plugins (they have been a disaster for me):</p>
+<ul>
+<li><a href="https://github.com/dotless-de/vagrant-vbguest">vagrant-vbguest</a> to keep VirtualBox's Guest Additions up-to-date on the Vagrant box <em>that started failing</em></li>
+<li><a href="https://github.com/mhallin/vagrant-notify-forwarder/">vagrant-notify-forwarder</a> for filesystem event forwarding <em>that is</em> <em>not reliable</em></li>
+<li><a href="https://github.com/sprotheroe/vagrant-disksize/">vagrant-disksize</a> to easily increase the size of your Virtualbox disk
+<ul>
+<li><code>config.disksize.size = '20GB'</code></li>
+</ul>
+</li>
+<li><a href="https://www.vagrantup.com/docs/share/">vagrant-share</a> to be able to share your container with others <em>that I've never used</em></li>
+<li><a href="https://github.com/fgrehm/vagrant-lxc/">vagrant-lxc</a> for LXC boxes <em>that don't work</em></li>
+</ul>
+<p>Create a <a href="https://www.vagrantup.com/docs/vagrantfile/">merging custom Vagrantfile</a> in <code>~/vagrant.d/</code>.</p>
+<p>Many applications inside the virtual machine will bind to <code>localhost</code> making them difficult to connect to from the host. We can configure a SOCKS5 proxy with SSH, and use a new profile of Firefox which always connect via that proxy.</p>
+<pre><code class="language-ruby">config.vm.network &quot;private_network&quot;, ip: &quot;172.16.3.2&quot;
+config.ssh.extra_args = [&quot;-D&quot;, &quot;1632&quot;]
+</code></pre>
+<p>Using the Firefox extension <a href="https://addons.mozilla.org/en-GB/firefox/addon/smartproxy/">SmartProxy</a>, add the SOCKSv5 Proxy Server (Vagrant; SOCKS5; 127.0.0.1; 1632). Then when browsing to a particular <code>localhost:&lt;port&gt;</code>, click on the toolbar icon and enable &quot;Enable proxy on <code>localhost:&lt;port&gt;</code>&quot;.</p>
+<p>It is also possible to connect the VM's shared private network directly on <code>172.16.3.2</code>.</p>
+<p>This is easier than forwarding each individual application (which you may not know in advance) with:</p>
+<pre><code class="language-ruby">config.vm.network &quot;forwarded_port&quot;, guest: 8000, host: 8000, host_ip: &quot;127.0.0.1&quot;
+</code></pre>
+<p><strong>Issue with vagrant-vbguest</strong></p>
+<pre><code>  if Vagrant.has_plugin?(&quot;vagrant-vbguest&quot;)
+    config.vbguest.auto_update = false
+  end
+</code></pre>
+<p><strong>Issue with Kubectl</strong></p>
+<p>If you encounter an issue with double port-forwarding (i.e. a port-forward inside the guest and then using Vagrant's port-forward to forward it to your host): <a href="https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant">https://stackoverflow.com/questions/49940964/windows-host-vagrant-kubectl-port-forward-stuck-inside-vagrant</a>. TODO: I have no idea what that is doing ATM.</p>
+<blockquote>
+<p># Port Forward from local port 8000 to remote port 80, listening on all addresses so that Vagrant's port forwarding works.</p>
+<p>kubectl port-forward --address 0.0.0.0 8000:80</p>
+</blockquote>
+<h2><a class="header" href="#deploying-with-docker" id="deploying-with-docker">Deploying with Docker</a></h2>
+<ul>
+<li>Use <a href="https://github.com/krallin/tini">tini</a> for your applications to handle signals (<a href="https://hynek.me/articles/docker-signals/">article</a>).</li>
+<li>Set <code>ENV PYTHONUNBUFFERED 1</code> to ensure all logs are always forwarded.</li>
+<li>Compile the Python files <code>python -m compileall .</code>.</li>
+<li>Use <a href="https://gist.github.com/QasimK/6f28a8a7ace4fdd0a23e90a652b6c6d8">multi-stage builds</a> for very large Python projects.</li>
+</ul>
+<p>Recommended: <a href="https://pythonspeed.com/docker/">https://pythonspeed.com/docker/</a></p>
+<p><a href="https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3">https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3</a></p>
+<p><a href="https://cloud.google.com/solutions/best-practices-for-building-containers">https://cloud.google.com/solutions/best-practices-for-building-containers</a></p>
+<p><a href="https://cloud.google.com/solutions/best-practices-for-operating-containers">https://cloud.google.com/solutions/best-practices-for-operating-containers</a></p>
+<h3><a class="header" href="#best-practises" id="best-practises">Best Practises</a></h3>
+<ul>
+<li>Use <a href="https://github.com/hadolint/hadolint">hadolint</a>, a docker file linter</li>
+<li>Use <a href="https://github.com/krallin/tini">tini</a> as the correct <code>init</code> (forwards signals and reaps zombies) (<a href="https://hynek.me/articles/docker-signals/">article</a>)</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../linux/ssh.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../linux/terminal.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../linux/ssh.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../linux/terminal.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

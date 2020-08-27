@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Snippets - The Programmer's Compendium</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="My knowledge relating to software engineering.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">2.</strong> Core</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../core/sorting.html"><strong aria-hidden="true">2.1.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="../core/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">3.</strong> Software Development</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/principles.html"><strong aria-hidden="true">3.1.</strong> Principles</a></li><li class="chapter-item expanded "><a href="../software-development/design-patterns.html"><strong aria-hidden="true">3.2.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/anti-patterns.html"><strong aria-hidden="true">3.3.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="../software-development/how-to-mock.html"><strong aria-hidden="true">3.4.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../software-development/architecture-patterns.html"><strong aria-hidden="true">3.5.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/apis.html"><strong aria-hidden="true">3.6.</strong> APIs</a></li><li class="chapter-item expanded "><a href="../software-development/agile.html"><strong aria-hidden="true">3.7.</strong> Agile</a></li><li class="chapter-item expanded "><a href="../software-development/refactoring.html"><strong aria-hidden="true">3.8.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="../software-development/documentation.html"><strong aria-hidden="true">3.9.</strong> Documentation</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">4.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/python.html"><strong aria-hidden="true">4.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../software-development/web.html"><strong aria-hidden="true">4.2.</strong> Web</a></li><li class="chapter-item expanded "><a href="../software-development/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li><li class="chapter-item expanded "><a href="../software-development/networking.html"><strong aria-hidden="true">4.4.</strong> Networking</a></li><li class="chapter-item expanded "><a href="../software-development/crypto.html"><strong aria-hidden="true">4.5.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="../software-development/time.html"><strong aria-hidden="true">4.6.</strong> Time</a></li><li class="chapter-item expanded "><a href="../software-development/bashsh.html"><strong aria-hidden="true">4.7.</strong> Bash/sh</a></li><li class="chapter-item expanded "><a href="../software-development/xml.html"><strong aria-hidden="true">4.8.</strong> XML</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">5.</strong> SQL/DB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sql/databases.html"><strong aria-hidden="true">5.1.</strong> Databases</a></li><li class="chapter-item expanded "><a href="../sql/query-summary.html"><strong aria-hidden="true">5.2.</strong> Query Summary</a></li><li class="chapter-item expanded "><a href="../sql/joins.html"><strong aria-hidden="true">5.3.</strong> Joins</a></li><li class="chapter-item expanded "><a href="../sql/trust.html"><strong aria-hidden="true">5.4.</strong> Trust</a></li><li class="chapter-item expanded "><a href="../sql/migrations.html"><strong aria-hidden="true">5.5.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="../sql/snippets.html" class="active"><strong aria-hidden="true">5.6.</strong> Snippets</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">6.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linux/overview.html"><strong aria-hidden="true">6.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../linux/systemd.html"><strong aria-hidden="true">6.2.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="../linux/shells.html"><strong aria-hidden="true">6.3.</strong> Shells</a></li><li class="chapter-item expanded "><a href="../linux/ssh.html"><strong aria-hidden="true">6.4.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="../linux/containerisation.html"><strong aria-hidden="true">6.5.</strong> Containers</a></li><li class="chapter-item expanded "><a href="../linux/terminal.html"><strong aria-hidden="true">6.6.</strong> Terminal Pro</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">7.</strong> Recipes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../recipes/nginx.html"><strong aria-hidden="true">7.1.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../recipes/uwsgi.html"><strong aria-hidden="true">7.2.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="../recipes/kubernetes.html"><strong aria-hidden="true">7.3.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="../recipes/gcloud.html"><strong aria-hidden="true">7.4.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="../recipes/postgres.html"><strong aria-hidden="true">7.5.</strong> Postgres</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">8.</strong> Misc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../misc/audio.html"><strong aria-hidden="true">8.1.</strong> Audio</a></li><li class="chapter-item expanded "><a href="../misc/encoding.html"><strong aria-hidden="true">8.2.</strong> Encoding</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/reading-materials.html"><strong aria-hidden="true">9.1.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="../appendix/references.html"><strong aria-hidden="true">9.2.</strong> References</a></li><li class="chapter-item expanded "><a href="../appendix/talk-notes.html"><strong aria-hidden="true">9.3.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="../appendix/know-thy-history.html"><strong aria-hidden="true">9.4.</strong> Know Thy History</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">The Programmer's Compendium</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#snippets" id="snippets">Snippets</a></h1>
+<h2><a class="header" href="#postgres" id="postgres">Postgres</a></h2>
+<h3><a class="header" href="#get-cell-as-file" id="get-cell-as-file">Get cell as file</a></h3>
+<p>Use <code>With CSV</code> for CSV files.</p>
+<pre><code class="language-psql">\copy (Select * From foo) To 'test.csv' With BINARY;
+</code></pre>
+<p>XMLs, manually remove <code>|</code> from the front and end of the file:</p>
+<pre><code>\copy (SELECT xml_field FROM table_name) TO 'output.xml' WITH CSV QUOTE AS '|';
+</code></pre>
+<h3><a class="header" href="#disk-space" id="disk-space">Disk Space</a></h3>
+<p>Free up disk space:</p>
+<pre><code class="language-terminal">vacuumdb --all --full --freeze
+</code></pre>
+<p>List total table sizes (including indexes):</p>
+<pre><code class="language-sql">SELECT nspname || '.' || relname AS &quot;relation&quot;,
+    pg_size_pretty(pg_total_relation_size(C.oid)) AS &quot;total_size&quot;
+  FROM pg_class C
+  LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
+  WHERE nspname NOT IN ('pg_catalog', 'information_schema')
+    AND C.relkind &lt;&gt; 'i'
+    AND nspname !~ '^pg_toast'
+  ORDER BY pg_total_relation_size(C.oid) DESC
+  LIMIT 20;
+</code></pre>
+<h2><a class="header" href="#bulk-insert-with-two-columns-matching-sequence-value" id="bulk-insert-with-two-columns-matching-sequence-value">Bulk Insert with two columns matching sequence value</a></h2>
+<blockquote>
+<p>**Note this doesn't work <strong><em><strong>LOL</strong></em></strong>. **func.nextval('outbound_messages_transaction_id_seq') + 1 may need to be -1, and I don't know how you can work out which one (+1 or -1) it should be. Apparently postgres has a column order, but it doesn't seem to be respected.</p>
+</blockquote>
+<p>I had a table with two columns: <code>transaction_id</code> and <code>xml</code>, but the <code>xml</code> text also contains the <code>transaction_id</code>. If you generate the <code>transaction_id</code> value client-side, then you can of course set the two columns on your INSERT.</p>
+<p>However, I wanted the <code>transaction_id</code> value to be a &quot;semi-unique&quot; identifier. It is semi-unique because an external system requires a value between 1-999,999,999 only. So, for that column I use a bounded Integer Sequence that will cycle back to 1 when it reaches the maximum value of 999,999,999.</p>
+<p>Then, the problem is how to generate the XML without knowing the <code>transaction_id</code> that will be generated when the database does the INSERT?</p>
+<p>One approach that I tried was to do the bulk-insert, returning the <code>transaction_id</code>s. Then to do another UPDATE replacing the XMLs. I found the built-in <code>replace</code> was good enough if the placeholder was sufficiently unique, but had to cast the integer <code>transaction_id</code> to a string for it to work (no auto-casts for you!). It has to wrapped in a transaction of course.</p>
+<p>(I had originally casted it to <code>CHAR</code>, but that just results in a single character...)</p>
+<pre><code class="language-py">insert_records = outbound_message_df.to_dict('records')
+with session.begin_nested():
+    result = session.execute(
+        cls.__table.insert(
+            values=insert_records
+        ).returning(
+            cls.id,
+        )
+    )
+    ids = [row[0] for row in result.fetchall()]
+
+    fix_transaction_ids = '''
+        UPDATE
+            outbound_messages
+        SET
+            xml = replace(xml, 'X_override_transaction_id', transaction_id::TEXT)
+        WHERE
+            id in :ids
+    '''
+    session.execute(fix_transaction_ids, params={'ids': ids})
+</code></pre>
+<p>This worked, but I thought that it seemed inefficient. The solution that I came to was to replace the XML string on the INSERT using database functions:</p>
+<pre><code class="language-SQL">INSERT INTO  
+    outbound_messages (xml)   
+VALUES  
+    (replace('&lt;xml version...' , 'X_override_transaction_id', currval('outbound_messages_transaction_id_seq')::TEXT))  
+;
+</code></pre>
+<p>This SQL inserts the real XML string. but replaces the placeholder <code>X_override_transaction_id</code> with the correct value of <code>transaction_id</code>!</p>
+<p>Or with SQLAlchemy, doing a simultaneous multi-insert:</p>
+<pre><code class="language-py">@classmethod
+def substitute_func(xml):
+    return func.replace(
+        xml,
+        'X_override_transaction_id',
+        cast(func.currval('outbound_messages_transaction_id_seq'), String),
+    )
+
+    outbound_message_df['xml'] = outbound_message_df['xml'].map(substitute_func)
+    insert_records = outbound_message_df.to_dict('records')
+    return cls.__table__.insert(values=insert_records)
+</code></pre>
+<p><strong>However</strong>, this fails when giving multiple values because the current value is fixed across all the rows! It seems to be very difficult to get a sequence during an insert per row-value. Instead, we can get the next value for the sequence, which happens sequentially for the rows, and offset it by one.</p>
+<pre><code class="language-SQL">INSERT INTO  
+    opera_outbound_messages (xml, created_utc, updated_utc)   
+VALUES  
+    (replace('A-OVERRIDE' , 'OVERRIDE', (nextval('outbound_messages_transaction_id_seq') + 1)::text), now(), now()),
+    (replace('B-OVERRIDE' , 'OVERRIDE', (nextval('outbound_messages_transaction_id_seq') + 1)::text), now(), now()),
+    (replace('B-OVERRIDE' , 'OVERRIDE', (nextval('outbound_messages_transaction_id_seq') + 1)::text), now(), now())
+;
+SELECT transaction_id, xml from outbound_messages;
+</code></pre>
+<p>With this SQL query, the database obtains the value for <code>xml</code> using the next value for the sequence, e.g. 1. Then obtains the next value for the column <code>transaction_id</code>, i.e. 2. This is done row-by-row so we get consistent values.We offset the first value to match the second value, so we get <code>2, 2</code>.</p>
+<p><strong>We note that this sequence cycles</strong>, so it's important that when we add one to the sequence value for <code>xml</code>, that it wraps around appropriately. This will be fine so long as when you add one, you do not need to wrap.</p>
+<p>So we must use something like: <code>minvalue=2, maxvalue=99, cycle=True</code>. Start on an even number and end on an odd number! (Or the other way around if you want to start at 2 rather than 3.)</p>
+<p>The equivalent SQLAlchemy:</p>
+<pre><code class="language-py">transaction_id_seq = Sequence(
+    'outbound_messages_transaction_id_seq',
+    minvalue=2,
+    maxvalue=999999999,
+    cycle=True,
+    metadata=Base.metadata,
+)
+transaction_id = Column(
+    Integer,
+    # Do NOT set the value client-side because it messes up the bulk insert.
+    # default=transaction_id_seq,
+    server_default=transaction_id_seq.next_value(),
+    nullable=False,
+)
+
+@classmethod
+def substitute_func(xml):
+    return func.replace(
+        xml,
+        'X_override_transaction_id',
+        cast(func.nextval('outbound_messages_transaction_id_seq') + 1, String),
+    )
+
+    outbound_message_df['xml'] = outbound_message_df['xml'].map(substitute_func)
+    insert_records = outbound_message_df.to_dict('records')
+    return cls.__table__.insert(values=insert_records)
+</code></pre>
+<p>Note: <a href="https://docs.sqlalchemy.org/en/rel_1_2/core/defaults.html#associating-a-sequence-as-the-server-side-default">SQLAlchemy's comment on server-side vs client-side sequences</a>.</p>
+<blockquote>
+<p>Placement of the Sequence in both the Python-side and server-side default generation contexts ensures that the “primary key fetch” logic works in all cases. Typically, sequence-enabled databases also support RETURNING for INSERT statements, which is used automatically by SQLAlchemy when emitting this statement. However if RETURNING is not used for a particular insert, then SQLAlchemy would prefer to “pre-execute” the sequence outside of the INSERT statement itself, which only works if the sequence is included as the Python-side default generator function.</p>
+</blockquote>
+<p>You could possibly go to the effort of making the sequence sequential (1, 2, 3, ...).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../sql/migrations.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../BLANK.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../sql/migrations.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../BLANK.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

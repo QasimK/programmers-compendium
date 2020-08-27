@@ -1,0 +1,451 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Nginx - The Programmer's Compendium</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="My knowledge relating to software engineering.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">2.</strong> Core</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../core/sorting.html"><strong aria-hidden="true">2.1.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="../core/strings.html"><strong aria-hidden="true">2.2.</strong> Strings</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">3.</strong> Software Development</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/principles.html"><strong aria-hidden="true">3.1.</strong> Principles</a></li><li class="chapter-item expanded "><a href="../software-development/design-patterns.html"><strong aria-hidden="true">3.2.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/anti-patterns.html"><strong aria-hidden="true">3.3.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="../software-development/how-to-mock.html"><strong aria-hidden="true">3.4.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../software-development/architecture-patterns.html"><strong aria-hidden="true">3.5.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/apis.html"><strong aria-hidden="true">3.6.</strong> APIs</a></li><li class="chapter-item expanded "><a href="../software-development/agile.html"><strong aria-hidden="true">3.7.</strong> Agile</a></li><li class="chapter-item expanded "><a href="../software-development/refactoring.html"><strong aria-hidden="true">3.8.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="../software-development/documentation.html"><strong aria-hidden="true">3.9.</strong> Documentation</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">4.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software-development/python.html"><strong aria-hidden="true">4.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="../software-development/web.html"><strong aria-hidden="true">4.2.</strong> Web</a></li><li class="chapter-item expanded "><a href="../software-development/git.html"><strong aria-hidden="true">4.3.</strong> Git</a></li><li class="chapter-item expanded "><a href="../software-development/networking.html"><strong aria-hidden="true">4.4.</strong> Networking</a></li><li class="chapter-item expanded "><a href="../software-development/crypto.html"><strong aria-hidden="true">4.5.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="../software-development/time.html"><strong aria-hidden="true">4.6.</strong> Time</a></li><li class="chapter-item expanded "><a href="../software-development/bashsh.html"><strong aria-hidden="true">4.7.</strong> Bash/sh</a></li><li class="chapter-item expanded "><a href="../software-development/xml.html"><strong aria-hidden="true">4.8.</strong> XML</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">5.</strong> SQL/DB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../sql/databases.html"><strong aria-hidden="true">5.1.</strong> Databases</a></li><li class="chapter-item expanded "><a href="../sql/query-summary.html"><strong aria-hidden="true">5.2.</strong> Query Summary</a></li><li class="chapter-item expanded "><a href="../sql/joins.html"><strong aria-hidden="true">5.3.</strong> Joins</a></li><li class="chapter-item expanded "><a href="../sql/trust.html"><strong aria-hidden="true">5.4.</strong> Trust</a></li><li class="chapter-item expanded "><a href="../sql/migrations.html"><strong aria-hidden="true">5.5.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="../sql/snippets.html"><strong aria-hidden="true">5.6.</strong> Snippets</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">6.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linux/overview.html"><strong aria-hidden="true">6.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../linux/systemd.html"><strong aria-hidden="true">6.2.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="../linux/shells.html"><strong aria-hidden="true">6.3.</strong> Shells</a></li><li class="chapter-item expanded "><a href="../linux/ssh.html"><strong aria-hidden="true">6.4.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="../linux/containerisation.html"><strong aria-hidden="true">6.5.</strong> Containers</a></li><li class="chapter-item expanded "><a href="../linux/terminal.html"><strong aria-hidden="true">6.6.</strong> Terminal Pro</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">7.</strong> Recipes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../recipes/nginx.html" class="active"><strong aria-hidden="true">7.1.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../recipes/uwsgi.html"><strong aria-hidden="true">7.2.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="../recipes/kubernetes.html"><strong aria-hidden="true">7.3.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="../recipes/gcloud.html"><strong aria-hidden="true">7.4.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="../recipes/postgres.html"><strong aria-hidden="true">7.5.</strong> Postgres</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">8.</strong> Misc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../misc/audio.html"><strong aria-hidden="true">8.1.</strong> Audio</a></li><li class="chapter-item expanded "><a href="../misc/encoding.html"><strong aria-hidden="true">8.2.</strong> Encoding</a></li></ol></li><li class="chapter-item expanded "><a href="../BLANK.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/reading-materials.html"><strong aria-hidden="true">9.1.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="../appendix/references.html"><strong aria-hidden="true">9.2.</strong> References</a></li><li class="chapter-item expanded "><a href="../appendix/talk-notes.html"><strong aria-hidden="true">9.3.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="../appendix/know-thy-history.html"><strong aria-hidden="true">9.4.</strong> Know Thy History</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">The Programmer's Compendium</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#nginx" id="nginx">Nginx</a></h1>
+<blockquote>
+<p>Config Generator: <a href="https://nginxconfig.io/">https://nginxconfig.io/</a></p>
+</blockquote>
+<p>Nginx is a reverse proxy, allowing a single port to host multiple websites.</p>
+<ul>
+<li><code>add_header</code> <a href="https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header">does not inherit</a> properly.</li>
+</ul>
+<h2><a class="header" href="#global-configurations" id="global-configurations">Global configurations</a></h2>
+<p>Global configuration (<code>http</code> block-level) can be placed inside <code>/etc/nginx/conf.d/*.conf</code>.</p>
+<h3><a class="header" href="#tls" id="tls">TLS</a></h3>
+<pre><code class="language-nginx"># tls.conf
+# Configure TLS security (requires setting parameters in server blocks to activate)
+
+# USAGE:
+# You must generate a dhparam.pem file.
+# You must set ssl_certificate, ssl_certificate_key, and ssl_trusted_certificate.
+# You must NOT use add_header inside your server {} block at all.
+
+ssl_session_cache shared:SSL:10M;
+ssl_session_timeout 180m;
+ssl_session_tickets off;
+
+# Secure SSL config - https://mozilla.github.io/server-side-tls/ssl-config-generator/
+ssl_protocols TLSv1.2 TLSv1.3;
+ssl_dhparam /etc/ssl/certs/dhparam.pem;  # Must generate this manually
+ssl_ciphers ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256;
+
+# Already set in /etc/nginx/nginx.conf
+# ssl_prefer_server_ciphers on;
+
+# SSL OSCP Stapling
+ssl_stapling on;
+ssl_stapling_verify on;
+resolver 8.8.8.8 8.8.4.4;
+
+# Force SSL to this domain (+subdomains) for 6 months (+ preload list)
+add_header Strict-Transport-Security &quot;max-age=15768000; includeSubDomains; preload&quot; always;
+</code></pre>
+<h3><a class="header" href="#security-headers" id="security-headers">Security Headers</a></h3>
+<p>There are several headers used for security, which can be set by Nginx or by your application. The following global configuration file will set a default if upstream has not provided one.</p>
+<pre><code class="language-nginx"># security_headers.conf
+# Ensure HTTP headers that are important for security are set.
+# We set some defaults which can be overridden by the upstream server.
+
+# USAGE:
+# You must use proxy_hide_header/uwsgi_hide_header to hide the upstream
+#   headers for all headers that we list below.
+# You must NOT use add_header inside your server {} block at all.
+
+map $upstream_http_referrer_policy $referrer_policy {
+    default $upstream_http_referrer_policy;
+    '' &quot;strict-origin-when-cross-origin&quot;;
+}
+
+map $upstream_http_x_content_type_options $x_content_type_options {
+    default $upstream_http_x_content_type_options;
+    '' &quot;nosniff&quot;;
+}
+
+map $upstream_http_x_frame_options $x_frame_options {
+    default $upstream_http_x_frame_options;
+    '' &quot;DENY&quot;;
+}
+
+map $upstream_http_x_xss_protection $x_xss_protection {
+    default $upstream_http_x_xss_protection;
+    '' &quot;1; mode=block&quot;;
+}
+
+add_header Referrer-Policy $referrer_policy always;
+add_header X-Content-Type-Options $x_content_type_options always;
+add_header X-Frame-Options $x_frame_options always;
+add_header X-XSS-Protection $x_xss_protection always;
+</code></pre>
+<blockquote>
+<p>Note:: X-XSS-Protection has been superseded with Content Security Policies (CSPs)</p>
+<p>Note: X-Frame-Options has been superseded with the frame-ancestors CSP</p>
+<p>TODO: Deny the use of browser features (Feature Policies)</p>
+<p>TODO: Deny the use of cross-site features (Content Security Policies)</p>
+</blockquote>
+<h2><a class="header" href="#servers" id="servers">Servers</a></h2>
+<p>Servers can be configured inside <code>/etc/nginx/sites-available/</code>, but a symlink should be created inside <code>/etc/nginx/sites-enabled/</code> for them to become active.</p>
+<h3><a class="header" href="#default-server---redirect-to-https" id="default-server---redirect-to-https">Default Server - Redirect to HTTPS</a></h3>
+<pre><code class="language-nginx">server {
+    listen {{ public_ipv4 }}:80 default_server;
+    listen [{{ public_ipv6 }}]:80 default_server;
+
+    # Redirect all HTTP requests to HTTPS with a 301 Moved Permanently response.
+    return 301 https://$host$request_uri;
+}
+</code></pre>
+<h3><a class="header" href="#default-server---prevent-non-sni-traffic" id="default-server---prevent-non-sni-traffic">Default Server - Prevent non-SNI Traffic</a></h3>
+<pre><code class="language-nginx"># HTTPS default server for non-SNI requests
+# Prevents an otherwise random public server certificate being leaked
+# Also captures SNI requests where we are not hosting that domain here
+server {
+    listen {{ public_ipv4 }}:443 default_server;
+    listen [{{ public_ipv6 }}]:443 default_server;
+    server_name _;
+    ssl_certificate /etc/ssl/certs/ssl-cert-snakeoil.pem;
+    ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+    return 444;
+}
+</code></pre>
+<h3><a class="header" href="#a-https-server" id="a-https-server">A HTTPS Server</a></h3>
+<pre><code class="language-nginx">server {
+    listen {{ public_ipv4 }}:443 ssl http2;
+    listen [{{ public_ipv6 }}]:443 ssl http2;
+    server_name {{ domain }};
+    charset utf-8;
+
+    # Check if this certificate is really served for this server_name
+    # https://serverfault.com/questions/578648/properly-setting-up-a-default-nginx-server-for-https
+    if ($host != $server_name) {
+        return 444;
+    }
+
+    # Certificate
+    ssl_certificate /etc/letsencrypt/live/{{ domain }}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/{{ domain }}/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/{{ domain }}/chain.pem;
+
+    # Lets Encrypt SSL Cert renewal
+    location ~ /.well-known/acme-challenge {
+        allow all;
+        root /var/www/letsencrypt;
+    }
+}
+</code></pre>
+<ul>
+<li>Ubuntu's Nginx configuration does a lot of things itself including: sendfile, tcp_nopush, tcpnodelay, keepalive_timeout, gzip, basic SSL configuration.</li>
+<li>Doing <code>listen [::]:443 ipv6only=off</code> does not seem to work well (maybe due to use of IP addresses on other servers?). It is also Linux-only.</li>
+</ul>
+<h2><a class="header" href="#serving-files--upstream-proxies" id="serving-files--upstream-proxies">Serving Files &amp; Upstream Proxies</a></h2>
+<h3><a class="header" href="#uwsgi-proxy" id="uwsgi-proxy">uWSGI Proxy</a></h3>
+<pre><code class="language-nginx">upstream uwsgicluster {
+    server unix:///run/uwsgi/app/APP_NAME/socket;
+}
+
+server {
+    ...
+
+    # Proxying connections to application servers
+    location / {
+        include         uwsgi_params;
+        uwsgi_pass      uwsgicluster;
+
+        uwsgi_param     Host $host;
+        uwsgi_param     X-Real-IP $remote_addr;
+        uwsgi_param     X-Forwarded-For $proxy_add_x_forwarded_for;
+        uwsgi_param     X-Forwarded-Host $server_name;
+        uwsgi_param     X-Forwarded-Proto $scheme;
+        uwsgi_param     X-Forwarded-Port $server_port;
+
+        # Correct handling of fallbacks for HTTP headers
+        uwsgi_hide_header   Referrer-Policy;
+        uwsgi_hide_header   X-Content-Type-Options;
+        uwsgi_hide_header   X-Frame-Options;
+        uwsgi_hide_header   X-XSS-Protection;
+    }
+}
+</code></pre>
+<h3><a class="header" href="#http-proxy" id="http-proxy">HTTP Proxy</a></h3>
+<pre><code class="language-nginx">server {
+    ...
+
+    # Proxying connections to application servers
+    location / {
+        proxy_pass         http://localhost:8080;
+        # Required to rewrite &quot;Location&quot; header for Jenkins
+        proxy_redirect     http://localhost:8080 https://{{ domain }};
+        proxy_read_timeout 60;
+        proxy_http_version 1.1;
+
+        proxy_set_header   Host $host;
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Host $server_name;
+        proxy_set_header   X-Forwarded-Proto $scheme;
+        proxy_set_header   X-Forwarded-Port $server_port;
+
+        # Correct handling of fallbacks for HTTP headers
+        proxy_hide_header  Referrer-Policy;
+        proxy_hide_header  X-Content-Type-Options;
+        proxy_hide_header  X-Frame-Options;
+        proxy_hide_header  X-XSS-Protection;
+    }
+}
+</code></pre>
+<h3><a class="header" href="#serving-static-files" id="serving-static-files">Serving Static Files</a></h3>
+<pre><code class="language-nginx">server {
+    ...
+
+    # Serve static files
+    rewrite ^/robots.txt /static/$request_uri last;
+    location /static/ {
+        alias /var/www-data/static/;
+        disable_symlinks if_not_owner;  # Extra-security
+        gzip_static on;
+
+        # Performance
+        # access_log off;
+        open_file_cache         max=1000;
+        open_file_cache_errors  on;
+    }
+}
+</code></pre>
+<p>A neat command to compress static files: <code>find -L . -type f ! -iname &quot;*.gz&quot; ! -iname &quot;*.png&quot; ! -iname &quot;*.jpg&quot; ! -iname &quot;*.jpeg&quot; ! -iname &quot;*.gif&quot; ! -iname &quot;*.webp&quot; ! -iname &quot;*.heif&quot; -exec gzip --best -kf &quot;{}&quot; \;</code></p>
+<h2><a class="header" href="#performancetuning" id="performancetuning">Performance/Tuning</a></h2>
+<ul>
+<li>sendfile - directly from kernel to network socket - covered by Ubuntu, but consider adding <code>sendfile_max_chunk</code>
+<ul>
+<li>Note that this does not work with gzip!</li>
+</ul>
+</li>
+<li>open_file_cache - do not recheck filesystem for file on every request</li>
+<li>gzip - covered by Ubuntu for HTML only...</li>
+<li>gzip_static - do not compress on the fly, serve pre-generated .gz files</li>
+<li>limit_req - consider for <a href="https://www.nginx.com/blog/rate-limiting-nginx/">rate limiting number-of-requests</a> by IP</li>
+<li>(limit_conn - consider for rate limiting number-of-requests by connections - alternative to above?)</li>
+<li>limit_rate - consider for limiting a individual request by limiting the network speed</li>
+</ul>
+<pre><code class="language-nginx"># Rate limit all requests for a server by IP address
+limit_req_zone $binary_remote_addr zone=myzone:10m rate=1r/s;
+
+server {
+    ...
+
+    limit_req_status 429;
+    limit_req zone=myzone burst=60 nodelay;
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../BLANK.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../recipes/uwsgi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../BLANK.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../recipes/uwsgi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
