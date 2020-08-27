@@ -13,6 +13,9 @@ function finish {
 }
 trap finish EXIT
 
+git commit -am "Update The Programmer's Compendium"
+env GIT_ALLOW_MASTER=1 git push
+
 cd "$REPO"
 mdbook clean
 mdbook build
