@@ -6,3 +6,4 @@ language = "en-GB"
 
 [output.html]
 site-url = "/programmers-compendium/"
+git-repository-url = "https://github.com/QasimK/programmers-compendium"

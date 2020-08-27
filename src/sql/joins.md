@@ -1,4 +1,4 @@
-![](/sql/joins.png)
+![](./joins.png)
 
 **Joins start off as a cross-product**, and predicates \("ON"\) filter the rows down.
 
