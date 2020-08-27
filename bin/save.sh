@@ -27,3 +27,5 @@ rsync -aqr "${BUILD}/" "$BOOK"
 git add --all
 git commit -am "Publish an update to The Programmer's Compendium"
 git push
+
+echo "https://qasimk.io/programmers-compendium/"
