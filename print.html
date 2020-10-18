@@ -3,17 +3,28 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>The Programmer's Compendium</title>
+        <title>The Programmer&#x27;s Compendium</title>
         
         <meta name="robots" content="noindex" />
         
+        
+
+
+        <!-- Custom HTML head -->
+        
+
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="My knowledge relating to software engineering.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
         <link rel="shortcut icon" href="favicon.png">
+        
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -21,8 +32,9 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
@@ -38,7 +50,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -83,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded "><a href="BLANK.html"><strong aria-hidden="true">2.</strong> Recipes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="recipes/nginx.html"><strong aria-hidden="true">2.1.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="recipes/uwsgi.html"><strong aria-hidden="true">2.2.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="recipes/kubernetes.html"><strong aria-hidden="true">2.3.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="recipes/gcloud.html"><strong aria-hidden="true">2.4.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="recipes/postgres.html"><strong aria-hidden="true">2.5.</strong> Postgres</a></li></ol></li><li class="chapter-item expanded "><a href="BLANK.html"><strong aria-hidden="true">3.</strong> Topics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="topics/python.html"><strong aria-hidden="true">3.1.</strong> Python</a></li><li class="chapter-item expanded "><a href="topics/web.html"><strong aria-hidden="true">3.2.</strong> Web</a></li><li class="chapter-item expanded "><a href="topics/git.html"><strong aria-hidden="true">3.3.</strong> Git</a></li><li class="chapter-item expanded "><a href="topics/networking.html"><strong aria-hidden="true">3.4.</strong> Networking</a></li><li class="chapter-item expanded "><a href="topics/crypto.html"><strong aria-hidden="true">3.5.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="topics/time.html"><strong aria-hidden="true">3.6.</strong> Time</a></li><li class="chapter-item expanded "><a href="topics/bash.html"><strong aria-hidden="true">3.7.</strong> Bash Scripts</a></li><li class="chapter-item expanded "><a href="topics/xml.html"><strong aria-hidden="true">3.8.</strong> XML</a></li></ol></li><li class="chapter-item expanded "><a href="BLANK.html"><strong aria-hidden="true">4.</strong> SQL/DB</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sql/databases.html"><strong aria-hidden="true">4.1.</strong> Databases</a></li><li class="chapter-item expanded "><a href="sql/query-summary.html"><strong aria-hidden="true">4.2.</strong> Query Summary</a></li><li class="chapter-item expanded "><a href="sql/joins.html"><strong aria-hidden="true">4.3.</strong> Joins</a></li><li class="chapter-item expanded "><a href="sql/trust.html"><strong aria-hidden="true">4.4.</strong> Trust</a></li><li class="chapter-item expanded "><a href="sql/migrations.html"><strong aria-hidden="true">4.5.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="sql/snippets.html"><strong aria-hidden="true">4.6.</strong> Snippets</a></li></ol></li><li class="chapter-item expanded "><a href="BLANK.html"><strong aria-hidden="true">5.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="linux/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="linux/systemd.html"><strong aria-hidden="true">5.2.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="linux/shells.html"><strong aria-hidden="true">5.3.</strong> Shells</a></li><li class="chapter-item expanded "><a href="linux/ssh.html"><strong aria-hidden="true">5.4.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="linux/containerisation.html"><strong aria-hidden="true">5.5.</strong> Containers</a></li><li class="chapter-item expanded "><a href="linux/terminal.html"><strong aria-hidden="true">5.6.</strong> Terminal Pro</a></li></ol></li><li class="chapter-item expanded "><a href="BLANK.html"><strong aria-hidden="true">6.</strong> Domains</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="domains/accounting.html"><strong aria-hidden="true">6.1.</strong> Accounting</a></li><li class="chapter-item expanded "><a href="domains/audio.html"><strong aria-hidden="true">6.2.</strong> Audio</a></li><li class="chapter-item expanded "><a href="domains/encoding.html"><strong aria-hidden="true">6.3.</strong> Encoding</a></li></ol></li><li class="chapter-item expanded "><a href="BLANK.html"><strong aria-hidden="true">7.</strong> Software Development</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="software-development/principles.html"><strong aria-hidden="true">7.1.</strong> Principles</a></li><li class="chapter-item expanded "><a href="software-development/design-patterns.html"><strong aria-hidden="true">7.2.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="software-development/anti-patterns.html"><strong aria-hidden="true">7.3.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="software-development/how-to-mock.html"><strong aria-hidden="true">7.4.</strong> Testing</a></li><li class="chapter-item expanded "><a href="software-development/architecture-patterns.html"><strong aria-hidden="true">7.5.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="software-development/apis.html"><strong aria-hidden="true">7.6.</strong> APIs</a></li><li class="chapter-item expanded "><a href="software-development/agile.html"><strong aria-hidden="true">7.7.</strong> Agile</a></li><li class="chapter-item expanded "><a href="software-development/refactoring.html"><strong aria-hidden="true">7.8.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="software-development/documentation.html"><strong aria-hidden="true">7.9.</strong> Documentation</a></li></ol></li><li class="chapter-item expanded "><a href="BLANK.html"><strong aria-hidden="true">8.</strong> Fundamentals</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="core/sorting.html"><strong aria-hidden="true">8.1.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="core/strings.html"><strong aria-hidden="true">8.2.</strong> Strings</a></li></ol></li><li class="chapter-item expanded "><a href="BLANK.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="appendix/reading-materials.html"><strong aria-hidden="true">9.1.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="appendix/references.html"><strong aria-hidden="true">9.2.</strong> References</a></li><li class="chapter-item expanded "><a href="appendix/talk-notes.html"><strong aria-hidden="true">9.3.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="appendix/know-thy-history.html"><strong aria-hidden="true">9.4.</strong> Know Thy History</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded affix "><li class="part-title">Recipes</li><li class="chapter-item expanded "><a href="recipes/nginx.html"><strong aria-hidden="true">2.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="recipes/uwsgi.html"><strong aria-hidden="true">3.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="recipes/kubernetes.html"><strong aria-hidden="true">4.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="recipes/gcloud.html"><strong aria-hidden="true">5.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="recipes/postgres.html"><strong aria-hidden="true">6.</strong> Postgres</a></li><li class="chapter-item expanded affix "><li class="part-title">Python</li><li class="chapter-item expanded "><a href="topics/python.html"><strong aria-hidden="true">7.</strong> Python Misc.</a></li><li class="chapter-item expanded "><a href="python/profiling.html"><strong aria-hidden="true">8.</strong> Profiling</a></li><li class="chapter-item expanded "><a href="python/versions.html"><strong aria-hidden="true">9.</strong> Versions</a></li><li class="chapter-item expanded affix "><li class="part-title">Topics</li><li class="chapter-item expanded "><a href="topics/web.html"><strong aria-hidden="true">10.</strong> Web</a></li><li class="chapter-item expanded "><a href="topics/git.html"><strong aria-hidden="true">11.</strong> Git</a></li><li class="chapter-item expanded "><a href="topics/networking.html"><strong aria-hidden="true">12.</strong> Networking</a></li><li class="chapter-item expanded "><a href="topics/crypto.html"><strong aria-hidden="true">13.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="topics/time.html"><strong aria-hidden="true">14.</strong> Time</a></li><li class="chapter-item expanded "><a href="topics/bash.html"><strong aria-hidden="true">15.</strong> Bash Scripts</a></li><li class="chapter-item expanded "><a href="topics/xml.html"><strong aria-hidden="true">16.</strong> XML</a></li><li class="chapter-item expanded affix "><li class="part-title">SQL/DB</li><li class="chapter-item expanded "><a href="sql/databases.html"><strong aria-hidden="true">17.</strong> Databases</a></li><li class="chapter-item expanded "><a href="sql/query-summary.html"><strong aria-hidden="true">18.</strong> Query Summary</a></li><li class="chapter-item expanded "><a href="sql/joins.html"><strong aria-hidden="true">19.</strong> Joins</a></li><li class="chapter-item expanded "><a href="sql/trust.html"><strong aria-hidden="true">20.</strong> Trust</a></li><li class="chapter-item expanded "><a href="sql/migrations.html"><strong aria-hidden="true">21.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="sql/snippets.html"><strong aria-hidden="true">22.</strong> Snippets</a></li><li class="chapter-item expanded affix "><li class="part-title">Linux</li><li class="chapter-item expanded "><a href="linux/overview.html"><strong aria-hidden="true">23.</strong> Overview</a></li><li class="chapter-item expanded "><a href="linux/systemd.html"><strong aria-hidden="true">24.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="linux/shells.html"><strong aria-hidden="true">25.</strong> Shells</a></li><li class="chapter-item expanded "><a href="linux/ssh.html"><strong aria-hidden="true">26.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="linux/containerisation.html"><strong aria-hidden="true">27.</strong> Containers</a></li><li class="chapter-item expanded "><a href="linux/terminal.html"><strong aria-hidden="true">28.</strong> Terminal Pro</a></li><li class="chapter-item expanded affix "><li class="part-title">Domains</li><li class="chapter-item expanded "><a href="domains/accounting.html"><strong aria-hidden="true">29.</strong> Accounting</a></li><li class="chapter-item expanded "><a href="domains/audio.html"><strong aria-hidden="true">30.</strong> Audio</a></li><li class="chapter-item expanded "><a href="domains/encoding.html"><strong aria-hidden="true">31.</strong> Encoding</a></li><li class="chapter-item expanded affix "><li class="part-title">Software Development</li><li class="chapter-item expanded "><a href="software-development/principles.html"><strong aria-hidden="true">32.</strong> Principles</a></li><li class="chapter-item expanded "><a href="software-development/design-patterns.html"><strong aria-hidden="true">33.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="software-development/anti-patterns.html"><strong aria-hidden="true">34.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="software-development/how-to-mock.html"><strong aria-hidden="true">35.</strong> Testing</a></li><li class="chapter-item expanded "><a href="software-development/architecture-patterns.html"><strong aria-hidden="true">36.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="software-development/apis.html"><strong aria-hidden="true">37.</strong> APIs</a></li><li class="chapter-item expanded "><a href="software-development/agile.html"><strong aria-hidden="true">38.</strong> Agile</a></li><li class="chapter-item expanded "><a href="software-development/refactoring.html"><strong aria-hidden="true">39.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="software-development/documentation.html"><strong aria-hidden="true">40.</strong> Documentation</a></li><li class="chapter-item expanded affix "><li class="part-title">Fundamentals</li><li class="chapter-item expanded "><a href="core/sorting.html"><strong aria-hidden="true">41.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="core/strings.html"><strong aria-hidden="true">42.</strong> Strings</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="appendix/reading-materials.html"><strong aria-hidden="true">43.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="appendix/references.html"><strong aria-hidden="true">44.</strong> References</a></li><li class="chapter-item expanded "><a href="appendix/talk-notes.html"><strong aria-hidden="true">45.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="appendix/know-thy-history.html"><strong aria-hidden="true">46.</strong> Know Thy History</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -115,7 +127,7 @@
                         
                     </div>
 
-                    <h1 class="menu-title">The Programmer's Compendium</h1>
+                    <h1 class="menu-title">The Programmer&#x27;s Compendium</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -156,12 +168,13 @@
                         <h1><a class="header" href="#the-programmers-compendium" id="the-programmers-compendium">The Programmer's Compendium</a></h1>
 <p>Broken out into:</p>
 <ul>
-<li>Recipes for setting up or using particular software/services</li>
-<li>Details about particular topics</li>
-<li>Rundown of Linux</li>
-<li>Miscellaneous information about particular domains</li>
-<li>General guidelines on developing software</li>
-<li>Underlying fundamentals of programming</li>
+<li><strong>Recipes</strong> for setting up or using particular software/services</li>
+<li><strong>Python</strong> because I do so much of it</li>
+<li>Details about particular <strong>Topics</strong></li>
+<li>Rundown of <strong>Linux</strong></li>
+<li>Miscellaneous information about particular <strong>Domains</strong></li>
+<li>General guidelines on <strong>Software Development</strong></li>
+<li>Underlying <strong>Fundamentals</strong> of programming</li>
 </ul>
 <p>Other resources include:</p>
 <ul>
@@ -172,7 +185,6 @@
 <p><a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="./cc-by-sa.png" alt="Creative Commons License" title="Creative Commons License" /></a>
 <br>
 This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-<p>This is a blank page.</p>
 <h1><a class="header" href="#nginx" id="nginx">Nginx</a></h1>
 <blockquote>
 <p>Config Generator: <a href="https://nginxconfig.io/">https://nginxconfig.io/</a></p>
@@ -487,7 +499,7 @@ py-tracebacker = /run/uwsgi/app/APP_NAME/tracebacker
 <h2><a class="header" href="#commands" id="commands">Commands</a></h2>
 <h3><a class="header" href="#running-as-a-different-user" id="running-as-a-different-user">Running as a different user</a></h3>
 <p>Work around for K8S not supporting --user flag: <a href="https://github.com/kubernetes/kubernetes/issues/30656">https://github.com/kubernetes/kubernetes/issues/30656</a></p>
-<pre><code>kubectl get pods
+<pre><code class="language-console">kubectl get pods
 kubectl describe pod &lt;POD-NAME&gt; | grep Node
 gcloud compute ssh &quot;&lt;NODE-NAME&gt;&quot;
 sudo su - root
@@ -515,7 +527,6 @@ max_standby_archive_delay = 900s
 max_standby_streaming_delay = 900s
 </code></pre>
 <p>This is a cumulative delay - if multiple queries a running, then the last one might get terminated after just a second because the total time limit has been reached.</p>
-<p>This is a blank page.</p>
 <h1><a class="header" href="#python" id="python">Python</a></h1>
 <ul>
 <li>Use <a href="https://pypi.org/project/pipx/">pipx</a> to install environment management tools and scripts. (Execute binaries installed in isolated virtual environments.)</li>
@@ -660,6 +671,76 @@ lambdas = [
 
 [f() for f in lambdas]
 </code></pre>
+<h1><a class="header" href="#python-profiling--performance" id="python-profiling--performance">Python Profiling &amp; Performance</a></h1>
+<h2><a class="header" href="#profiling-methods" id="profiling-methods">Profiling Methods</a></h2>
+<pre><code class="language-console">python -m cProfile -o out.prof do.py
+</code></pre>
+<h2><a class="header" href="#visualisation" id="visualisation">Visualisation</a></h2>
+<p>Use <a href="https://jiffyclub.github.io/snakeviz/">snakeviz</a>.</p>
+<p>Install <code>pipx install snakeviz</code>.</p>
+<pre><code class="language-console">snakeviz out.prof
+</code></pre>
+<h2><a class="header" href="#other" id="other">Other</a></h2>
+<p><a href="https://github.com/P403n1x87/austin">Austin</a>.</p>
+<pre><code class="language-console">austin -f -o out.prof python3 do.py
+</code></pre>
+<p>Austin can attach to running programs.</p>
+<p>I haven't worked out how to visualise this.</p>
+<h2><a class="header" href="#performance-tips" id="performance-tips">Performance Tips</a></h2>
+<h3><a class="header" href="#sqlalchemy-1" id="sqlalchemy-1">SQLAlchemy</a></h3>
+<p>Something something 'raise' to prevent hidden n+1 joins.</p>
+<h1><a class="header" href="#python-history" id="python-history">Python History</a></h1>
+<h2><a class="header" href="#python-39" id="python-39">Python 3.9</a></h2>
+<ul>
+<li>time zone support built-in with zoneinfo module</li>
+<li>in-place union <code>|=</code> of dictionary-like objects</li>
+<li>combined annotations <code>Annotated[float, &quot;seconds&quot;]</code></li>
+<li>type hint containers directly <code>list[float]</code></li>
+<li>more flexible decorator syntax</li>
+<li>string <code>removeprefix</code> and <code>removesuffix</code></li>
+<li>maths <code>gcd</code> and <code>lcm</code></li>
+</ul>
+<h2><a class="header" href="#python-38" id="python-38">Python 3.8</a></h2>
+<ul>
+<li>assignment expressions <code>if (n := len(a)) &gt; 10:</code></li>
+<li>improved f-strings <code>f&quot;{x*9 + 15=}&quot;</code></li>
+<li>positional and keyword only parameters</li>
+<li>multiprocessing.shared_memory</li>
+</ul>
+<h2><a class="header" href="#python-37" id="python-37">Python 3.7:</a></h2>
+<ul>
+<li>dataclasses TBD: talk link.</li>
+<li>contextvars</li>
+<li>breakpoint()</li>
+<li>postponed evaluation of type annotations</li>
+<li>dicts officially respect insertion-order</li>
+<li>time - nanosecond resolution functions</li>
+<li><code>f&quot;{number:,}</code></li>
+</ul>
+<h2><a class="header" href="#python-36" id="python-36">Python 3.6:</a></h2>
+<ul>
+<li>f-string literals</li>
+<li>underscores in numeric literals</li>
+<li>extended variable annotations</li>
+<li>(async generators &amp; comprehensions)</li>
+<li>Local Time Disambiguation</li>
+<li>secrets module</li>
+</ul>
+<h2><a class="header" href="#python-31---35" id="python-31---35">Python 3.1 - 3.5</a></h2>
+<p>Skipped</p>
+<h2><a class="header" href="#python-3000" id="python-3000">Python 3000:</a></h2>
+<ul>
+<li>unicode vs bytes</li>
+<li>print() vs print</li>
+<li>division float vs int</li>
+<li>new-style vs classic classes</li>
+<li>relative imports (?)</li>
+<li>views and iterators vs lists (e.g. dict.items() == dict.iteritems())</li>
+<li>nonlocal</li>
+<li>extended iterable unpacking</li>
+<li>set literals</li>
+<li>removed tuple parameter unpacking</li>
+</ul>
 <h1><a class="header" href="#web" id="web">Web</a></h1>
 <p>Learning: <a href="https://hpbn.co/">https://hpbn.co/</a></p>
 <p><a href="https://google.github.io/styleguide/htmlcssguide.html">Google's Style Guide</a> has basic formatting and other guidance.</p>
@@ -846,7 +927,6 @@ set -o xtrace        # Print each executed command
     )
 )
 </code></pre>
-<p>This is a blank page.</p>
 <h1><a class="header" href="#databases" id="databases">Databases</a></h1>
 <ul>
 <li>Clustering organises the data on the disk:
@@ -1144,7 +1224,6 @@ def substitute_func(xml):
 <p>Placement of the Sequence in both the Python-side and server-side default generation contexts ensures that the “primary key fetch” logic works in all cases. Typically, sequence-enabled databases also support RETURNING for INSERT statements, which is used automatically by SQLAlchemy when emitting this statement. However if RETURNING is not used for a particular insert, then SQLAlchemy would prefer to “pre-execute” the sequence outside of the INSERT statement itself, which only works if the sequence is included as the Python-side default generator function.</p>
 </blockquote>
 <p>You could possibly go to the effort of making the sequence sequential (1, 2, 3, ...).</p>
-<p>This is a blank page.</p>
 <h1><a class="header" href="#linux-overviewdevelopment" id="linux-overviewdevelopment">Linux Overview/Development</a></h1>
 <ul>
 <li>The <a href="https://www.freedesktop.org/software/systemd/man/file-hierarchy.html">filesystem hierarchy</a></li>
@@ -1406,7 +1485,6 @@ $ xdg-mime default org.gnome.gedit.desktop text/plain
 $ xdg-mime query default text/plain
 org.gnome.gedit.desktop
 </code></pre>
-<p>This is a blank page.</p>
 <p>Two good resources</p>
 <ol>
 <li>
@@ -1435,7 +1513,6 @@ org.gnome.gedit.desktop
 </code></pre>
 <p>Transcode audio: <code>-c:a libfdk_aac -b:a 128k</code></p>
 <p>-tune parameter: <a href="https://superuser.com/a/564404/229283">https://superuser.com/a/564404/229283</a></p>
-<p>This is a blank page.</p>
 <h1><a class="header" href="#principles" id="principles">Principles</a></h1>
 <p>These guiding principles reduce bugs and increase implementation speed of new features or modifications.</p>
 <p>Remember the scope and context of the project. Is it a script? Is it huge? Is it one-off? Is it mission-critical?</p>
@@ -1675,10 +1752,8 @@ Kent Beck, Twitter</p>
 <p>Don't justify refactoring in terms of &quot;clean code&quot;, &quot;good engineering practice&quot;, or other moral reasons. Instead, communicate with the core economic benefits: it makes us faster to add features and faster to fix bugs.</p>
 <h1><a class="header" href="#documentation" id="documentation">Documentation</a></h1>
 <p>This: <a href="https://www.divio.com/blog/documentation/">https://www.divio.com/blog/documentation/</a></p>
-<p>This is a blank page.</p>
 <h1><a class="header" href="#sorting" id="sorting">Sorting</a></h1>
 <h1><a class="header" href="#strings" id="strings">Strings</a></h1>
-<p>This is a blank page.</p>
 <h1><a class="header" href="#reading-materials" id="reading-materials">Reading Materials</a></h1>
 <p>A collection of further, high-quality reading material:</p>
 <ul>
@@ -1991,10 +2066,10 @@ command may be &quot;ALL&quot;.
         
 
         
-        
+
         
         <script type="text/javascript">
-            window.playpen_copyable = true;
+            window.playground_copyable = true;
         </script>
         
 
