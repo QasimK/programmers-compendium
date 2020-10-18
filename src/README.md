@@ -2,12 +2,13 @@
 
 Broken out into:
 
-* Recipes for setting up or using particular software/services
-* Details about particular topics
-* Rundown of Linux
-* Miscellaneous information about particular domains
-* General guidelines on developing software
-* Underlying fundamentals of programming
+* **Recipes** for setting up or using particular software/services
+* **Python** because I do so much of it
+* Details about particular **Topics**
+* Rundown of **Linux**
+* Miscellaneous information about particular **Domains**
+* General guidelines on **Software Development**
+* Underlying **Fundamentals** of programming
 
 Other resources include:
 
