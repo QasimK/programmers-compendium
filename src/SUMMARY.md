@@ -32,6 +32,7 @@
 - [Joins](sql/joins.md)
 - [Trust](sql/trust.md)
 - [Migrations](sql/migrations.md)
+- [Migrations-HOWTO](sql/migrations-howto.html)
 - [Snippets](sql/snippets.md)
 
 # Linux

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+<title>Migrations</title>
+
+<style>
+    [data-pg-versions]::before {
+        content: "PostgreSQL versions " attr(data-pg-versions);
+        font-weight: bold;
+    }
+
+    [data-show] {
+        display: initial;
+    }
+
+    [data-hide] {
+        display: none;
+    }
+
+    h2:target {
+        background-color: yellow;
+    }
+
+    section {
+        margin-top: 3em;
+    }
+
+    summary {
+        cursor: pointer;
+    }
+
+    details[open] {
+        border: 1px solid black;
+    }
+
+    footer {
+        margin-top: 3em;
+    }
+
+    .good {
+        background-color: #AF0;
+    }
+
+    .warning {
+        background-color: #F99;
+    }
+
+    #postgres-version {
+        display: none;
+    }
+</style>
+
+<header>
+    <p><a href="migrations.html">☚ Back to Book</a>
+    <h1>HOW-TO: Avoid Dangerous Database Migrations</h1>
+    <p>
+        <em>For PostgreSQL versions 9.5 - 12</em>
+        <select id="postgres-version">
+            <option value="all" selected>Show All Versions</option>
+            <option value="9.5">PostgreSQL 9.5</option>
+            <option value="9.6">PostgreSQL 9.6</option>
+            <option value="10">PostgreSQL 10</option>
+            <option value="11">PostgreSQL 11</option>
+            <option value="12">PostgreSQL 12</option>
+        </select>
+    <p>
+        Database migrations can seem safe on tables with little read and write
+        activity.
+        <br>
+        However, in production the exact same migration can be deadly for busy
+        tables.
+    <p>
+        This is only a HOW-TO guide, more detailed explanations are found in
+        <a href="https://www.postgresql.org/docs/current/index.html">
+            the PostgreSQL manual.
+        </a>
+    <p>
+        Consult the table of contents before creating an automated migration.
+
+    <details>
+        <summary><strong>General Advice...</strong></summary>
+        <ol>
+            <li>Deployments should do the following things in order:
+                <ol>
+                    <li>Migrate the database successfully
+                    <li>Then, and only then, deploy the new code
+                </ol>
+            <li>Application code should be forwards-compatible with the new schema.
+            <li>Database schemas should be backwards-compatible with the old code.
+            <li>Use timeouts for all automated migrations:
+                <br>
+                <code>
+                    SET statement_timeout = "5000";<br>
+                    SET lock_timeout = "2000";<br>
+                </code>
+        </ol>
+    </details>
+</header>
+
+<nav>
+    <h2>Table of Contents</h2>
+    <p>PostgreSQL HOW-TOs:
+    <ol>
+        <li>
+            <a href="#create-null-with-default">
+                Create a NULL Column with a DEFAULT
+            </a>
+        <li>
+            <a href="#create-not-null">
+                Create a NOT NULL Column
+            </a>
+        <li>
+            <a href="#make-null-not-null">
+                Make a NULL Column NOT NULL
+            </a>
+        <li>
+            <a href="#create-index">
+                Create an Index
+            </a>
+        <li>
+            <a href="#create-constraint">
+                Create a Constraint
+            </a>
+        <li>
+            <a href="#create-foreign-key">
+                Create a Foreign Key
+            </a>
+    </ol>
+    <p>ORM HOW-TOs:
+    <ol>
+        <li>
+            <a href="#drop-not-null-column">
+                Drop a NOT NULL Column
+            </a>
+        <li>
+            <a href="#drop-column">
+                Drop a Column
+            </a>
+        <li>
+            <a href="#rename-column">
+                Rename a Column
+            </a>
+    </ol>
+</nav>
+
+<section>
+    <h2 id="create-null-with-default">
+        Create a NULL Column with a DEFAULT
+    </h2>
+    <p>
+        <code>
+            ALTER TABLE table ADD COLUMN column INT DEFAULT 0;
+        </code>
+    <p>(Setting a default value after adding the column is different&mdash;it won't apply the default to existing rows.)
+    <div data-pg-versions="9.5 9.6 10">
+        <p>
+        <details>
+            <summary><mark class="warning">This is unsafe.</summary>
+            <p>This will cause the entire table to be re-written to disk.
+        </details>
+        <p>Safe alternative:
+        <ol>
+            <li><code>ALTER TABLE table ADD COLUMN column INT;</code>
+            <li>Set the value on existing rows <strong>in batches</strong>:
+                <br>
+                <code>
+                    UPDATE table SET column = 0 WHERE id >= 0 AND id < 1000;
+                </code>
+    </div>
+    <div data-pg-versions="11 12">
+        <p>
+            <mark class="good">Since PostgreSQL 11 it is possible to do this
+            <a href="https://brandur.org/postgres-default">
+                without a full table rewrite.
+            </a>
+            </mark>
+    </div>
+</section>
+
+<section>
+    <h2 id="create-not-null">Create a NOT NULL Column</h2>
+    <p>
+        <code>
+            ALTER TABLE table ADD COLUMN column INT DEFAULT 0 NOT NULL;
+        </code>
+    <p>(A default value is required.)
+    <p>This is much better than: NULL ➜ Backfill Default ➜ NOT NULL.
+    <p>It is literally better to use an incorrect default value.
+
+    <div data-pg-versions="9.5 9.6 10">
+        <p>
+        <details>
+            <summary><mark class="warning">This is unsafe.</summary>
+            <p>This will cause the entire table to be re-written to disk.
+            <p>An <code>ACCESS_EXCLUSIVE</code> lock is acquired during this.
+            <p>This blocks <strong>all</strong> queries.
+            <p>Alternative: make it NULL first&mdash;still slow because a full table scan is required (faster than a table re-write).
+        </details>
+        <p>There is no way to do this without downtime.
+    </div>
+    <div data-pg-versions="11 12">
+        <p>
+            <mark class="good">Since PostgreSQL 11 it is possible to do this
+            <a href="https://brandur.org/postgres-default">
+                without a full table rewrite.
+            </a>
+            </mark>
+    </div>
+</section>
+
+<section>
+    <h2 id="make-null-not-null">Make a NULL Column NOT NULL</h2>
+    <p>
+        <code>
+            ALTER TABLE table ALTER column SET NOT NULL;
+        </code>
+
+    <div data-pg-versions="9.5 9.6 10 11">
+        <p>
+        <details>
+            <summary><mark class="warning">This is unsafe.</summary>
+            <p>This will cause a full table scan.
+            <p>An <code>ACCESS_EXCLUSIVE</code> lock is acquired during this.
+            <p>This blocks <strong>all</strong> queries.
+        </details>
+        <p>The closest alternative is to create table constraint instead.
+        <p>The downsides are: 0.5-1% performance hit, and the NOT NULL is fairly invisible.
+        <ol>
+            <li>
+                <code>
+                    SET statement_timeout = "3000";<br>
+                    SET lock_timeout = "3000";<br>
+                    ALTER TABLE table
+                    ADD CONSTRAINT ck_constraint_name
+                    CHECK (column IS NOT NULL)
+                    NOT VALID;
+                </code>
+            <li>
+                <code>
+                    SET statement_timeout = "0";<br>
+                    SET lock_timeout = "0";<br>
+                    VALIDATE CONSTRAINT ck_constraint_name;
+                </code>
+        </ol>
+
+        <p><small><mark>Upgrading to PostgreSQL 12 allows the suboptimal constraint to be replaced.</mark></small>
+    </div>
+    <div data-pg-versions="12">
+        <p>
+        <details>
+            <summary><mark class="warning">This is unsafe.</summary>
+            <p>An <code>ACCESS_EXCLUSIVE</code> lock is acquired during this.
+            <p>This blocks <strong>all</strong> queries.
+            <p>A full table scan is required which takes a <em>long</em> time.
+        </details>
+        <p>Since PostgreSQL 12 it is possible to use an existing constraint to help.
+        <p>Safe alternative:
+        <ol>
+            <li>
+                <code>
+                    SET statement_timeout = "3000";<br>
+                    SET lock_timeout = "3000";<br>
+                    ALTER TABLE table
+                    ADD CONSTRAINT ck_constraint_name
+                    CHECK (column IS NOT NULL)
+                    NOT VALID;
+                </code>
+            <li>
+                <code>
+                    SET statement_timeout = "0";<br>
+                    SET lock_timeout = "0";<br>
+                    VALIDATE CONSTRAINT ck_constraint_name;
+                </code>
+            <li>
+                <code>
+                    ALTER TABLE table ALTER column SET NOT NULL;
+                </code>
+            <li>
+                <code>
+                    SET statement_timeout = "3000";<br>
+                    SET lock_timeout = "3000";<br>
+                    ALTER TABLE table DROP CONSTRAINT ck_constraint_name;
+                </code>
+    </div>
+</section>
+
+<section>
+    <h2 id="Create-index">Create an Index</h2>
+    <p>
+        <code>
+            CREATE INDEX name_idx ON table (column);
+        </code>
+    <p>
+        <code>
+            CREATE UNIQUE INDEX name_idx ON table (column);
+        </code>
+
+    <div data-pg-versions="9.5 9.6 10 11 12">
+        <p>
+            <details>
+                <summary><mark class="warning">This is unsafe.</summary>
+                <p>A <code>SHARE</code> lock is acquired for this operation.
+                <p>This blocks <strong>writes</strong> on the table.
+                <p>A full table scan is required which takes a <em>long</em> time.
+            </details>
+        <p>A good alternative is to create the index concurrently.
+        <p>The downside is that more total work is performed and it takes longer overall.
+        <p>There are other caveats in the PostgreSQL documentation, but I feel they are unlikely to be a problem.
+        <ol>
+            <li>
+                <code>
+                    SET statement_timeout = "0";<br>
+                    SET lock_timeout = "0";<br>
+                    CREATE INDEX CONCURRENTLY name_idx ON table (column);
+                </code>
+            <li>Check the index was created successfully:
+                <br>
+                <code>
+                    \d table
+                </code>
+                <br>
+                Invalid indexes are marked with <code>INVALID</code>.
+            <li>If it was unsuccessful, try again after dropping the index:
+                <br>
+                <code>
+                    DROP INDEX name_idx;
+                </code>
+        </ol>
+    </div>
+</section>
+
+
+<section>
+    <h2 id="create-constraint">Create a Constraint</h2>
+    <p>NOT VALID, then VALIDATE CONSTRAINT
+    <p>Not tried.
+</section>
+
+<section>
+    <h2 id="create-foreign-key">Create a Foreign Key</h2>
+    <p>Not tried.
+    <p>Requires lock on foreign key target.
+</section>
+
+<section>
+    <h2 id="drop-not-null-column">Drop a NOT NULL Column</h2>
+    <p>Problem with ORM reading and writing field.
+    <p>Safe alternative: make null first, then follow drop a column.
+</section>
+
+<section>
+    <h2 id="drop-column">Drop a Column</h2>
+    <p>Problem with ORM reading and writing field(?)
+    <p>Problem with ACCESS EXCLUSIVE lock (waiting issue)
+</section>
+
+<section>
+    <h2 id="rename-column">Rename a Column</h2>
+    <p>...
+</section>
+
+<footer>
+    <h2>References</h2>
+    <ul>
+        <li>Old (2015):
+            <a href="https://gocardless.com/blog/zero-downtime-postgres-migrations-the-hard-parts/">
+                https://gocardless.com/blog/zero-downtime-postgres-migrations-the-hard-parts/
+            </a>
+        <li>Old (2014): <a href="https://www.braintreepayments.com/blog/safe-operations-for-high-volume-postgresql/">https://www.braintreepayments.com/blog/safe-operations-for-high-volume-postgresql/</a>
+    </ul>
+
+<script>
+    const postgresVersionElement = document.getElementById("postgres-version");
+    postgresVersionElement.addEventListener("change", handleVersionChange);
+
+    function handleVersionChange() {
+        const postgresVersion = postgresVersionElement.value;
+        if (postgresVersion === "all") {
+            showAllVersions();
+        } else {
+            showVersion(postgresVersion);
+        }
+    };
+
+    function showVersion(version) {
+        const toShow = document.querySelectorAll(
+            `[data-pg-versions~="${version}"]`
+        );
+        const toHide = document.querySelectorAll(
+            `[data-pg-versions]:not([data-pg-versions~="${version}"])`
+        );
+
+        toShow.forEach(element => element.style.display = "initial");
+        toHide.forEach(element => element.style.display = "none");
+    };
+
+    function showAllVersions() {
+        const toShow = document.querySelectorAll("[data-pg-versions]");
+        toShow.forEach(element => element.style.display = "initial");
+    };
+
+    // Init
+    handleVersionChange();
+    postgresVersionElement.style.display = "initial";
+</script>
