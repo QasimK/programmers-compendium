@@ -1137,13 +1137,12 @@ SUM
         However, in production the exact same migration can be deadly for busy
         tables.
     <p>
-        This is only a HOW-TO guide, more detailed explanations are found in
-        <a href="https://www.postgresql.org/docs/current/index.html">
-            the PostgreSQL manual.
-        </a>
-    <p>
-        Consult the table of contents before creating an automated migration.
-<pre><code>&lt;details&gt;
+        This is only a HOW-TO guide; a more detailed understanding can be
+        obtained from the <a href="sql/migrations-howto.html#references">references</a>.
+<pre><code>&lt;p&gt;
+    Consult the table of contents before creating an automated migration.
+
+&lt;details&gt;
     &lt;summary&gt;&lt;strong&gt;General Advice...&lt;/strong&gt;&lt;/summary&gt;
     &lt;ol&gt;
         &lt;li&gt;Deployments should do the following things in order:
@@ -1417,8 +1416,12 @@ SUM
     <p>...
 </section>
 <footer>
-    <h2><a class="header" href="#references" id="references">References</a></h2>
+    <h2 id="references">References</h2>
     <ul>
+        <li>
+            <a href="https://www.postgresql.org/docs/current/index.html">
+                The PostgreSQL manual
+            </a>
         <li>Old (2015):
             <a href="https://gocardless.com/blog/zero-downtime-postgres-migrations-the-hard-parts/">
                 https://gocardless.com/blog/zero-downtime-postgres-migrations-the-hard-parts/
