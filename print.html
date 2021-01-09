@@ -1152,10 +1152,14 @@ SUM
             &lt;/ol&gt;
         &lt;li&gt;Application code should be forwards-compatible with the new schema.
         &lt;li&gt;Database schemas should be backwards-compatible with the old code.
-        &lt;li&gt;Use timeouts for all automated migrations:
+        &lt;li&gt;Use a statement timeout for all automated migrations:
             &lt;br&gt;
             &lt;code&gt;
                 SET statement_timeout = &quot;5000&quot;;&lt;br&gt;
+            &lt;/code&gt;
+        &lt;li&gt;Optionally, additionally, use a lock timeout for all automated migrations:
+            &lt;br&gt;
+            &lt;code&gt;
                 SET lock_timeout = &quot;2000&quot;;&lt;br&gt;
             &lt;/code&gt;
     &lt;/ol&gt;

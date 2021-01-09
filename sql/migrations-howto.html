@@ -90,10 +90,14 @@
                 </ol>
             <li>Application code should be forwards-compatible with the new schema.
             <li>Database schemas should be backwards-compatible with the old code.
-            <li>Use timeouts for all automated migrations:
+            <li>Use a statement timeout for all automated migrations:
                 <br>
                 <code>
                     SET statement_timeout = "5000";<br>
+                </code>
+            <li>Optionally, additionally, use a lock timeout for all automated migrations:
+                <br>
+                <code>
                     SET lock_timeout = "2000";<br>
                 </code>
         </ol>
