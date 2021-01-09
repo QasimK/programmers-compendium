@@ -7,3 +7,5 @@
 3. `./bin/save.sh` to save (quick commit all & publish)
 
 The [Markdown Guide](https://www.markdownguide.org/) is useful!
+
+This is published on GitHub pages at <https://QasimK.io/programmers-compendium/>.
