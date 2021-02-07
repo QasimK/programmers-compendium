@@ -1,5 +1,13 @@
 # SSH
 
+Escape sequences
+
+* `<Enter> ~.` - terminate connection (and any multiplexed sessions)
+* `<Enter> ~C` - open command console
+* `<Enter> ~?` - help message
+
+## Managing Keys
+
 [The full reference](https://wiki.archlinux.org/index.php/SSH_keys "Arch Linux Wiki") \(Arch Wiki\).
 
 Common commands:
@@ -7,32 +15,44 @@ Common commands:
 ```
 # Create new secure key with comment (User@Device#Realm)
 ssh-keygen -t ed25519 -C Qasim@PC#QasimK
+
 # Change passphrase of existing key
 ssh-keygen -f ~/.ssh/id_ed25519 -p
+
 # Add your credentials to remote server to allow you to login
-ssh-copy-id -i ~/.ssh/id_ed25519.pub username@remote-server.domain
+ssh-copy-id -i ~/.ssh/id_ed25519.pub <host>
 ```
 
-\(`ssh-copy-id` adds your SSH key to to the remote server's user's `authorized_keys` file.\)
+`ssh-copy-id` adds your SSH key to the remote user's `authorized_keys` file.
 
-For your `~/.ssh/config` file, take a look at [my-setup](https://github.com/QasimK/my-setup/), but here is a reference:
+## Port Forwarding (TCP-only)
 
-```
-# Add all new SSH key passphrases to ssh agent (doesn't seem to work)
-AddKeysToAgent [yes|ask|confirm|no]
-# This is default and unnecessary
-IdentityFile ~/.ssh/id_rsa
+Requests to a local port are sent to a remote host/port:
 
-Host MACHINE1
-   IdentitiesOnly yes
-   IdentityFile ~/.ssh/id_ed25519_MACHINE1
-```
+* The default `bind` address is `localhost`.
+* `host` can be `localhost` which means `sshserver` or a remote host.
 
-## TODO: SSH agent
+![](./ssh-local-forward.png "SSH Local Forwarding Diagram")
 
-[https://wiki.archlinux.org/index.php/SSH\_keys\#Start\_ssh-agent\_with\_systemd\_user](https://wiki.archlinux.org/index.php/SSH_keys#Start_ssh-agent_with_systemd_user)
+Requests to a remote port are sent to a "local" port:
 
-.pam\_environment may require reboot !!! \(or manual source?\)
+* The default `bind` address is `localhost` on `sshserver`.
+  (Changing this requires `GatewayPorts` in `sshd_config`.)
+* The "local" port can be on your device or another `host`.
+
+![](./ssh-remote-forward.png "SSH Local Forwarding Diagram")
+
+To cancel port forwarding:
+
+1. In a multiplexed session, run `ssh -O cancel <port forward command> <host>`.
+2. Otherwise enter the control console and type `-KL <port forward command>`
+   (or `-KR` or `-KD`).
+
+## Autossh
+
+[autossh](https://github.com/halida/autossh) can restart an SSH command.
+
+Recommendation: use `-M0` with `ServerAliveInterval` and `ServerAliveCountMax`.
 
 ## SSHD
 
@@ -59,7 +79,7 @@ AllowUsers qasim
 * Use fail2ban \(not needed with SSH keys; lockout risk\)
 * [Require 2FA](http://www.justgohome.co.uk/blog/2013/07/better-two-factor-ssh-authentication-on-ubuntu.html): `libpam-google-authenticator` \(longer setup; not tested; has backup codes\)
 
-### Mosh
+## Mosh
 
 * Mosh uses SSH for initial authentication.
 * Requires UDP ports 60000–61000 to be open \(you can get away with 60000-60010\).
