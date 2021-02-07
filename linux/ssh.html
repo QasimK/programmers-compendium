@@ -164,29 +164,48 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#ssh" id="ssh">SSH</a></h1>
+<p>Escape sequences</p>
+<ul>
+<li><code>&lt;Enter&gt; ~.</code> - terminate connection (and any multiplexed sessions)</li>
+<li><code>&lt;Enter&gt; ~C</code> - open command console</li>
+<li><code>&lt;Enter&gt; ~?</code> - help message</li>
+</ul>
+<h2><a class="header" href="#managing-keys" id="managing-keys">Managing Keys</a></h2>
 <p><a href="https://wiki.archlinux.org/index.php/SSH_keys" title="Arch Linux Wiki">The full reference</a> (Arch Wiki).</p>
 <p>Common commands:</p>
 <pre><code># Create new secure key with comment (User@Device#Realm)
 ssh-keygen -t ed25519 -C Qasim@PC#QasimK
+
 # Change passphrase of existing key
 ssh-keygen -f ~/.ssh/id_ed25519 -p
-# Add your credentials to remote server to allow you to login
-ssh-copy-id -i ~/.ssh/id_ed25519.pub username@remote-server.domain
-</code></pre>
-<p>(<code>ssh-copy-id</code> adds your SSH key to to the remote server's user's <code>authorized_keys</code> file.)</p>
-<p>For your <code>~/.ssh/config</code> file, take a look at <a href="https://github.com/QasimK/my-setup/">my-setup</a>, but here is a reference:</p>
-<pre><code># Add all new SSH key passphrases to ssh agent (doesn't seem to work)
-AddKeysToAgent [yes|ask|confirm|no]
-# This is default and unnecessary
-IdentityFile ~/.ssh/id_rsa
 
-Host MACHINE1
-   IdentitiesOnly yes
-   IdentityFile ~/.ssh/id_ed25519_MACHINE1
+# Add your credentials to remote server to allow you to login
+ssh-copy-id -i ~/.ssh/id_ed25519.pub &lt;host&gt;
 </code></pre>
-<h2><a class="header" href="#todo-ssh-agent" id="todo-ssh-agent">TODO: SSH agent</a></h2>
-<p><a href="https://wiki.archlinux.org/index.php/SSH_keys#Start_ssh-agent_with_systemd_user">https://wiki.archlinux.org/index.php/SSH_keys#Start_ssh-agent_with_systemd_user</a></p>
-<p>.pam_environment may require reboot !!! (or manual source?)</p>
+<p><code>ssh-copy-id</code> adds your SSH key to the remote user's <code>authorized_keys</code> file.</p>
+<h2><a class="header" href="#port-forwarding-tcp-only" id="port-forwarding-tcp-only">Port Forwarding (TCP-only)</a></h2>
+<p>Requests to a local port are sent to a remote host/port:</p>
+<ul>
+<li>The default <code>bind</code> address is <code>localhost</code>.</li>
+<li><code>host</code> can be <code>localhost</code> which means <code>sshserver</code> or a remote host.</li>
+</ul>
+<p><img src="./ssh-local-forward.png" alt="" title="SSH Local Forwarding Diagram" /></p>
+<p>Requests to a remote port are sent to a &quot;local&quot; port:</p>
+<ul>
+<li>The default <code>bind</code> address is <code>localhost</code> on <code>sshserver</code>.
+(Changing this requires <code>GatewayPorts</code> in <code>sshd_config</code>.)</li>
+<li>The &quot;local&quot; port can be on your device or another <code>host</code>.</li>
+</ul>
+<p><img src="./ssh-remote-forward.png" alt="" title="SSH Local Forwarding Diagram" /></p>
+<p>To cancel port forwarding:</p>
+<ol>
+<li>In a multiplexed session, run <code>ssh -O cancel &lt;port forward command&gt; &lt;host&gt;</code>.</li>
+<li>Otherwise enter the control console and type <code>-KL &lt;port forward command&gt;</code>
+(or <code>-KR</code> or <code>-KD</code>).</li>
+</ol>
+<h2><a class="header" href="#autossh" id="autossh">Autossh</a></h2>
+<p><a href="https://github.com/halida/autossh">autossh</a> can restart an SSH command.</p>
+<p>Recommendation: use <code>-M0</code> with <code>ServerAliveInterval</code> and <code>ServerAliveCountMax</code>.</p>
 <h2><a class="header" href="#sshd" id="sshd">SSHD</a></h2>
 <p>Test config with <code>sudo sshd -T</code> before restarting the daemon.</p>
 <p>The following settings are ordered starting from the most significant, least invasive and easiest to setup:</p>
@@ -209,7 +228,7 @@ AllowUsers qasim
 <li>Use fail2ban (not needed with SSH keys; lockout risk)</li>
 <li><a href="http://www.justgohome.co.uk/blog/2013/07/better-two-factor-ssh-authentication-on-ubuntu.html">Require 2FA</a>: <code>libpam-google-authenticator</code> (longer setup; not tested; has backup codes)</li>
 </ul>
-<h3><a class="header" href="#mosh" id="mosh">Mosh</a></h3>
+<h2><a class="header" href="#mosh" id="mosh">Mosh</a></h2>
 <ul>
 <li>Mosh uses SSH for initial authentication.</li>
 <li>Requires UDP ports 60000–61000 to be open (you can get away with 60000-60010).</li>
