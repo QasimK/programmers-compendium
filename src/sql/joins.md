@@ -12,3 +12,5 @@
 A lateral join is like a for-each loop. It can join multiple rows for each original row.
 
 Contrast this with a correlated subquery which can only return one row.
+
+Each lateral join subquery in the `FROM` clause can reference columns from preceding FROM subqueries. Without the lateral, each subquery is evaluated independently.
