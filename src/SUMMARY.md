@@ -28,12 +28,12 @@
 
 # SQL/DB
 - [Databases](sql/databases.md)
-- [Query Summary](sql/query-summary.md)
+- [Querying](sql/querying.md)
 - [Joins](sql/joins.md)
 - [Trust](sql/trust.md)
 - [Migrations](sql/migrations.md)
 - [Migrations-HOWTO](sql/migrations-howto.html)
-- [Snippets](sql/snippets.md)
+- [Postgres](sql/postgres.md)
 
 # Linux
 

@@ -7,5 +7,8 @@
 * **FULL OUTER JOIN** - either side could be null.
 * **INNER JOIN** - return only rows with matching records on both sides.
 
+## Lateral Joins
 
+A lateral join is like a for-each loop. It can join multiple rows for each original row.
 
+Contrast this with a correlated subquery which can only return one row.
