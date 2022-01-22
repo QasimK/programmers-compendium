@@ -67,6 +67,11 @@
 - [Sorting](core/sorting.md)
 - [Strings](core/strings.md)
 
+# Thoughts
+
+- [Django ORM](thoughts/django-orm.md)
+- [Safe Writes](thoughts/safe-writes.md)
+
 ---
 
 # Appendix

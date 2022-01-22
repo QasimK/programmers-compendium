@@ -1,6 +1,8 @@
 # Trust in your database
 
-Transactions. TBD: Serialisation levels
+Excellent article on race conditions:
+
+https://ketanbhatt.com/db-concurrency-defects/
 
 ## CAP
 

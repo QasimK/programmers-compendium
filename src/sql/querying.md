@@ -35,7 +35,11 @@ DELETE ...
 
 **UNION** adds the rows of different queries
 
-**HAVING** allows aggregate functions. WHERE filters individual rows before the GROUP BY, while HAVING filters group rows created by the GROUP BY.
+**WHERE** determines which rows will be processed by the query and filters rows before the GROUP BY.
+
+**HAVING** comes in at the end of a query after the GROUP BY and determines which rows will be sent to the client. It allows aggregate functions by filtering group rows created by the GROUP BY.
+
+[The difference between WHERE and HAVING](https://sql-bits.com/the-difference-between-where-and-having/).
 
 The order is in fact:
 
