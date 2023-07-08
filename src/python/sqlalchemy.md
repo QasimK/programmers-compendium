@@ -18,13 +18,17 @@ Thus, even small transactions can become a serious problem.
 In particular, consider when sessions are tied to web requests—a transaction could be open for several seconds.
 
 
-
 ### Recommendation
 
 When using the usual READ COMMITTED isolation level:
 
 * use auto-commit for reads
 * switch to explicit transactions for writes
+
+
+
+Problem description and alternate solution: <https://www.gorgias.com/blog/prevent-idle-in-transaction-engineering>
+<https://www.oddbird.net/2014/06/14/sqlalchemy-postgres-autocommit/>
 
 
 ## Weakly Referenced Objects
@@ -40,5 +44,5 @@ Use [SQLAlchemy's recipe for strong references](https://docs.sqlalchemy.org/en/2
 
 ## Good to Know
 
-* SQLAlchemy follows the unit of work pattern and stores
+* SQLAlchemy has an identity map that caches queried objects
 * SQLAlchemy using mutation tracking and updates the precise fields that changed
