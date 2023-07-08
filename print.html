@@ -5,8 +5,10 @@
         <meta charset="UTF-8">
         <title>The Programmer&#x27;s Compendium</title>
         <meta name="robots" content="noindex" />
+
+
         <!-- Custom HTML head -->
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        
         <meta name="description" content="My knowledge relating to software engineering.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -17,25 +19,29 @@
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
         <link rel="stylesheet" href="css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -51,7 +57,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -63,12 +69,14 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -76,16 +84,38 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded affix "><li class="part-title">Recipes</li><li class="chapter-item expanded "><a href="recipes/nginx.html"><strong aria-hidden="true">2.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="recipes/uwsgi.html"><strong aria-hidden="true">3.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="recipes/kubernetes.html"><strong aria-hidden="true">4.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="recipes/gcloud.html"><strong aria-hidden="true">5.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="recipes/postgres.html"><strong aria-hidden="true">6.</strong> Postgres</a></li><li class="chapter-item expanded affix "><li class="part-title">Python</li><li class="chapter-item expanded "><a href="topics/python.html"><strong aria-hidden="true">7.</strong> Python Misc.</a></li><li class="chapter-item expanded "><a href="python/profiling.html"><strong aria-hidden="true">8.</strong> Profiling</a></li><li class="chapter-item expanded "><a href="python/versions.html"><strong aria-hidden="true">9.</strong> Versions</a></li><li class="chapter-item expanded affix "><li class="part-title">Topics</li><li class="chapter-item expanded "><a href="topics/web.html"><strong aria-hidden="true">10.</strong> Web</a></li><li class="chapter-item expanded "><a href="topics/git.html"><strong aria-hidden="true">11.</strong> Git</a></li><li class="chapter-item expanded "><a href="topics/networking.html"><strong aria-hidden="true">12.</strong> Networking</a></li><li class="chapter-item expanded "><a href="topics/crypto.html"><strong aria-hidden="true">13.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="topics/time.html"><strong aria-hidden="true">14.</strong> Time</a></li><li class="chapter-item expanded "><a href="topics/bash.html"><strong aria-hidden="true">15.</strong> Bash Scripts</a></li><li class="chapter-item expanded "><a href="topics/xml.html"><strong aria-hidden="true">16.</strong> XML</a></li><li class="chapter-item expanded affix "><li class="part-title">SQL/DB</li><li class="chapter-item expanded "><a href="sql/databases.html"><strong aria-hidden="true">17.</strong> Databases</a></li><li class="chapter-item expanded "><a href="sql/querying.html"><strong aria-hidden="true">18.</strong> Querying</a></li><li class="chapter-item expanded "><a href="sql/joins.html"><strong aria-hidden="true">19.</strong> Joins</a></li><li class="chapter-item expanded "><a href="sql/trust.html"><strong aria-hidden="true">20.</strong> Trust</a></li><li class="chapter-item expanded "><a href="sql/migrations.html"><strong aria-hidden="true">21.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="sql/migrations-howto.html"><strong aria-hidden="true">22.</strong> Migrations-HOWTO</a></li><li class="chapter-item expanded "><a href="sql/postgres.html"><strong aria-hidden="true">23.</strong> Postgres</a></li><li class="chapter-item expanded affix "><li class="part-title">Linux</li><li class="chapter-item expanded "><a href="linux/overview.html"><strong aria-hidden="true">24.</strong> Overview</a></li><li class="chapter-item expanded "><a href="linux/systemd.html"><strong aria-hidden="true">25.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="linux/shells.html"><strong aria-hidden="true">26.</strong> Shells</a></li><li class="chapter-item expanded "><a href="linux/ssh.html"><strong aria-hidden="true">27.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="linux/containerisation.html"><strong aria-hidden="true">28.</strong> Containers</a></li><li class="chapter-item expanded "><a href="linux/terminal.html"><strong aria-hidden="true">29.</strong> Terminal Pro</a></li><li class="chapter-item expanded affix "><li class="part-title">Domains</li><li class="chapter-item expanded "><a href="domains/accounting.html"><strong aria-hidden="true">30.</strong> Accounting</a></li><li class="chapter-item expanded "><a href="domains/audio.html"><strong aria-hidden="true">31.</strong> Audio</a></li><li class="chapter-item expanded "><a href="domains/encoding.html"><strong aria-hidden="true">32.</strong> Encoding</a></li><li class="chapter-item expanded affix "><li class="part-title">Software Development</li><li class="chapter-item expanded "><a href="software-development/principles.html"><strong aria-hidden="true">33.</strong> Principles</a></li><li class="chapter-item expanded "><a href="software-development/design-patterns.html"><strong aria-hidden="true">34.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="software-development/anti-patterns.html"><strong aria-hidden="true">35.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="software-development/how-to-mock.html"><strong aria-hidden="true">36.</strong> Testing</a></li><li class="chapter-item expanded "><a href="software-development/architecture-patterns.html"><strong aria-hidden="true">37.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="software-development/apis.html"><strong aria-hidden="true">38.</strong> APIs</a></li><li class="chapter-item expanded "><a href="software-development/agile.html"><strong aria-hidden="true">39.</strong> Agile</a></li><li class="chapter-item expanded "><a href="software-development/refactoring.html"><strong aria-hidden="true">40.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="software-development/documentation.html"><strong aria-hidden="true">41.</strong> Documentation</a></li><li class="chapter-item expanded affix "><li class="part-title">Fundamentals</li><li class="chapter-item expanded "><a href="core/sorting.html"><strong aria-hidden="true">42.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="core/strings.html"><strong aria-hidden="true">43.</strong> Strings</a></li><li class="chapter-item expanded affix "><li class="part-title">Thoughts</li><li class="chapter-item expanded "><a href="thoughts/django-orm.html"><strong aria-hidden="true">44.</strong> Django ORM</a></li><li class="chapter-item expanded "><a href="thoughts/safe-writes.html"><strong aria-hidden="true">45.</strong> Safe Writes</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="appendix/reading-materials.html"><strong aria-hidden="true">46.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="appendix/references.html"><strong aria-hidden="true">47.</strong> References</a></li><li class="chapter-item expanded "><a href="appendix/talk-notes.html"><strong aria-hidden="true">48.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="appendix/know-thy-history.html"><strong aria-hidden="true">49.</strong> Know Thy History</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded affix "><li class="part-title">Recipes</li><li class="chapter-item expanded "><a href="recipes/nginx.html"><strong aria-hidden="true">2.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="recipes/uwsgi.html"><strong aria-hidden="true">3.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="recipes/kubernetes.html"><strong aria-hidden="true">4.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="recipes/gcloud.html"><strong aria-hidden="true">5.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="recipes/postgres.html"><strong aria-hidden="true">6.</strong> Postgres</a></li><li class="chapter-item expanded affix "><li class="part-title">Python</li><li class="chapter-item expanded "><a href="topics/python.html"><strong aria-hidden="true">7.</strong> Python Misc.</a></li><li class="chapter-item expanded "><a href="python/profiling.html"><strong aria-hidden="true">8.</strong> Profiling</a></li><li class="chapter-item expanded "><a href="python/versions.html"><strong aria-hidden="true">9.</strong> Versions</a></li><li class="chapter-item expanded "><a href="python/sqlalchemy.html"><strong aria-hidden="true">10.</strong> SQLAlchemy</a></li><li class="chapter-item expanded affix "><li class="part-title">Topics</li><li class="chapter-item expanded "><a href="topics/web.html"><strong aria-hidden="true">11.</strong> Web</a></li><li class="chapter-item expanded "><a href="topics/git.html"><strong aria-hidden="true">12.</strong> Git</a></li><li class="chapter-item expanded "><a href="topics/networking.html"><strong aria-hidden="true">13.</strong> Networking</a></li><li class="chapter-item expanded "><a href="topics/crypto.html"><strong aria-hidden="true">14.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="topics/time.html"><strong aria-hidden="true">15.</strong> Time</a></li><li class="chapter-item expanded "><a href="topics/bash.html"><strong aria-hidden="true">16.</strong> Bash Scripts</a></li><li class="chapter-item expanded "><a href="topics/xml.html"><strong aria-hidden="true">17.</strong> XML</a></li><li class="chapter-item expanded affix "><li class="part-title">SQL/DB</li><li class="chapter-item expanded "><a href="sql/databases.html"><strong aria-hidden="true">18.</strong> Databases</a></li><li class="chapter-item expanded "><a href="sql/querying.html"><strong aria-hidden="true">19.</strong> Querying</a></li><li class="chapter-item expanded "><a href="sql/joins.html"><strong aria-hidden="true">20.</strong> Joins</a></li><li class="chapter-item expanded "><a href="sql/trust.html"><strong aria-hidden="true">21.</strong> Trust</a></li><li class="chapter-item expanded "><a href="sql/migrations.html"><strong aria-hidden="true">22.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="sql/migrations-howto.html"><strong aria-hidden="true">23.</strong> Migrations-HOWTO</a></li><li class="chapter-item expanded "><a href="sql/postgres.html"><strong aria-hidden="true">24.</strong> Postgres</a></li><li class="chapter-item expanded affix "><li class="part-title">Linux</li><li class="chapter-item expanded "><a href="linux/overview.html"><strong aria-hidden="true">25.</strong> Overview</a></li><li class="chapter-item expanded "><a href="linux/systemd.html"><strong aria-hidden="true">26.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="linux/shells.html"><strong aria-hidden="true">27.</strong> Shells</a></li><li class="chapter-item expanded "><a href="linux/ssh.html"><strong aria-hidden="true">28.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="linux/containerisation.html"><strong aria-hidden="true">29.</strong> Containers</a></li><li class="chapter-item expanded "><a href="linux/terminal.html"><strong aria-hidden="true">30.</strong> Terminal Pro</a></li><li class="chapter-item expanded affix "><li class="part-title">Domains</li><li class="chapter-item expanded "><a href="domains/accounting.html"><strong aria-hidden="true">31.</strong> Accounting</a></li><li class="chapter-item expanded "><a href="domains/audio.html"><strong aria-hidden="true">32.</strong> Audio</a></li><li class="chapter-item expanded "><a href="domains/encoding.html"><strong aria-hidden="true">33.</strong> Encoding</a></li><li class="chapter-item expanded affix "><li class="part-title">Software Development</li><li class="chapter-item expanded "><a href="software-development/principles.html"><strong aria-hidden="true">34.</strong> Principles</a></li><li class="chapter-item expanded "><a href="software-development/design-patterns.html"><strong aria-hidden="true">35.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="software-development/anti-patterns.html"><strong aria-hidden="true">36.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="software-development/testing.html"><strong aria-hidden="true">37.</strong> Testing</a></li><li class="chapter-item expanded "><a href="software-development/architecture-patterns.html"><strong aria-hidden="true">38.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="software-development/apis.html"><strong aria-hidden="true">39.</strong> APIs</a></li><li class="chapter-item expanded "><a href="software-development/agile.html"><strong aria-hidden="true">40.</strong> Agile</a></li><li class="chapter-item expanded "><a href="software-development/refactoring.html"><strong aria-hidden="true">41.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="software-development/documentation.html"><strong aria-hidden="true">42.</strong> Documentation</a></li><li class="chapter-item expanded "><a href="software-development/estimating.html"><strong aria-hidden="true">43.</strong> Estimating</a></li><li class="chapter-item expanded affix "><li class="part-title">Fundamentals</li><li class="chapter-item expanded "><a href="core/sorting.html"><strong aria-hidden="true">44.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="core/strings.html"><strong aria-hidden="true">45.</strong> Strings</a></li><li class="chapter-item expanded affix "><li class="part-title">Thoughts</li><li class="chapter-item expanded "><a href="thoughts/avoid-makefiles.html"><strong aria-hidden="true">46.</strong> Avoid Makefiles</a></li><li class="chapter-item expanded "><a href="thoughts/django-orm.html"><strong aria-hidden="true">47.</strong> Django ORM</a></li><li class="chapter-item expanded "><a href="thoughts/safe-writes.html"><strong aria-hidden="true">48.</strong> Safe Writes</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="appendix/reading-materials.html"><strong aria-hidden="true">49.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="appendix/references.html"><strong aria-hidden="true">50.</strong> References</a></li><li class="chapter-item expanded "><a href="appendix/talk-notes.html"><strong aria-hidden="true">51.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="appendix/know-thy-history.html"><strong aria-hidden="true">52.</strong> Know Thy History</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
@@ -94,7 +124,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -114,6 +144,7 @@
                         <a href="https://github.com/QasimK/programmers-compendium" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -127,8 +158,9 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -630,12 +662,13 @@ max_standby_streaming_delay = 900s
 <p>GIL required to run bytecode, but not when waiting on I/O - can switch to different thread. CPython has macros to release and re-aquire GIL which can be used if extension does not need to run python bytecode/do any kind of ref-count changes (e.g. sleep, read/write files, network socket, numpy, image processing(?)). Cannot share GIL in CPU-bound code. CPU-bound &quot;check&quot; every 100 ticks to allow switching. Note: I/O doesn't often block unless you are flushing - OS buffers. Note: Threads/Processes result in CPU context switches, while async does not.</p>
 <p>Pure CPU: Process &lt;---&gt; Threads &lt;---&gt; Async: Pure I/O (Many &quot;Connections&quot;/Slow I/O).</p>
 <p>Async I/O clearly delineates the context switch locations, in theory.</p>
-<table><thead><tr><th style="text-align: left">Processes</th><th style="text-align: left">Threads</th><th style="text-align: left">Async I/O</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Processes</th><th style="text-align: left">Threads</th><th style="text-align: left">Async I/O</th></tr></thead><tbody>
 <tr><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left">No CPU Context Switches</td></tr>
 <tr><td style="text-align: left"></td><td style="text-align: left">Shared memory can result in race conditions.</td><td style="text-align: left">No race conditions.. usually.</td></tr>
 <tr><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left">No dead locks.. usually.</td></tr>
 <tr><td style="text-align: left">Costly.</td><td style="text-align: left">Each thread has its own stack.</td><td style="text-align: left">Shared Stack. Uses an executor pool to run sync tasks in a background thread (this uses additional resources)</td></tr>
 </tbody></table>
+</div>
 <p>Python 2 -&gt; 3: Strings/Bytes, Print, Super() - new style classes, division.</p>
 <h2 id="linting"><a class="header" href="#linting">Linting</a></h2>
 <ul>
@@ -743,9 +776,30 @@ lambdas = [
 <h3 id="sqlalchemy-1"><a class="header" href="#sqlalchemy-1">SQLAlchemy</a></h3>
 <p>Something something 'raise' to prevent hidden n+1 joins.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="python-history"><a class="header" href="#python-history">Python History</a></h1>
+<h2 id="python-311"><a class="header" href="#python-311">Python 3.11</a></h2>
+<ul>
+<li>exception groups and <code>except*</code> syntax</li>
+<li>asyncio task groups  <code>TaskGroup</code></li>
+<li>add context to exceptions using <code>add_note</code></li>
+<li><code>datetime.UTC</code> alias</li>
+<li>date and time support for <code>fromisoformat</code></li>
+<li><code>StrEnum</code></li>
+<li>enum verification checks <code>verify</code></li>
+<li><code>operator.call</code></li>
+<li>type hints <code>Self</code> and <code>LiteralString</code></li>
+<li>typing <code>assert_never</code> and <code>reveal_type</code></li>
+</ul>
+<h2 id="python-310"><a class="header" href="#python-310">Python 3.10</a></h2>
+<ul>
+<li>structural pattern matching <code>match</code></li>
+<li>context managers can be defined across multiple lines</li>
+<li>union operator for type hints <code>X | Y</code></li>
+<li>type hint guarding <code>TypeGuard</code></li>
+<li>itertools <code>pairwise</code></li>
+</ul>
 <h2 id="python-39"><a class="header" href="#python-39">Python 3.9</a></h2>
 <ul>
-<li>time zone support built-in with zoneinfo module</li>
+<li>time zone support built-in with <code>zoneinfo</code> module</li>
 <li>in-place union <code>|=</code> of dictionary-like objects</li>
 <li>combined annotations <code>Annotated[float, &quot;seconds&quot;]</code></li>
 <li>type hint containers directly <code>list[float]</code></li>
@@ -793,6 +847,31 @@ lambdas = [
 <li>extended iterable unpacking</li>
 <li>set literals</li>
 <li>removed tuple parameter unpacking</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="using-sqlalchemy-in-python"><a class="header" href="#using-sqlalchemy-in-python">Using SQLAlchemy in Python</a></h1>
+<p>SQLAlchemy is an absolutely outstanding, best-in-class ORM library.</p>
+<p><em>However</em>, the default setup is not perfect.</p>
+<h2 id="idle-in-transaction"><a class="header" href="#idle-in-transaction">Idle in Transaction</a></h2>
+<p>The default behaviour in SQLAlchemy is to open a transaction for read queries.</p>
+<p>However, read queries (inside a transaction), will block all database migrations.</p>
+<p>Considering, that migrations block all subsequent query requests, this can take down an application.</p>
+<p>Thus, even small transactions can become a serious problem.</p>
+<p>In particular, consider when sessions are tied to web requests—a transaction could be open for several seconds.</p>
+<h3 id="recommendation"><a class="header" href="#recommendation">Recommendation</a></h3>
+<p>When using the usual READ COMMITTED isolation level:</p>
+<ul>
+<li>use auto-commit for reads</li>
+<li>switch to explicit transactions for writes</li>
+</ul>
+<h2 id="weakly-referenced-objects"><a class="header" href="#weakly-referenced-objects">Weakly Referenced Objects</a></h2>
+<p>SQLAlchemy weakly references ORM instances. This means, when you convert them into a core type, they are dropped from the identity map.</p>
+<p>The impact is that when it comes to updates, SQLAlchemy will have to inefficiently query the database for the object again.</p>
+<h3 id="recommendation-1"><a class="header" href="#recommendation-1">Recommendation</a></h3>
+<p>Use <a href="https://docs.sqlalchemy.org/en/20/orm/session_state_management.html#session-referencing-behavior">SQLAlchemy's recipe for strong references</a>.</p>
+<h2 id="good-to-know"><a class="header" href="#good-to-know">Good to Know</a></h2>
+<ul>
+<li>SQLAlchemy follows the unit of work pattern and stores</li>
+<li>SQLAlchemy using mutation tracking and updates the precise fields that changed</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="web"><a class="header" href="#web">Web</a></h1>
 <p>Learning: <a href="https://hpbn.co/">https://hpbn.co/</a></p>
@@ -864,13 +943,13 @@ lambdas = [
 <p><a href="https://github.com/NicoHood/gpgit">https://github.com/NicoHood/gpgit</a></p>
 <p>(Interesting read: <a href="https://mikegerwitz.com/papers/git-horror-story.html">https://mikegerwitz.com/papers/git-horror-story.html</a>)</p>
 <h1 id="comparison"><a class="header" href="#comparison">Comparison</a></h1>
-<table><thead><tr><th style="text-align: left">Concept</th><th style="text-align: left">Git</th><th style="text-align: left">Mercurial</th><th style="text-align: left">SVN</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Concept</th><th style="text-align: left">Git</th><th style="text-align: left">Mercurial</th><th style="text-align: left">SVN</th></tr></thead><tbody>
 <tr><td style="text-align: left">Branches</td><td style="text-align: left">Branches</td><td style="text-align: left">...</td><td style="text-align: left">...</td></tr>
 <tr><td style="text-align: left">Stash</td><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">Working Area</td><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">History</td><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left"></td></tr>
 </tbody></table>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="networking"><a class="header" href="#networking">Networking</a></h1>
 <p>Private networks:</p>
 <ul>
 <li>10.0.0.0/8 (255.0.0.0)</li>
@@ -1003,9 +1082,10 @@ set -o xtrace        # Print each executed command
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sql"><a class="header" href="#sql">SQL</a></h1>
 <p><a href="https://pgexercises.com/">https://pgexercises.com/</a></p>
 <p><a href="http://tatiyants.com/pev/">http://tatiyants.com/pev/</a> - Explain Visualiser</p>
-<table><thead><tr><th style="text-align: left">Data Description Language (DDL)</th><th style="text-align: left">Data Manipulation Language (DML)</th><th style="text-align: left">Data Control Language (DCL)</th><th style="text-align: left">Transaction Control Language (TCL)</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Data Description Language (DDL)</th><th style="text-align: left">Data Manipulation Language (DML)</th><th style="text-align: left">Data Control Language (DCL)</th><th style="text-align: left">Transaction Control Language (TCL)</th></tr></thead><tbody>
 <tr><td style="text-align: left">CREATE/ALTER/DROP/TRUNCATE/RENAME</td><td style="text-align: left">SELECT/INSERT/UPDATE/DELETE</td><td style="text-align: left">GRANT/REVOKE</td><td style="text-align: left">BEGIN/COMMIT/ROLLBACK/SAVEPOINT</td></tr>
 </tbody></table>
+</div>
 <h2 id="query-summary"><a class="header" href="#query-summary">Query Summary</a></h2>
 <p>The key actions are:</p>
 <pre><code class="language-SQL">SELECT [DISTINCT] ... FROM ...
@@ -1384,7 +1464,7 @@ WHERE
     </div>
 </section>
 <section>
-    <h2 id="create-not-null">Create a NOT NULL Column</h2>
+    <h2 id="create-not-null"><a class="header" href="#create-not-null">Create a NOT NULL Column</a></h2>
     <p>
         <code>
             ALTER TABLE table ADD COLUMN column INT DEFAULT 0 NOT NULL;
@@ -1415,7 +1495,7 @@ WHERE
 </code></pre>
 </section>
 <section>
-    <h2 id="make-null-not-null">Make a NULL Column NOT NULL</h2>
+    <h2 id="make-null-not-null"><a class="header" href="#make-null-not-null">Make a NULL Column NOT NULL</a></h2>
     <p>
         <code>
             ALTER TABLE table ALTER column SET NOT NULL;
@@ -1490,7 +1570,7 @@ WHERE
 </code></pre>
 </section>
 <section>
-    <h2 id="Create-index">Create an Index</h2>
+    <h2 id="Create-index"><a class="header" href="#Create-index">Create an Index</a></h2>
     <p>
         <code>
             CREATE INDEX name_idx ON table (column);
@@ -1534,31 +1614,31 @@ WHERE
 </code></pre>
 </section>
 <section>
-    <h2 id="create-constraint">Create a Constraint</h2>
+    <h2 id="create-constraint"><a class="header" href="#create-constraint">Create a Constraint</a></h2>
     <p>NOT VALID, then VALIDATE CONSTRAINT
     <p>Not tried.
 </section>
 <section>
-    <h2 id="create-foreign-key">Create a Foreign Key</h2>
+    <h2 id="create-foreign-key"><a class="header" href="#create-foreign-key">Create a Foreign Key</a></h2>
     <p>Not tried.
     <p>Requires lock on foreign key target.
 </section>
 <section>
-    <h2 id="drop-not-null-column">Drop a NOT NULL Column</h2>
+    <h2 id="drop-not-null-column"><a class="header" href="#drop-not-null-column">Drop a NOT NULL Column</a></h2>
     <p>Problem with ORM reading and writing field.
     <p>Safe alternative: make null first, then follow drop a column.
 </section>
 <section>
-    <h2 id="drop-column">Drop a Column</h2>
+    <h2 id="drop-column"><a class="header" href="#drop-column">Drop a Column</a></h2>
     <p>Problem with ORM reading and writing field(?)
     <p>Problem with ACCESS EXCLUSIVE lock (waiting issue)
 </section>
 <section>
-    <h2 id="rename-column">Rename a Column</h2>
+    <h2 id="rename-column"><a class="header" href="#rename-column">Rename a Column</a></h2>
     <p>...
 </section>
 <footer>
-    <h2 id="references">References</h2>
+    <h2 id="references"><a class="header" href="#references">References</a></h2>
     <ul>
         <li>
             <a href="https://www.postgresql.org/docs/current/index.html">
@@ -1645,7 +1725,6 @@ WHERE
 <li>Alt: <a href="https://github.com/knqyf263/pet/">pet</a></li>
 </ul>
 </li>
-<li>Use <code>.pam_environment</code> to <a href="https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.pam_environment">set environment variables</a> in a cross-shell manner</li>
 <li><a href="https://github.com/nvbn/thefuck">thefuck</a> corrects your previous console command</li>
 <li>How to control the <a href="https://wiki.archlinux.org/index.php/XDG_Base_Directory_support">proliferation of dotfiles</a></li>
 <li>(A way-too-big list of tools to make an <a href="https://github.com/alebcay/awesome-shell">awesome shell</a>.)</li>
@@ -1682,6 +1761,7 @@ WHERE
 <li><a href="https://github.com/jarun/nnn">nnn</a> - Terminal File Browser</li>
 </ul>
 <h2 id="makefiles"><a class="header" href="#makefiles">Makefiles</a></h2>
+<p>I advise <a href="linux/thoughts/avoid-makefiles.html">avoiding makefiles to run scripts</a>.</p>
 <p>Template:</p>
 <pre><code class="language-makefile">MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
@@ -1710,10 +1790,9 @@ $(VERBOSE).SILENT:
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="systemd-files"><a class="header" href="#systemd-files">Systemd Files</a></h1>
 <blockquote>
-<p>Ubuntu 16.04 does not support <strong>user</strong> SystemD services.</p>
 <p>&quot;The only thing more complicated and confusing than systemd is the planet's ecosystem.&quot; - Me</p>
 </blockquote>
-<p>This page is useless.</p>
+<p>This page is currently useless.</p>
 <p>For example, create <code>/etc/systemd/system/my-ssh-monitor.service</code></p>
 <pre><code class="language-ini">[Unit]
 description=My SSH monitor
@@ -1743,14 +1822,14 @@ WantedBy=default.target
 <h2 id="timers"><a class="header" href="#timers">Timers</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="shells"><a class="header" href="#shells">Shells</a></h1>
 <p>There <a href="https://unix.stackexchange.com/a/4132">difference between a shell, terminal, console and command line</a>.</p>
-<table><thead><tr><th style="text-align: left">Fish</th><th style="text-align: left">Bash</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Fish</th><th style="text-align: left">Bash</th></tr></thead><tbody>
 <tr><td style="text-align: left">Alt-L : ls</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">Alt-P : append &quot;| less&quot;</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">Alt-V : edit command in editor</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">Alt-W : what is the current command?</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">history</td><td style="text-align: left">history</td></tr>
 </tbody></table>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ssh"><a class="header" href="#ssh">SSH</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="ssh"><a class="header" href="#ssh">SSH</a></h1>
 <p>Escape sequences</p>
 <ul>
 <li><code>&lt;Enter&gt; ~.</code> - terminate connection (and any multiplexed sessions)</li>
@@ -2006,6 +2085,11 @@ org.gnome.gedit.desktop
 <p>The <a href="https://mikehadlow.blogspot.co.uk/2014/12/the-lava-layer-anti-pattern.html">lava layer</a> is the mismash that results from an evolving codebase that lacks singular vision and continuity of development.</p>
 <h2 id="testing-anti-patterns"><a class="header" href="#testing-anti-patterns">Testing anti-patterns</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
+<blockquote>
+<p>I am not happy with this page right now.</p>
+</blockquote>
+<p>There are many different names and people use different names to mean different
+things. The following will likely not confirm to what you think:</p>
 <p>Tests can be divided by size:</p>
 <ul>
 <li>unit-tests - tiny, no IO, no other components involved (small) - fast</li>
@@ -2017,7 +2101,7 @@ org.gnome.gedit.desktop
 <li>functional tests - functional programming, test output based on input (NB: also used to refer to testing features)</li>
 <li>acceptance tests - the final end result (black-box) tested at the highest, outer-most level (e.g. using your web app with a web browser)</li>
 </ul>
-<p>They can be devided by purpose:</p>
+<p>They can be divided by purpose:</p>
 <ul>
 <li>smoke tests - a subset of tests that quickly reveal severe failures</li>
 <li>regression tests - tests that catch bugs that come back, or features that stop working</li>
@@ -2027,11 +2111,10 @@ org.gnome.gedit.desktop
 <li>end-to-end tests - performed by QA involving multiple distinct steps to accomplish a goal</li>
 <li>user acceptance tests - performed by non-technical business users or otherwise domain-experts to test whether they accept the software in their heart</li>
 </ul>
-<p>The naming and boundaries are fairly fuzzy so don't worry about it.</p>
 <p>Tests accomplish two main goals:</p>
 <ul>
 <li>What you've written now is right, including incorporating business requirement directly as a test.</li>
-<li>What you've written stays right, including allow refactorings with confidence (increase development speed; reduce regressions). It leaves a bad impression (on clients) if a bug keeps reappearing, and demoralises developers.</li>
+<li>What you've written stays right, including refactoring with confidence (increase development speed; reduce regressions). It leaves a bad impression (on clients) if a bug keeps reappearing, and demoralises developers.</li>
 </ul>
 <p>Software Quality Assurance (SQA) looks at the development process itself to reduce the number of issues.</p>
 <p>You also have operation acceptance tests, which test things like failover, backups, recoveries, performance, monitoring, and alerting.</p>
@@ -2063,11 +2146,31 @@ org.gnome.gedit.desktop
 <h2 id="how-to-mock"><a class="header" href="#how-to-mock">How to Mock</a></h2>
 <p>Don't. Ref: <a href="https://www.youtube.com/watch?v=Xu5EhKVZdV8">https://www.youtube.com/watch?v=Xu5EhKVZdV8</a></p>
 <p>https://www.youtube.com/watch?v=3MNVP9-hglc &quot;The End Of Object Inheritance &amp; The Beginning Of A New Modularity&quot; here?</p>
-<p>Stubs - Fake/Shortcutted implementations, for testing the state of the object</p>
-<p>Mocks - Empty &quot;implementations&quot;, for testing interactions with the object</p>
 <p>How to Test: <a href="https://www.destroyallsoftware.com/talks/boundaries">https://www.destroyallsoftware.com/talks/boundaries</a></p>
 <p>Imperative shell = integration tests of the shell which tie together all the dependencies (no logic; no code paths to test) - that's what they're good at.</p>
 <p>Functional core = unit-tests of all that messy logic (that's what they're good at)</p>
+<h2 id="test-doubles"><a class="header" href="#test-doubles">Test Doubles</a></h2>
+<p><a href="https://scribe.rip/m/global-identity-2?redirectUrl=https%3A%2F%2Fblog.pragmatists.com%2Ftest-doubles-fakes-mocks-and-stubs-1a7491dfa3da">https://scribe.rip/m/global-identity-2?redirectUrl=https%3A%2F%2Fblog.pragmatists.com%2Ftest-doubles-fakes-mocks-and-stubs-1a7491dfa3da</a></p>
+<ul>
+<li>Dummy — anything not used</li>
+<li>Fakes — working implementation with shortcuts (test for state)</li>
+<li>Stubs — answers queries with predefined data</li>
+<li>Spies — stubs that record how they were called</li>
+<li>Mocks — verify calls against a specification (test for behaviour)</li>
+</ul>
+<h3 id="how-to-choose-between-these"><a class="header" href="#how-to-choose-between-these">How to choose between these?</a></h3>
+<p>There's different schools:</p>
+<ul>
+<li><a href="https://scribe.rip/@adrianbooth/test-driven-development-wars-detroit-vs-london-classicist-vs-mockist-9956c78ae95f">https://scribe.rip/@adrianbooth/test-driven-development-wars-detroit-vs-london-classicist-vs-mockist-9956c78ae95f</a></li>
+<li><a href="https://martinfowler.com/articles/mocksArentStubs.html">https://martinfowler.com/articles/mocksArentStubs.html</a></li>
+<li><a href="https://tyrrrz.me/blog/fakes-over-mocks">https://tyrrrz.me/blog/fakes-over-mocks</a></li>
+</ul>
+<p>Don't use test doubles for what you own. Only mock/fake external dependencies.</p>
+<p>You own your own database, so you can use the real thing for tests.</p>
+<p>You don't own a 3rd party API, so you need to use a fake for it (or mock it).</p>
+<p>“Mocking introduces assumptions, which introduces risk”. You are assuming the client library is implemented right, you are assuming all boundaries are solid, you are assuming you know how the library actually behaves.</p>
+<h3 id="more-ideas"><a class="header" href="#more-ideas">More ideas</a></h3>
+<p><a href="https://www.jamesshore.com/v2/projects/nullables/testing-without-mocks">https://www.jamesshore.com/v2/projects/nullables/testing-without-mocks</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="architecture-patterns"><a class="header" href="#architecture-patterns">Architecture Patterns</a></h1>
 <ul>
 <li>Functional core, imperative shell/stateful surface (<a href="https://www.destroyallsoftware.com/talks/boundaries">Boundaries</a>)
@@ -2080,8 +2183,11 @@ org.gnome.gedit.desktop
 <div style="break-before: page; page-break-before: always;"></div><h1 id="apis"><a class="header" href="#apis">APIs</a></h1>
 <p>RESTful API, HTTP/Web API, TCP/Socket API - RPCs</p>
 <h2 id="rest"><a class="header" href="#rest">REST</a></h2>
+<blockquote>
+<p>I would suggest RESTful APIs for CRUD-based applications, not for DDD-based applications.</p>
+</blockquote>
 <p>A set of patterns and guidelines (a software architectural style). The transport protocol is not defined, but universally REST is used as REST-over-HTTP.</p>
-<p>A RESTful API<sup class="footnote-reference"><a href="#1">1</a></sup> is about <em>resources</em><sup class="footnote-reference"><a href="#2">2</a></sup><em>,</em> where resources are <em>hypermedia</em>. Note that URLs are resources (not verbs/actions). You should spend your time defining the <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">media types</a> used for resource representations, which includes the <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relations</a> that the resource may contain.</p>
+<p>A RESTful API<sup class="footnote-reference"><a href="#1">1</a></sup> is about <em>resources</em><sup class="footnote-reference"><a href="#2">2</a></sup>, where resources are <em>hypermedia</em>. Note that URLs are resources (not verbs/actions). You should spend your time defining the <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">media types</a> used for resource representations, which includes the <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relations</a> that the resource may contain.</p>
 <p>The resources should not depend on the underlying domain/implementation objects. Create resources that make sense in the context of the API - they can be anything you can think of, for example a <em>process</em> can be a resource, especially if you want to ask questions about the state of the process.</p>
 <p>HATEOAS means clients know one entry point (the bookmark) and the media types used for resource representations beforehand. What does the entry point return? In theory this allows you to control your namespace at will (i.e. changing object hierarchies or resource names at will); in practise clients may hardcode URLs and you need backwards-compatibility during the transition to a new URL namespace anyway. It also allows you to specify actions that may dynamically change depending on the resource's state. You may want to use <a href="https://tools.ietf.org/html/rfc5988" title="IETF RFC describing link relations between resources">links in headers</a>. In practise, decisions are made when the api integration code is written, not at run-time, as opposed to how we use links in web. HATEOAS requires hypermedia-aware media types such as HTML, Atom and SVG - hyperlinks, which XML and JSON don't define though there certain extensions to these that do. It genuinely puts theory over practise, and as it is uncommon it is actually slightly developer unfriendly.</p>
 <p>Version via content-type headers: <code>application/vnd.mycompany.myapp.myresource+json; version=1.0</code> (or just a completely custom header); or inside the URL (hostname, <strong>path</strong> or query parameter). Note that, <code>application/json</code> is indeed a media type, but it is incomplete because it would only describe the data format, while (almost always) special processing is required for the content. Roy Fieldings says to version inside the hostname as the next version is a new system.</p>
@@ -2139,10 +2245,10 @@ org.gnome.gedit.desktop
 <h2 id="versioning-pattern"><a class="header" href="#versioning-pattern">Versioning Pattern</a></h2>
 <p>Adapt new response to old response - pipeline, infinite support. See stripe &lt;TBD&gt;</p>
 <div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p>Originally described by Roy Fielding in his <a href="https://www.ics.uci.edu/%7Efielding/pubs/dissertation/rest_arch_style.htm">dissertation</a> in 2000</p>
+<p>Originally described by Roy Fielding in his <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">dissertation</a> in 2000</p>
 </div>
 <div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
-<p>The exact meanings of words like &quot;representation&quot; are described in Fielding's <a href="https://www.ics.uci.edu/%7Efielding/pubs/dissertation/rest_arch_style.htm#tab_5_1">REST data elements table</a></p>
+<p>The exact meanings of words like &quot;representation&quot; are described in Fielding's <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#tab_5_1">REST data elements table</a></p>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="agile"><a class="header" href="#agile">&quot;Agile&quot;</a></h1>
 <ul>
@@ -2182,8 +2288,31 @@ Kent Beck, Twitter</p>
 <p>Don't justify refactoring in terms of &quot;clean code&quot;, &quot;good engineering practice&quot;, or other moral reasons. Instead, communicate with the core economic benefits: it makes us faster to add features and faster to fix bugs.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="documentation"><a class="header" href="#documentation">Documentation</a></h1>
 <p>This: <a href="https://www.divio.com/blog/documentation/">https://www.divio.com/blog/documentation/</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="estimating"><a class="header" href="#estimating">Estimating</a></h1>
+<blockquote>
+<p><strong>Hofstadter's Law</strong> It always takes longer than you expect, even when you take into account Hofstadter's Law.</p>
+</blockquote>
+<p>You can, to a certain degree, trade time for more accuracy. Propose that to your manager.</p>
+<h2 id="how-can-we-increase-the-accuracy"><a class="header" href="#how-can-we-increase-the-accuracy">How can we increase the accuracy?</a></h2>
+<ol>
+<li>Estimate hierarchically, break down tasks until the leaf nodes are 4 hours or less.</li>
+<li>Use how long similar past tasks took to estimate new tasks.</li>
+<li>Include time for other work: meetings, code review, writing tests, debugging, presenting, etc.</li>
+<li>Derisk unpredictable things ahead of time using spikes.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sorting"><a class="header" href="#sorting">Sorting</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="avoid-using-makefiles-as-a-script-runner"><a class="header" href="#avoid-using-makefiles-as-a-script-runner">Avoid using Makefiles as a Script Runner</a></h1>
+<p>The purpose of a makefile is to create a directed acyclic graph of dependencies to build files.</p>
+<ul>
+<li>it is yet another custom syntax with its own caveats to learn</li>
+<li>long shell scripts must be separate files or badly inlined</li>
+<li>most targets will be <code>.PHONY</code> defeating the purpose of the tool</li>
+<li>makefiles use <code>mtime</code> to detect changes which can be unreliable for when a team develops using git branches</li>
+<li>makefiles usually need additional configuration (help, .PHONY, flags, failure)</li>
+<li><code>make</code> may require explicit installation on a developer's system</li>
+</ul>
+<p>Instead, just use bash scripts in a folder.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="django-orm"><a class="header" href="#django-orm">Django ORM</a></h1>
 <p>Django has tight integration between relational databases, HTML, and REST APIs. By defining one model, you get a web interface to modify it, a database interface to query or modify it, and HTML interfaces (forms) to query/modify it. This is fantastic for rapid development.</p>
 <p>So, if you're in that tightly-coupled ecosystem and legitimately making use of it, then bear those pros in mind.</p>
@@ -2632,31 +2761,43 @@ command may be &quot;ALL&quot;.
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
             </nav>
 
         </div>
 
-        <script type="text/javascript">
+
+
+
+        <script>
             window.playground_copyable = true;
         </script>
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript">
+
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
+
+    </div>
     </body>
 </html>

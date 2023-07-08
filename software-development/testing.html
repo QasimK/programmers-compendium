@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Testing - The Programmer&#x27;s Compendium</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="My knowledge relating to software engineering.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded affix "><li class="part-title">Recipes</li><li class="chapter-item expanded "><a href="../recipes/nginx.html"><strong aria-hidden="true">2.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="../recipes/uwsgi.html"><strong aria-hidden="true">3.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="../recipes/kubernetes.html"><strong aria-hidden="true">4.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="../recipes/gcloud.html"><strong aria-hidden="true">5.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="../recipes/postgres.html"><strong aria-hidden="true">6.</strong> Postgres</a></li><li class="chapter-item expanded affix "><li class="part-title">Python</li><li class="chapter-item expanded "><a href="../topics/python.html"><strong aria-hidden="true">7.</strong> Python Misc.</a></li><li class="chapter-item expanded "><a href="../python/profiling.html"><strong aria-hidden="true">8.</strong> Profiling</a></li><li class="chapter-item expanded "><a href="../python/versions.html"><strong aria-hidden="true">9.</strong> Versions</a></li><li class="chapter-item expanded "><a href="../python/sqlalchemy.html"><strong aria-hidden="true">10.</strong> SQLAlchemy</a></li><li class="chapter-item expanded affix "><li class="part-title">Topics</li><li class="chapter-item expanded "><a href="../topics/web.html"><strong aria-hidden="true">11.</strong> Web</a></li><li class="chapter-item expanded "><a href="../topics/git.html"><strong aria-hidden="true">12.</strong> Git</a></li><li class="chapter-item expanded "><a href="../topics/networking.html"><strong aria-hidden="true">13.</strong> Networking</a></li><li class="chapter-item expanded "><a href="../topics/crypto.html"><strong aria-hidden="true">14.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="../topics/time.html"><strong aria-hidden="true">15.</strong> Time</a></li><li class="chapter-item expanded "><a href="../topics/bash.html"><strong aria-hidden="true">16.</strong> Bash Scripts</a></li><li class="chapter-item expanded "><a href="../topics/xml.html"><strong aria-hidden="true">17.</strong> XML</a></li><li class="chapter-item expanded affix "><li class="part-title">SQL/DB</li><li class="chapter-item expanded "><a href="../sql/databases.html"><strong aria-hidden="true">18.</strong> Databases</a></li><li class="chapter-item expanded "><a href="../sql/querying.html"><strong aria-hidden="true">19.</strong> Querying</a></li><li class="chapter-item expanded "><a href="../sql/joins.html"><strong aria-hidden="true">20.</strong> Joins</a></li><li class="chapter-item expanded "><a href="../sql/trust.html"><strong aria-hidden="true">21.</strong> Trust</a></li><li class="chapter-item expanded "><a href="../sql/migrations.html"><strong aria-hidden="true">22.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="../sql/migrations-howto.html"><strong aria-hidden="true">23.</strong> Migrations-HOWTO</a></li><li class="chapter-item expanded "><a href="../sql/postgres.html"><strong aria-hidden="true">24.</strong> Postgres</a></li><li class="chapter-item expanded affix "><li class="part-title">Linux</li><li class="chapter-item expanded "><a href="../linux/overview.html"><strong aria-hidden="true">25.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../linux/systemd.html"><strong aria-hidden="true">26.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="../linux/shells.html"><strong aria-hidden="true">27.</strong> Shells</a></li><li class="chapter-item expanded "><a href="../linux/ssh.html"><strong aria-hidden="true">28.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="../linux/containerisation.html"><strong aria-hidden="true">29.</strong> Containers</a></li><li class="chapter-item expanded "><a href="../linux/terminal.html"><strong aria-hidden="true">30.</strong> Terminal Pro</a></li><li class="chapter-item expanded affix "><li class="part-title">Domains</li><li class="chapter-item expanded "><a href="../domains/accounting.html"><strong aria-hidden="true">31.</strong> Accounting</a></li><li class="chapter-item expanded "><a href="../domains/audio.html"><strong aria-hidden="true">32.</strong> Audio</a></li><li class="chapter-item expanded "><a href="../domains/encoding.html"><strong aria-hidden="true">33.</strong> Encoding</a></li><li class="chapter-item expanded affix "><li class="part-title">Software Development</li><li class="chapter-item expanded "><a href="../software-development/principles.html"><strong aria-hidden="true">34.</strong> Principles</a></li><li class="chapter-item expanded "><a href="../software-development/design-patterns.html"><strong aria-hidden="true">35.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/anti-patterns.html"><strong aria-hidden="true">36.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="../software-development/testing.html" class="active"><strong aria-hidden="true">37.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../software-development/architecture-patterns.html"><strong aria-hidden="true">38.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="../software-development/apis.html"><strong aria-hidden="true">39.</strong> APIs</a></li><li class="chapter-item expanded "><a href="../software-development/agile.html"><strong aria-hidden="true">40.</strong> Agile</a></li><li class="chapter-item expanded "><a href="../software-development/refactoring.html"><strong aria-hidden="true">41.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="../software-development/documentation.html"><strong aria-hidden="true">42.</strong> Documentation</a></li><li class="chapter-item expanded "><a href="../software-development/estimating.html"><strong aria-hidden="true">43.</strong> Estimating</a></li><li class="chapter-item expanded affix "><li class="part-title">Fundamentals</li><li class="chapter-item expanded "><a href="../core/sorting.html"><strong aria-hidden="true">44.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="../core/strings.html"><strong aria-hidden="true">45.</strong> Strings</a></li><li class="chapter-item expanded affix "><li class="part-title">Thoughts</li><li class="chapter-item expanded "><a href="../thoughts/avoid-makefiles.html"><strong aria-hidden="true">46.</strong> Avoid Makefiles</a></li><li class="chapter-item expanded "><a href="../thoughts/django-orm.html"><strong aria-hidden="true">47.</strong> Django ORM</a></li><li class="chapter-item expanded "><a href="../thoughts/safe-writes.html"><strong aria-hidden="true">48.</strong> Safe Writes</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="../appendix/reading-materials.html"><strong aria-hidden="true">49.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="../appendix/references.html"><strong aria-hidden="true">50.</strong> References</a></li><li class="chapter-item expanded "><a href="../appendix/talk-notes.html"><strong aria-hidden="true">51.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="../appendix/know-thy-history.html"><strong aria-hidden="true">52.</strong> Know Thy History</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Programmer&#x27;s Compendium</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/QasimK/programmers-compendium" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
+<blockquote>
+<p>I am not happy with this page right now.</p>
+</blockquote>
+<p>There are many different names and people use different names to mean different
+things. The following will likely not confirm to what you think:</p>
+<p>Tests can be divided by size:</p>
+<ul>
+<li>unit-tests - tiny, no IO, no other components involved (small) - fast</li>
+<li>integration tests - test combined units (medium-large) - slow</li>
+<li>system tests - test multiple high-level stages (large) - slow</li>
+</ul>
+<p>They can be divided by methodology:</p>
+<ul>
+<li>functional tests - functional programming, test output based on input (NB: also used to refer to testing features)</li>
+<li>acceptance tests - the final end result (black-box) tested at the highest, outer-most level (e.g. using your web app with a web browser)</li>
+</ul>
+<p>They can be divided by purpose:</p>
+<ul>
+<li>smoke tests - a subset of tests that quickly reveal severe failures</li>
+<li>regression tests - tests that catch bugs that come back, or features that stop working</li>
+</ul>
+<p>They can be divided by who is doing them:</p>
+<ul>
+<li>end-to-end tests - performed by QA involving multiple distinct steps to accomplish a goal</li>
+<li>user acceptance tests - performed by non-technical business users or otherwise domain-experts to test whether they accept the software in their heart</li>
+</ul>
+<p>Tests accomplish two main goals:</p>
+<ul>
+<li>What you've written now is right, including incorporating business requirement directly as a test.</li>
+<li>What you've written stays right, including refactoring with confidence (increase development speed; reduce regressions). It leaves a bad impression (on clients) if a bug keeps reappearing, and demoralises developers.</li>
+</ul>
+<p>Software Quality Assurance (SQA) looks at the development process itself to reduce the number of issues.</p>
+<p>You also have operation acceptance tests, which test things like failover, backups, recoveries, performance, monitoring, and alerting.</p>
+<h2 id="principles"><a class="header" href="#principles">Principles</a></h2>
+<ul>
+<li>The tests can help guide you towards a nice API, e.g. write the final candidate API with its integration tests and write the lower level details to advance the integration test as needed with unit-tests alongside it. i.e. Write what a thing is supposed to do</li>
+<li>Found a bug? Write a test that verifies it, then fix it. (Usually.)</li>
+<li>Arrange-Act-Assert (AAA): set up the test, execute your code, check against expected results. I usually do Arrange-Assert-Act-Assert.
+<ul>
+<li>This is also known as Given-When-Then in Behaviour-Driven Development (BDD) which uses the friendly english language to express the requirements.</li>
+</ul>
+</li>
+</ul>
+<h2 id="automated-code-review"><a class="header" href="#automated-code-review">Automated Code Review</a></h2>
+<p>Who? The machine runs it for everyone</p>
+<p>What?</p>
+<ul>
+<li>Static code analysis</li>
+<li>Data-flow analysis?</li>
+<li>Code coverage</li>
+</ul>
+<p>When?</p>
+<ul>
+<li>Git pre-commit hook</li>
+<li>Local (manual run)</li>
+<li>Code review interface</li>
+<li>Continuous Integration (merger) runner</li>
+</ul>
+<h2 id="how-to-mock"><a class="header" href="#how-to-mock">How to Mock</a></h2>
+<p>Don't. Ref: <a href="https://www.youtube.com/watch?v=Xu5EhKVZdV8">https://www.youtube.com/watch?v=Xu5EhKVZdV8</a></p>
+<p>https://www.youtube.com/watch?v=3MNVP9-hglc &quot;The End Of Object Inheritance &amp; The Beginning Of A New Modularity&quot; here?</p>
+<p>How to Test: <a href="https://www.destroyallsoftware.com/talks/boundaries">https://www.destroyallsoftware.com/talks/boundaries</a></p>
+<p>Imperative shell = integration tests of the shell which tie together all the dependencies (no logic; no code paths to test) - that's what they're good at.</p>
+<p>Functional core = unit-tests of all that messy logic (that's what they're good at)</p>
+<h2 id="test-doubles"><a class="header" href="#test-doubles">Test Doubles</a></h2>
+<p><a href="https://scribe.rip/m/global-identity-2?redirectUrl=https%3A%2F%2Fblog.pragmatists.com%2Ftest-doubles-fakes-mocks-and-stubs-1a7491dfa3da">https://scribe.rip/m/global-identity-2?redirectUrl=https%3A%2F%2Fblog.pragmatists.com%2Ftest-doubles-fakes-mocks-and-stubs-1a7491dfa3da</a></p>
+<ul>
+<li>Dummy — anything not used</li>
+<li>Fakes — working implementation with shortcuts (test for state)</li>
+<li>Stubs — answers queries with predefined data</li>
+<li>Spies — stubs that record how they were called</li>
+<li>Mocks — verify calls against a specification (test for behaviour)</li>
+</ul>
+<h3 id="how-to-choose-between-these"><a class="header" href="#how-to-choose-between-these">How to choose between these?</a></h3>
+<p>There's different schools:</p>
+<ul>
+<li><a href="https://scribe.rip/@adrianbooth/test-driven-development-wars-detroit-vs-london-classicist-vs-mockist-9956c78ae95f">https://scribe.rip/@adrianbooth/test-driven-development-wars-detroit-vs-london-classicist-vs-mockist-9956c78ae95f</a></li>
+<li><a href="https://martinfowler.com/articles/mocksArentStubs.html">https://martinfowler.com/articles/mocksArentStubs.html</a></li>
+<li><a href="https://tyrrrz.me/blog/fakes-over-mocks">https://tyrrrz.me/blog/fakes-over-mocks</a></li>
+</ul>
+<p>Don't use test doubles for what you own. Only mock/fake external dependencies.</p>
+<p>You own your own database, so you can use the real thing for tests.</p>
+<p>You don't own a 3rd party API, so you need to use a fake for it (or mock it).</p>
+<p>“Mocking introduces assumptions, which introduces risk”. You are assuming the client library is implemented right, you are assuming all boundaries are solid, you are assuming you know how the library actually behaves.</p>
+<h3 id="more-ideas"><a class="header" href="#more-ideas">More ideas</a></h3>
+<p><a href="https://www.jamesshore.com/v2/projects/nullables/testing-without-mocks">https://www.jamesshore.com/v2/projects/nullables/testing-without-mocks</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../software-development/anti-patterns.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../software-development/architecture-patterns.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../software-development/anti-patterns.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../software-development/architecture-patterns.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
