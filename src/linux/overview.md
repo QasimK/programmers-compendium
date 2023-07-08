@@ -5,7 +5,6 @@
   * Alt: [bropages](http://bropages.org/)
   * Alt: [cheat](https://github.com/chrisallenlane/cheat)
   * Alt: [pet](https://github.com/knqyf263/pet/)
-* Use `.pam_environment` to [set environment variables](https://help.ubuntu.com/community/EnvironmentVariables#A.2BAH4-.2F.pam_environment) in a cross-shell manner
 * [thefuck](https://github.com/nvbn/thefuck) corrects your previous console command
 * How to control the [proliferation of dotfiles](https://wiki.archlinux.org/index.php/XDG_Base_Directory_support)
 * \(A way-too-big list of tools to make an [awesome shell](https://github.com/alebcay/awesome-shell).\)
@@ -44,6 +43,8 @@ If you ever want to package something for Linux, [Repology](https://repology.org
 * [nnn](https://github.com/jarun/nnn) - Terminal File Browser
 
 ## Makefiles
+
+I advise [avoiding makefiles to run scripts](thoughts/avoid-makefiles.md).
 
 Template:
 

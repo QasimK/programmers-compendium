@@ -1,8 +1,29 @@
 # Python History
 
+## Python 3.11
+
+* exception groups and `except*` syntax
+* asyncio task groups  `TaskGroup`
+* add context to exceptions using `add_note`
+* `datetime.UTC` alias
+* date and time support for `fromisoformat`
+* `StrEnum`
+* enum verification checks `verify`
+* `operator.call`
+* type hints `Self` and `LiteralString`
+* typing `assert_never` and `reveal_type`
+
+## Python 3.10
+
+* structural pattern matching `match`
+* context managers can be defined across multiple lines
+* union operator for type hints `X | Y`
+* type hint guarding `TypeGuard`
+* itertools `pairwise`
+
 ## Python 3.9
 
-* time zone support built-in with zoneinfo module
+* time zone support built-in with `zoneinfo` module
 * in-place union `|=` of dictionary-like objects
 * combined annotations `Annotated[float, "seconds"]`
 * type hint containers directly `list[float]`

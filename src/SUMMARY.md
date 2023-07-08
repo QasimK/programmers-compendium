@@ -15,6 +15,7 @@
 - [Python Misc.](topics/python.md)
 - [Profiling](python/profiling.md)
 - [Versions](python/versions.md)
+- [SQLAlchemy](python/sqlalchemy.md)
 
 # Topics
 
@@ -55,12 +56,13 @@
 - [Principles](software-development/principles.md)
 - [Design Patterns](software-development/design-patterns.md)
 - [Anti-patterns](software-development/anti-patterns.md)
-- [Testing](software-development/how-to-mock.md)
+- [Testing](software-development/testing.md)
 - [Architecture Patterns](software-development/architecture-patterns.md)
 - [APIs](software-development/apis.md)
 - [Agile](software-development/agile.md)
 - [Refactoring](software-development/refactoring.md)
 - [Documentation](software-development/documentation.md)
+- [Estimating](software-development/estimating.md)
 
 # Fundamentals
 
@@ -69,6 +71,7 @@
 
 # Thoughts
 
+- [Avoid Makefiles](thoughts/avoid-makefiles.md)
 - [Django ORM](thoughts/django-orm.md)
 - [Safe Writes](thoughts/safe-writes.md)
 

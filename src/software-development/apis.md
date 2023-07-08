@@ -4,9 +4,11 @@ RESTful API, HTTP/Web API, TCP/Socket API - RPCs
 
 ## REST
 
+> I would suggest RESTful APIs for CRUD-based applications, not for DDD-based applications.
+
 A set of patterns and guidelines \(a software architectural style\). The transport protocol is not defined, but universally REST is used as REST-over-HTTP.
 
-A RESTful API[^1] is about _resources_[^2]_,_ where resources are _hypermedia_. Note that URLs are resources \(not verbs/actions\). You should spend your time defining the [media types](https://www.iana.org/assignments/media-types/media-types.xhtml) used for resource representations, which includes the [link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) that the resource may contain.
+A RESTful API[^1] is about _resources_[^2], where resources are _hypermedia_. Note that URLs are resources \(not verbs/actions\). You should spend your time defining the [media types](https://www.iana.org/assignments/media-types/media-types.xhtml) used for resource representations, which includes the [link relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml) that the resource may contain.
 
 The resources should not depend on the underlying domain/implementation objects. Create resources that make sense in the context of the API - they can be anything you can think of, for example a _process_ can be a resource, especially if you want to ask questions about the state of the process.
 
