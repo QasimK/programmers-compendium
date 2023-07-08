@@ -863,6 +863,8 @@ lambdas = [
 <li>use auto-commit for reads</li>
 <li>switch to explicit transactions for writes</li>
 </ul>
+<p>Problem description and alternate solution: <a href="https://www.gorgias.com/blog/prevent-idle-in-transaction-engineering">https://www.gorgias.com/blog/prevent-idle-in-transaction-engineering</a>
+<a href="https://www.oddbird.net/2014/06/14/sqlalchemy-postgres-autocommit/">https://www.oddbird.net/2014/06/14/sqlalchemy-postgres-autocommit/</a></p>
 <h2 id="weakly-referenced-objects"><a class="header" href="#weakly-referenced-objects">Weakly Referenced Objects</a></h2>
 <p>SQLAlchemy weakly references ORM instances. This means, when you convert them into a core type, they are dropped from the identity map.</p>
 <p>The impact is that when it comes to updates, SQLAlchemy will have to inefficiently query the database for the object again.</p>
@@ -870,7 +872,7 @@ lambdas = [
 <p>Use <a href="https://docs.sqlalchemy.org/en/20/orm/session_state_management.html#session-referencing-behavior">SQLAlchemy's recipe for strong references</a>.</p>
 <h2 id="good-to-know"><a class="header" href="#good-to-know">Good to Know</a></h2>
 <ul>
-<li>SQLAlchemy follows the unit of work pattern and stores</li>
+<li>SQLAlchemy has an identity map that caches queried objects</li>
 <li>SQLAlchemy using mutation tracking and updates the precise fields that changed</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="web"><a class="header" href="#web">Web</a></h1>
