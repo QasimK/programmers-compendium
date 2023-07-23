@@ -20,3 +20,9 @@ Now, I think it is good in specific circumstances that do not apply to most larg
 What doesn't work well (and what tended to happen with jQuery apps) is having state both on the client and on the server and having to coordinate between the two. So, consider an alternative way of building interactive interfaces:
 
 <https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/htmx-alpine/#building-interactive-interfaces-in-your-django-pages-with-alpinejs>
+
+## Others
+
+Other people have had thoughts around Django as well. I have not read this:
+
+<https://spookylukey.github.io/django-views-the-right-way/>

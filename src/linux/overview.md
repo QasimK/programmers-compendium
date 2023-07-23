@@ -16,6 +16,7 @@
 * [direnv](https://direnv.net/) - manage environment variables per-project
 * [fish](https://fishshell.com/)/[xiki](http://xiki.org/) - alternative shells
 * [tmux](https://github.com/tmux/tmux) - remote window management - [cheatsheat](https://gist.github.com/MohamedAlaa/2961058)
+* [spacer](https://github.com/samwho/spacer) - put spaces between command output
 
 ### Packaging
 

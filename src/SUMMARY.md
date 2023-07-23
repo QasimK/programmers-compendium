@@ -63,6 +63,7 @@
 - [Refactoring](software-development/refactoring.md)
 - [Documentation](software-development/documentation.md)
 - [Estimating](software-development/estimating.md)
+- [DDD](software-development/ddd.md)
 
 # Fundamentals
 
