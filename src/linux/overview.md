@@ -1,6 +1,7 @@
 # Linux Overview/Development
 
 * The [filesystem hierarchy](https://www.freedesktop.org/software/systemd/man/file-hierarchy.html)
+* The [linux DNS lookup](https://zwischenzugs.com/2018/06/08/anatomy-of-a-linux-dns-lookup-part-i/)
 * [tl;dr](https://tldr.ostera.io/) how-to guide to commands
   * Alt: [bropages](http://bropages.org/)
   * Alt: [cheat](https://github.com/chrisallenlane/cheat)
@@ -75,6 +76,3 @@ $(VERBOSE).SILENT:
 # Delete targets on failure
 .DELETE_ON_ERROR:
 ```
-
-
-

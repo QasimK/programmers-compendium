@@ -67,6 +67,7 @@
 
 # Fundamentals
 
+- [CPU](core/cpu.md)
 - [Sorting](core/sorting.md)
 - [Strings](core/strings.md)
 
