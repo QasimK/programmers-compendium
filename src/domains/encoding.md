@@ -1,5 +1,7 @@
 # FFMPEG
 
+ffmpeg cheatsheet: <https://amiaopensource.github.io/ffmprovisr/>
+
 Downcode to x264 1080p \(copy audio and subtitles\)
 
 ```terminal
@@ -12,4 +14,3 @@ ffmpeg -i input.wmv \
 Transcode audio: `-c:a libfdk_aac -b:a 128k`
 
 -tune parameter: [https://superuser.com/a/564404/229283](https://superuser.com/a/564404/229283)
-

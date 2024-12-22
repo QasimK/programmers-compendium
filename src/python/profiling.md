@@ -16,8 +16,11 @@ Install `pipx install snakeviz`.
 snakeviz out.prof
 ```
 
+Or, use [tuna](https://github.com/nschloe/tuna) which is slightly less misleading.
+
 ## Other
 
+Austin can attach to running programs.
 
 [Austin](https://github.com/P403n1x87/austin).
 
@@ -25,12 +28,4 @@ snakeviz out.prof
 austin -f -o out.prof python3 do.py
 ```
 
-Austin can attach to running programs.
-
 I haven't worked out how to visualise this.
-
-## Performance Tips
-
-### SQLAlchemy
-
-Something something 'raise' to prevent hidden n+1 joins.

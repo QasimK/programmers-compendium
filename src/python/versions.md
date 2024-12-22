@@ -1,5 +1,17 @@
 # Python History
 
+## Python 3.12
+
+* more flexible f-strings
+* simpler type annotations for generic classes `class Car[T]`
+* unambiguous type aliases `type cars = list[str]`
+* typing check decorator `@override`
+* type annotation for `**kwargs: Unpack[MyTypedDict]`
+* `python -m uuid`
+* `python -m sqlite3`
+* debugging values in pdb `$_retval` and `$_exception`
+
+
 ## Python 3.11
 
 * exception groups and `except*` syntax
@@ -35,8 +47,11 @@
 
 * assignment expressions `if (n := len(a)) > 10:`
 * improved f-strings `f"{x*9 + 15=}"`
-* positional and keyword only parameters
+* positional and keyword only parameters `def f(a, /, b, *, c)`
 * multiprocessing.shared\_memory
+* `functools.singledispatchmethod`
+* typing `Literal` and `Final`
+* (xml.etree.ElementTree wildcard stuff — super humorous & annoying timing!)`
 
 ## Python 3.7:
 

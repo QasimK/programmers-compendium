@@ -4,7 +4,6 @@ SQLAlchemy is an absolutely outstanding, best-in-class ORM library.
 
 _However_, the default setup is not perfect.
 
-
 ## Idle in Transaction
 
 The default behaviour in SQLAlchemy is to open a transaction for read queries.
@@ -46,3 +45,15 @@ Use [SQLAlchemy's recipe for strong references](https://docs.sqlalchemy.org/en/2
 
 * SQLAlchemy has an identity map that caches queried objects
 * SQLAlchemy using mutation tracking and updates the precise fields that changed
+
+## Other tips
+
+* Remember to index on ForeignKeys. Postgres does not do this automatically. MySQL always does this.
+* Remember to set `onupdate` and `ondelete` cascades on ForeignKeys.
+* To prevent spurious joins: (this cannot be used with NULLable outer joins)
+  ```py
+  session.query(Model).options(
+      sa.orm.joinedload("child").joinedload("grandchild"),
+      sa.orm.raiseload("*"),
+  )
+  ```

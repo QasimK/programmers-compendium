@@ -12,7 +12,7 @@
 
 # Python
 
-- [Python Misc.](topics/python.md)
+- [Python Overview](python/overview.md)
 - [Profiling](python/profiling.md)
 - [Versions](python/versions.md)
 - [SQLAlchemy](python/sqlalchemy.md)
@@ -67,7 +67,6 @@
 
 # Fundamentals
 
-- [CPU](core/cpu.md)
 - [Sorting](core/sorting.md)
 - [Strings](core/strings.md)
 
