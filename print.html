@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="en-GB" class="sidebar-visible no-js light">
+<html lang="en-GB" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>The Programmer&#x27;s Compendium</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="My knowledge relating to software engineering.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -31,15 +31,17 @@
 
         <!-- Custom theme stylesheets -->
 
-    </head>
-    <body>
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -61,65 +63,49 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            html.classList.add("js");
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
+            sidebar_toggle.checked = sidebar === 'visible';
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> The Programmer's Compendium</a></li><li class="chapter-item expanded affix "><li class="part-title">Recipes</li><li class="chapter-item expanded "><a href="recipes/nginx.html"><strong aria-hidden="true">2.</strong> Nginx</a></li><li class="chapter-item expanded "><a href="recipes/uwsgi.html"><strong aria-hidden="true">3.</strong> uWSGI</a></li><li class="chapter-item expanded "><a href="recipes/kubernetes.html"><strong aria-hidden="true">4.</strong> Kubernetes</a></li><li class="chapter-item expanded "><a href="recipes/gcloud.html"><strong aria-hidden="true">5.</strong> GCloud</a></li><li class="chapter-item expanded "><a href="recipes/postgres.html"><strong aria-hidden="true">6.</strong> Postgres</a></li><li class="chapter-item expanded affix "><li class="part-title">Python</li><li class="chapter-item expanded "><a href="topics/python.html"><strong aria-hidden="true">7.</strong> Python Misc.</a></li><li class="chapter-item expanded "><a href="python/profiling.html"><strong aria-hidden="true">8.</strong> Profiling</a></li><li class="chapter-item expanded "><a href="python/versions.html"><strong aria-hidden="true">9.</strong> Versions</a></li><li class="chapter-item expanded "><a href="python/sqlalchemy.html"><strong aria-hidden="true">10.</strong> SQLAlchemy</a></li><li class="chapter-item expanded affix "><li class="part-title">Topics</li><li class="chapter-item expanded "><a href="topics/web.html"><strong aria-hidden="true">11.</strong> Web</a></li><li class="chapter-item expanded "><a href="topics/git.html"><strong aria-hidden="true">12.</strong> Git</a></li><li class="chapter-item expanded "><a href="topics/networking.html"><strong aria-hidden="true">13.</strong> Networking</a></li><li class="chapter-item expanded "><a href="topics/crypto.html"><strong aria-hidden="true">14.</strong> Crypto</a></li><li class="chapter-item expanded "><a href="topics/time.html"><strong aria-hidden="true">15.</strong> Time</a></li><li class="chapter-item expanded "><a href="topics/bash.html"><strong aria-hidden="true">16.</strong> Bash Scripts</a></li><li class="chapter-item expanded "><a href="topics/xml.html"><strong aria-hidden="true">17.</strong> XML</a></li><li class="chapter-item expanded affix "><li class="part-title">SQL/DB</li><li class="chapter-item expanded "><a href="sql/databases.html"><strong aria-hidden="true">18.</strong> Databases</a></li><li class="chapter-item expanded "><a href="sql/querying.html"><strong aria-hidden="true">19.</strong> Querying</a></li><li class="chapter-item expanded "><a href="sql/joins.html"><strong aria-hidden="true">20.</strong> Joins</a></li><li class="chapter-item expanded "><a href="sql/trust.html"><strong aria-hidden="true">21.</strong> Trust</a></li><li class="chapter-item expanded "><a href="sql/migrations.html"><strong aria-hidden="true">22.</strong> Migrations</a></li><li class="chapter-item expanded "><a href="sql/migrations-howto.html"><strong aria-hidden="true">23.</strong> Migrations-HOWTO</a></li><li class="chapter-item expanded "><a href="sql/postgres.html"><strong aria-hidden="true">24.</strong> Postgres</a></li><li class="chapter-item expanded affix "><li class="part-title">Linux</li><li class="chapter-item expanded "><a href="linux/overview.html"><strong aria-hidden="true">25.</strong> Overview</a></li><li class="chapter-item expanded "><a href="linux/systemd.html"><strong aria-hidden="true">26.</strong> Systemd</a></li><li class="chapter-item expanded "><a href="linux/shells.html"><strong aria-hidden="true">27.</strong> Shells</a></li><li class="chapter-item expanded "><a href="linux/ssh.html"><strong aria-hidden="true">28.</strong> SSH/Mosh</a></li><li class="chapter-item expanded "><a href="linux/containerisation.html"><strong aria-hidden="true">29.</strong> Containers</a></li><li class="chapter-item expanded "><a href="linux/terminal.html"><strong aria-hidden="true">30.</strong> Terminal Pro</a></li><li class="chapter-item expanded affix "><li class="part-title">Domains</li><li class="chapter-item expanded "><a href="domains/accounting.html"><strong aria-hidden="true">31.</strong> Accounting</a></li><li class="chapter-item expanded "><a href="domains/audio.html"><strong aria-hidden="true">32.</strong> Audio</a></li><li class="chapter-item expanded "><a href="domains/encoding.html"><strong aria-hidden="true">33.</strong> Encoding</a></li><li class="chapter-item expanded affix "><li class="part-title">Software Development</li><li class="chapter-item expanded "><a href="software-development/principles.html"><strong aria-hidden="true">34.</strong> Principles</a></li><li class="chapter-item expanded "><a href="software-development/design-patterns.html"><strong aria-hidden="true">35.</strong> Design Patterns</a></li><li class="chapter-item expanded "><a href="software-development/anti-patterns.html"><strong aria-hidden="true">36.</strong> Anti-patterns</a></li><li class="chapter-item expanded "><a href="software-development/testing.html"><strong aria-hidden="true">37.</strong> Testing</a></li><li class="chapter-item expanded "><a href="software-development/architecture-patterns.html"><strong aria-hidden="true">38.</strong> Architecture Patterns</a></li><li class="chapter-item expanded "><a href="software-development/apis.html"><strong aria-hidden="true">39.</strong> APIs</a></li><li class="chapter-item expanded "><a href="software-development/agile.html"><strong aria-hidden="true">40.</strong> Agile</a></li><li class="chapter-item expanded "><a href="software-development/refactoring.html"><strong aria-hidden="true">41.</strong> Refactoring</a></li><li class="chapter-item expanded "><a href="software-development/documentation.html"><strong aria-hidden="true">42.</strong> Documentation</a></li><li class="chapter-item expanded "><a href="software-development/estimating.html"><strong aria-hidden="true">43.</strong> Estimating</a></li><li class="chapter-item expanded "><a href="software-development/ddd.html"><strong aria-hidden="true">44.</strong> DDD</a></li><li class="chapter-item expanded affix "><li class="part-title">Fundamentals</li><li class="chapter-item expanded "><a href="core/cpu.html"><strong aria-hidden="true">45.</strong> CPU</a></li><li class="chapter-item expanded "><a href="core/sorting.html"><strong aria-hidden="true">46.</strong> Sorting</a></li><li class="chapter-item expanded "><a href="core/strings.html"><strong aria-hidden="true">47.</strong> Strings</a></li><li class="chapter-item expanded affix "><li class="part-title">Thoughts</li><li class="chapter-item expanded "><a href="thoughts/avoid-makefiles.html"><strong aria-hidden="true">48.</strong> Avoid Makefiles</a></li><li class="chapter-item expanded "><a href="thoughts/django-orm.html"><strong aria-hidden="true">49.</strong> Django ORM</a></li><li class="chapter-item expanded "><a href="thoughts/safe-writes.html"><strong aria-hidden="true">50.</strong> Safe Writes</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="appendix/reading-materials.html"><strong aria-hidden="true">51.</strong> Reading Materials</a></li><li class="chapter-item expanded "><a href="appendix/references.html"><strong aria-hidden="true">52.</strong> References</a></li><li class="chapter-item expanded "><a href="appendix/talk-notes.html"><strong aria-hidden="true">53.</strong> Talk Notes</a></li><li class="chapter-item expanded "><a href="appendix/know-thy-history.html"><strong aria-hidden="true">54.</strong> Know Thy History</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="ignore-me/maybes.html">Maybes-Todos-Snippets</a></li></ol>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
-
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -227,7 +213,7 @@ ssl_stapling_verify on;
 resolver 8.8.8.8 8.8.4.4;
 
 # Force SSL to this domain (+subdomains) for 6 months (+ preload list)
-add_header Strict-Transport-Security &quot;max-age=15768000; includeSubDomains; preload&quot; always;
+add_header Strict-Transport-Security "max-age=15768000; includeSubDomains; preload" always;
 </code></pre>
 <h3 id="security-headers"><a class="header" href="#security-headers">Security Headers</a></h3>
 <p>There are several headers used for security, which can be set by Nginx or by your application. The following global configuration file will set a default if upstream has not provided one.</p>
@@ -242,22 +228,22 @@ add_header Strict-Transport-Security &quot;max-age=15768000; includeSubDomains; 
 
 map $upstream_http_referrer_policy $referrer_policy {
     default $upstream_http_referrer_policy;
-    '' &quot;strict-origin-when-cross-origin&quot;;
+    '' "strict-origin-when-cross-origin";
 }
 
 map $upstream_http_x_content_type_options $x_content_type_options {
     default $upstream_http_x_content_type_options;
-    '' &quot;nosniff&quot;;
+    '' "nosniff";
 }
 
 map $upstream_http_x_frame_options $x_frame_options {
     default $upstream_http_x_frame_options;
-    '' &quot;DENY&quot;;
+    '' "DENY";
 }
 
 map $upstream_http_x_xss_protection $x_xss_protection {
     default $upstream_http_x_xss_protection;
-    '' &quot;1; mode=block&quot;;
+    '' "1; mode=block";
 }
 
 add_header Referrer-Policy $referrer_policy always;
@@ -360,7 +346,7 @@ server {
     # Proxying connections to application servers
     location / {
         proxy_pass         http://localhost:8080;
-        # Required to rewrite &quot;Location&quot; header for Jenkins
+        # Required to rewrite "Location" header for Jenkins
         proxy_redirect     http://localhost:8080 https://{{ domain }};
         proxy_read_timeout 60;
         proxy_http_version 1.1;
@@ -398,7 +384,7 @@ server {
     }
 }
 </code></pre>
-<p>A neat command to compress static files: <code>find -L . -type f ! -iname &quot;*.gz&quot; ! -iname &quot;*.png&quot; ! -iname &quot;*.jpg&quot; ! -iname &quot;*.jpeg&quot; ! -iname &quot;*.gif&quot; ! -iname &quot;*.webp&quot; ! -iname &quot;*.heif&quot; -exec gzip --best -kf &quot;{}&quot; \;</code></p>
+<p>A neat command to compress static files: <code>find -L . -type f ! -iname "*.gz" ! -iname "*.png" ! -iname "*.jpg" ! -iname "*.jpeg" ! -iname "*.gif" ! -iname "*.webp" ! -iname "*.heif" -exec gzip --best -kf "{}" \;</code></p>
 <h2 id="performancetuning"><a class="header" href="#performancetuning">Performance/Tuning</a></h2>
 <ul>
 <li>sendfile - directly from kernel to network socket - covered by Ubuntu, but consider adding <code>sendfile_max_chunk</code>
@@ -448,7 +434,7 @@ route-if-not = equal:${HTTP_HOST};REPLACE_ME_HOST_NAME return:421
 </code></pre>
 <ul>
 <li>Due to uWSGI's default pre-forking behaviour, you may want <code>lazy-apps</code> or a <code>@postfork</code> fix function when running more than one process.</li>
-<li>Note on <code>harakiri</code> and &quot;post buffering&quot; - the web server should take entire request body before passing it on, otherwise a slow upload could be killed due to the harakiri timer.</li>
+<li>Note on <code>harakiri</code> and "post buffering" - the web server should take entire request body before passing it on, otherwise a slow upload could be killed due to the harakiri timer.</li>
 <li>When using threads, e.g.<code>threads=2</code>, will automatically set <code>enable-threads = true</code>.</li>
 </ul>
 <h2 id="features"><a class="header" href="#features">Features</a></h2>
@@ -506,7 +492,7 @@ py-tracebacker = /run/uwsgi/app/APP_NAME/tracebacker
 <p>Work around for K8S not supporting --user flag: <a href="https://github.com/kubernetes/kubernetes/issues/30656">https://github.com/kubernetes/kubernetes/issues/30656</a></p>
 <pre><code class="language-console">kubectl get pods
 kubectl describe pod &lt;POD-NAME&gt; | grep Node
-gcloud compute ssh &quot;&lt;NODE-NAME&gt;&quot;
+gcloud compute ssh "&lt;NODE-NAME&gt;"
 sudo su - root
 docker ps | grep &lt;POD-NAME&gt;
 docker exec -it -uroot &lt;ID&gt; /bin/bash
@@ -563,10 +549,10 @@ docker exec -it -uroot &lt;ID&gt; /bin/bash
 
                 resources:
                     requests:
-                        memory: &quot;192Mi&quot;
+                        memory: "192Mi"
                         cpu: 0.1
                     limits:
-                        memory: &quot;256Mi&quot;
+                        memory: "256Mi"
                         cpu: 1
 
                 command: []
@@ -655,89 +641,29 @@ max_standby_streaming_delay = 900s
 <div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
 <ul>
 <li>Use <a href="https://pypi.org/project/pipx/">pipx</a> to install environment management tools and scripts. (Execute binaries installed in isolated virtual environments.)</li>
-<li>Use <a href="https://python-poetry.org/">Poetry</a> to manage packaging and dependencies.</li>
+<li>Use <a href="https://pdm-project.org/">pdm</a> to manage packaging and dependencies.</li>
+<li>Use a <a href="https://www.bitecode.dev/p/happiness-is-a-good-pythonstartup">PYTHONSTARTUP</a></li>
 </ul>
 <p>Hey, there's already a <a href="http://docs.python-guide.org/en/latest/">Hitchhiker's Guide to Python</a>! This is quite comprehensive on the Python <em>development</em> basics.</p>
-<h2 id="gil"><a class="header" href="#gil">GIL</a></h2>
-<p>GIL required to run bytecode, but not when waiting on I/O - can switch to different thread. CPython has macros to release and re-aquire GIL which can be used if extension does not need to run python bytecode/do any kind of ref-count changes (e.g. sleep, read/write files, network socket, numpy, image processing(?)). Cannot share GIL in CPU-bound code. CPU-bound &quot;check&quot; every 100 ticks to allow switching. Note: I/O doesn't often block unless you are flushing - OS buffers. Note: Threads/Processes result in CPU context switches, while async does not.</p>
-<p>Pure CPU: Process &lt;---&gt; Threads &lt;---&gt; Async: Pure I/O (Many &quot;Connections&quot;/Slow I/O).</p>
-<p>Async I/O clearly delineates the context switch locations, in theory.</p>
-<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Processes</th><th style="text-align: left">Threads</th><th style="text-align: left">Async I/O</th></tr></thead><tbody>
-<tr><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left">No CPU Context Switches</td></tr>
-<tr><td style="text-align: left"></td><td style="text-align: left">Shared memory can result in race conditions.</td><td style="text-align: left">No race conditions.. usually.</td></tr>
-<tr><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left">No dead locks.. usually.</td></tr>
-<tr><td style="text-align: left">Costly.</td><td style="text-align: left">Each thread has its own stack.</td><td style="text-align: left">Shared Stack. Uses an executor pool to run sync tasks in a background thread (this uses additional resources)</td></tr>
-</tbody></table>
-</div>
-<p>Python 2 -&gt; 3: Strings/Bytes, Print, Super() - new style classes, division.</p>
-<h2 id="linting"><a class="header" href="#linting">Linting</a></h2>
+<h2 id="libraries"><a class="header" href="#libraries">Libraries</a></h2>
+<h3 id="linting"><a class="header" href="#linting">Linting</a></h3>
 <ul>
-<li>black (<a href="https://engineering.depop.com/implementing-python-black-on-a-legacy-codebase-35b37f10ce18">how-to</a>)</li>
-<li>flake8
-<ul>
-<li>pycodestyle (formerly pep8)</li>
-<li>pyflakes</li>
-<li>mccabe</li>
-</ul>
-</li>
-<li>pylint</li>
-<li>bandit/dodgy/safety(pipenv)</li>
-<li>prospector</li>
-<li>isort</li>
-<li><a href="https://github.com/seddonym/layer_linter">Layer Linter</a> (not tried)</li>
-<li>pydocstyle</li>
+<li>ruff</li>
 <li>mypy</li>
 <li>vulture</li>
-<li>pyroma for libraries (setup.py)</li>
+<li>bandit/dodgy/safety</li>
+<li><a href="https://github.com/seddonym/layer_linter">Layer Linter</a> (not tried)</li>
 </ul>
-<h2 id="libraries"><a class="header" href="#libraries">Libraries</a></h2>
+<h3 id="development"><a class="header" href="#development">Development</a></h3>
+<ul>
+<li><a href="https://github.com/rayking99/cqd">cqd</a> for debugging (<code>PYTHONSTARTUP</code> it)</li>
+<li><a href="https://github.com/cool-RR/pysnooper">pysnooper</a> - line-by-line print debugging</li>
+</ul>
+<h3 id="libraries-1"><a class="header" href="#libraries-1">Libraries</a></h3>
 <ul>
 <li><a href="https://passlib.readthedocs.io/">passlib</a> - high-level secrets library</li>
-<li><a href="https://github.com/cool-RR/pysnooper">pysnooper</a> - line-by-line print debugging</li>
-<li><a href="https://boltons.readthedocs.io/en/latest/">boltons</a> - &quot;boltons should be buitins&quot; (stdlib additions)</li>
-<li>[freezegun]</li>
-</ul>
-<h3 id="pytest"><a class="header" href="#pytest">Pytest</a></h3>
-<p>See <a href="https://github.com/QasimK/learn-it/blob/master/pytest-cheat-sheet.md">my cheat sheet</a>.</p>
-<p>Useful plugins:</p>
-<ul>
-<li>pytest-randomly</li>
-<li>pytest-datadir</li>
-<li>pytest-bdd</li>
-</ul>
-<p>Stop network calls:</p>
-<pre><code class="language-py">import socket
-def stop_network_calls(monkeypatch)
-    def _socket(*_, **__):
-        raise Exception()
-    monkeypatch.setattr(socket, &quot;socket&quot;, _socket)
-
-</code></pre>
-<p>Randomise time-zones:</p>
-<pre><code class="language-py">import os, random, pytest
-from _pytest.monkeypatch import MonkeyPatch
-
-@pytest.fixture(scope=&quot;session&quot;)
-def monkeysession():
-    mpatch = MonkeyPatch()
-    yield mpatch
-    mpatch.undo()
-
-@pytest.fixture(autouse=True, scope=&quot;session&quot;)
-def randomise_timezone(monkeysession):
-    monkeysession.setenv(&quot;TZ&quot;, random.choice([&quot;Europe/London&quot;]))
-</code></pre>
-<h3 id="sqlalchemy"><a class="header" href="#sqlalchemy">SQLAlchemy</a></h3>
-<ul>
-<li>Remember to index on ForeignKeys. Postgres does not do this automatically. MySQL always does this.</li>
-<li>Remember to set <code>onupdate</code> and <code>ondelete</code> cascades on ForeignKeys.</li>
-<li>To prevent spurious joins: (this cannot be used with NULLable outer joins)
-<pre><code class="language-py">session.query(Model).options(
-    sa.orm.joinedload(&quot;child&quot;).joinedload(&quot;grandchild&quot;),
-    sa.orm.raiseload(&quot;*&quot;),
-)
-</code></pre>
-</li>
+<li><a href="https://boltons.readthedocs.io/en/latest/">boltons</a> - "boltons should be buitins" (stdlib additions)</li>
+<li><a href="https://github.com/spulec/freezegun">freezegun</a></li>
 </ul>
 <h3 id="pandas"><a class="header" href="#pandas">Pandas</a></h3>
 <p>Understanding <a href="https://towardsdatascience.com/understanding-settingwithcopywarning-7142952a01fa">SettingWithCopyWarning</a>.</p>
@@ -757,6 +683,24 @@ lambdas = [
 
 [f() for f in lambdas]
 </code></pre>
+<h2 id="gil"><a class="header" href="#gil">GIL</a></h2>
+<ul>
+<li>The GIL is required to run bytecode, but not when waiting on I/O - Python can switch to different thread.</li>
+<li>CPython has macros to release and re-aquire GIL which can be used if extension does not need to run python bytecode/do any kind of ref-count changes (e.g. sleep, read/write files, network socket, <code>numpy</code>).</li>
+<li>The GIL cannot be shared in CPU-bound code. CPU-bound "check" every 100 ticks to allow switching.</li>
+<li>I/O doesn't often block unless you are flushing - OS buffers</li>
+<li>Threads/Processes result in CPU context switches, while async does not.</li>
+</ul>
+<p>Pure CPU: Process &lt;---&gt; Threads &lt;---&gt; Async: Pure I/O (Many "Connections"/Slow I/O).</p>
+<p>Async I/O clearly delineates the context switch locations, in theory.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Processes</th><th style="text-align: left">Threads</th><th style="text-align: left">Async I/O</th></tr></thead><tbody>
+<tr><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left">No CPU Context Switches</td></tr>
+<tr><td style="text-align: left"></td><td style="text-align: left">Shared memory can result in race conditions.</td><td style="text-align: left">No race conditions.. usually.</td></tr>
+<tr><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left">No dead locks.. usually.</td></tr>
+<tr><td style="text-align: left">Costly.</td><td style="text-align: left">Each thread has its own stack.</td><td style="text-align: left">Shared Stack. Uses an executor pool to run sync tasks in a background thread (this uses additional resources)</td></tr>
+</tbody></table>
+</div>
+<p>Python 2 -&gt; 3: Strings/Bytes, Print, Super() - new style classes, division.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="python-profiling--performance"><a class="header" href="#python-profiling--performance">Python Profiling &amp; Performance</a></h1>
 <h2 id="profiling-methods"><a class="header" href="#profiling-methods">Profiling Methods</a></h2>
 <pre><code class="language-console">python -m cProfile -o out.prof do.py
@@ -766,16 +710,25 @@ lambdas = [
 <p>Install <code>pipx install snakeviz</code>.</p>
 <pre><code class="language-console">snakeviz out.prof
 </code></pre>
+<p>Or, use <a href="https://github.com/nschloe/tuna">tuna</a> which is slightly less misleading.</p>
 <h2 id="other"><a class="header" href="#other">Other</a></h2>
+<p>Austin can attach to running programs.</p>
 <p><a href="https://github.com/P403n1x87/austin">Austin</a>.</p>
 <pre><code class="language-console">austin -f -o out.prof python3 do.py
 </code></pre>
-<p>Austin can attach to running programs.</p>
 <p>I haven't worked out how to visualise this.</p>
-<h2 id="performance-tips"><a class="header" href="#performance-tips">Performance Tips</a></h2>
-<h3 id="sqlalchemy-1"><a class="header" href="#sqlalchemy-1">SQLAlchemy</a></h3>
-<p>Something something 'raise' to prevent hidden n+1 joins.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="python-history"><a class="header" href="#python-history">Python History</a></h1>
+<h2 id="python-312"><a class="header" href="#python-312">Python 3.12</a></h2>
+<ul>
+<li>more flexible f-strings</li>
+<li>simpler type annotations for generic classes <code>class Car[T]</code></li>
+<li>unambiguous type aliases <code>type cars = list[str]</code></li>
+<li>typing check decorator <code>@override</code></li>
+<li>type annotation for <code>**kwargs: Unpack[MyTypedDict]</code></li>
+<li><code>python -m uuid</code></li>
+<li><code>python -m sqlite3</code></li>
+<li>debugging values in pdb <code>$_retval</code> and <code>$_exception</code></li>
+</ul>
 <h2 id="python-311"><a class="header" href="#python-311">Python 3.11</a></h2>
 <ul>
 <li>exception groups and <code>except*</code> syntax</li>
@@ -801,7 +754,7 @@ lambdas = [
 <ul>
 <li>time zone support built-in with <code>zoneinfo</code> module</li>
 <li>in-place union <code>|=</code> of dictionary-like objects</li>
-<li>combined annotations <code>Annotated[float, &quot;seconds&quot;]</code></li>
+<li>combined annotations <code>Annotated[float, "seconds"]</code></li>
 <li>type hint containers directly <code>list[float]</code></li>
 <li>more flexible decorator syntax</li>
 <li>string <code>removeprefix</code> and <code>removesuffix</code></li>
@@ -810,9 +763,12 @@ lambdas = [
 <h2 id="python-38"><a class="header" href="#python-38">Python 3.8</a></h2>
 <ul>
 <li>assignment expressions <code>if (n := len(a)) &gt; 10:</code></li>
-<li>improved f-strings <code>f&quot;{x*9 + 15=}&quot;</code></li>
-<li>positional and keyword only parameters</li>
+<li>improved f-strings <code>f"{x*9 + 15=}"</code></li>
+<li>positional and keyword only parameters <code>def f(a, /, b, *, c)</code></li>
 <li>multiprocessing.shared_memory</li>
+<li><code>functools.singledispatchmethod</code></li>
+<li>typing <code>Literal</code> and <code>Final</code></li>
+<li>(xml.etree.ElementTree wildcard stuff — super humorous &amp; annoying timing!)`</li>
 </ul>
 <h2 id="python-37"><a class="header" href="#python-37">Python 3.7:</a></h2>
 <ul>
@@ -822,7 +778,7 @@ lambdas = [
 <li>postponed evaluation of type annotations</li>
 <li>dicts officially respect insertion-order</li>
 <li>time - nanosecond resolution functions</li>
-<li><code>f&quot;{number:,}</code></li>
+<li><code>f"{number:,}</code></li>
 </ul>
 <h2 id="python-36"><a class="header" href="#python-36">Python 3.6:</a></h2>
 <ul>
@@ -875,15 +831,27 @@ lambdas = [
 <li>SQLAlchemy has an identity map that caches queried objects</li>
 <li>SQLAlchemy using mutation tracking and updates the precise fields that changed</li>
 </ul>
+<h2 id="other-tips"><a class="header" href="#other-tips">Other tips</a></h2>
+<ul>
+<li>Remember to index on ForeignKeys. Postgres does not do this automatically. MySQL always does this.</li>
+<li>Remember to set <code>onupdate</code> and <code>ondelete</code> cascades on ForeignKeys.</li>
+<li>To prevent spurious joins: (this cannot be used with NULLable outer joins)
+<pre><code class="language-py">session.query(Model).options(
+    sa.orm.joinedload("child").joinedload("grandchild"),
+    sa.orm.raiseload("*"),
+)
+</code></pre>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="web"><a class="header" href="#web">Web</a></h1>
 <p>Learning: <a href="https://hpbn.co/">https://hpbn.co/</a></p>
 <p><a href="https://google.github.io/styleguide/htmlcssguide.html">Google's Style Guide</a> has basic formatting and other guidance.</p>
 <h2 id="minimal-html"><a class="header" href="#minimal-html">Minimal HTML</a></h2>
 <pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
 &lt;title&gt;Saving bytes&lt;/title&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
 &lt;h1&gt;Let's go&lt;/h1&gt;
 &lt;p&gt;Annddd we're done
 </code></pre>
@@ -901,7 +869,7 @@ lambdas = [
 <li>The Same Origin Policy (SOP) applies only to scripts accessing data from another origin.</li>
 <li>CORS can be used to relax restrictions for scripts.</li>
 <li>Websockets do not use SOP, the server must verify the <code>Origin:</code> header.</li>
-<li>SOP does not prevent &quot;Simple Requests&quot; (e.g. HTML forms), but does prevent reading the response. This means <a href="https://stackoverflow.com/questions/33261244/why-same-origin-policy-isnt-enough-to-prevent-csrf-attacks#33324803">to prevent CSRF</a>, the server must verify the <code>Origin:</code> header.</li>
+<li>SOP does not prevent "Simple Requests" (e.g. HTML forms), but does prevent reading the response. This means <a href="https://stackoverflow.com/questions/33261244/why-same-origin-policy-isnt-enough-to-prevent-csrf-attacks#33324803">to prevent CSRF</a>, the server must verify the <code>Origin:</code> header.</li>
 <li>Older browsers do not send the <code>Origin:</code> header.</li>
 </ul>
 </li>
@@ -977,7 +945,7 @@ lambdas = [
 </ul>
 </li>
 <li>IPVLAN
-* </li>
+*</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="crypto"><a class="header" href="#crypto">Crypto</a></h1>
 <p>You already know that you should never roll out your own crypto.</p>
@@ -1009,7 +977,7 @@ lambdas = [
 <ul>
 <li>Be liberal in what you accept.</li>
 <li>Store time as UTC</li>
-<li>Store the symbolic time zone (i.e. &quot;Europe/London&quot;) if you need to know about daylight savings for further calculations.</li>
+<li>Store the symbolic time zone (i.e. "Europe/London") if you need to know about daylight savings for further calculations.</li>
 <li>Return time in UTC, and let the presentation layer convert it to the user's local time.</li>
 </ul>
 <p>Examples: <a href="http://www.creativedeletion.com/2015/01/28/falsehoods-programmers-date-time-zones.html">http://www.creativedeletion.com/2015/01/28/falsehoods-programmers-date-time-zones.html</a></p>
@@ -1034,14 +1002,14 @@ set -o xtrace        # Print each executed command
 <div style="break-before: page; page-break-before: always;"></div><h1 id="xml"><a class="header" href="#xml">XML</a></h1>
 <h2 id="xpath"><a class="header" href="#xpath">xpath</a></h2>
 <p>Find tags ignoring namespaces</p>
-<pre><code class="language-py">&quot;//*[local-name()='reservationOriginatorCode']&quot;
+<pre><code class="language-py">"//*[local-name()='reservationOriginatorCode']"
 </code></pre>
 <p>Filter nodes based on a sub-node text, then find a sibling element:</p>
 <pre><code class="language-xml">&lt;rf5:ResGuests&gt;
   &lt;ResGuest&gt;
     &lt;reservationID&gt;12345&lt;/reservationID&gt;
     &lt;ReservationReferences&gt;
-      &lt;ReservationReference type=&quot;PMSID&quot; legNumber=&quot;1&quot; /&gt;
+      &lt;ReservationReference type="PMSID" legNumber="1" /&gt;
     &lt;/ReservationReferences&gt;
   &lt;/ResGuest&gt;
 &lt;rf5:ResGuests&gt;
@@ -1050,10 +1018,10 @@ set -o xtrace        # Print each executed command
     xml.getroottree().xpath(
         # 1. Get ResGuest corresponding to this reservation
         # 2. Get the Leg Number from that ResGuest
-        &quot;&quot;&quot;
+        """
         ./rf5:ResGuests/rf5:ResGuest[rf5:reservationID[text()[normalize-space(.)='12345']]]
         //rf5:ReservationReference[@type='PMSID']/@legNumber
-        &quot;&quot;&quot;,
+        """,
         namespaces=NAMESPACES_MAP,
     )
 )
@@ -1141,7 +1109,7 @@ LIKE ...
 <p><strong>BETWEEN</strong> can be numbers, texts, or dates. In the case of text it seems to use alphabetical ordering (Unicode considerations)?</p>
 <p><strong>EXISTS</strong> tests whether a <em>subquery</em> returns any values (boolean existence check).</p>
 <p><strong>IN</strong> can use a tuple of values <code>('George', 'Clooney')</code>, or a <em>subquery</em>.</p>
-<p><strong>LIKE</strong> uses two wildcards % (0+ characters), and _ (exactly one character). For example, <code>_r%</code> would mean values with &quot;r&quot; in the 2nd position.</p>
+<p><strong>LIKE</strong> uses two wildcards % (0+ characters), and _ (exactly one character). For example, <code>_r%</code> would mean values with "r" in the 2nd position.</p>
 <p><strong>ANY</strong> and <strong>ALL</strong> can be used with an operator against a <em>subquery</em>, e.g. <code>WHERE column = ANY (SELECT ...)</code>.</p>
 <h2 id="aggregate-functions"><a class="header" href="#aggregate-functions">Aggregate Functions</a></h2>
 <p>We have aggregate functions that can act on values:</p>
@@ -1201,7 +1169,7 @@ WHERE
 /* block comment */
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><p><img src="sql/./joins.png" alt="" /></p>
-<p><strong>Joins start off as a cross-product</strong>, and predicates (&quot;ON&quot;) filter the rows down.</p>
+<p><strong>Joins start off as a cross-product</strong>, and predicates ("ON") filter the rows down.</p>
 <ul>
 <li><strong>LEFT OUTER JOIN</strong> - always return all rows for A, with anything that happens to match in B (ie. B could be null).</li>
 <li><strong>RIGHT OUTER JOIN</strong>s are fairly useless - just do a left join for intuitiveness (possible exception for 3+ tables?).</li>
@@ -1375,12 +1343,12 @@ WHERE
         &lt;li&gt;Use a statement timeout for all automated migrations:
             &lt;br&gt;
             &lt;code&gt;
-                SET statement_timeout = &quot;5000&quot;;&lt;br&gt;
+                SET statement_timeout = "5000";&lt;br&gt;
             &lt;/code&gt;
         &lt;li&gt;Optionally, additionally, use a lock timeout for all automated migrations:
             &lt;br&gt;
             &lt;code&gt;
-                SET lock_timeout = &quot;2000&quot;;&lt;br&gt;
+                SET lock_timeout = "2000";&lt;br&gt;
             &lt;/code&gt;
     &lt;/ol&gt;
 &lt;/details&gt;
@@ -1474,10 +1442,10 @@ WHERE
     <p>(A default value is required.)
     <p>This is much better than: NULL ➜ Backfill Default ➜ NOT NULL.
     <p>It is literally better to use an incorrect default value.
-<pre><code>&lt;div data-pg-versions=&quot;9.5 9.6 10&quot;&gt;
+<pre><code>&lt;div data-pg-versions="9.5 9.6 10"&gt;
     &lt;p&gt;
     &lt;details&gt;
-        &lt;summary&gt;&lt;mark class=&quot;warning&quot;&gt;This is unsafe.&lt;/summary&gt;
+        &lt;summary&gt;&lt;mark class="warning"&gt;This is unsafe.&lt;/summary&gt;
         &lt;p&gt;This will cause the entire table to be re-written to disk.
         &lt;p&gt;An &lt;code&gt;ACCESS_EXCLUSIVE&lt;/code&gt; lock is acquired during this.
         &lt;p&gt;This blocks &lt;strong&gt;all&lt;/strong&gt; queries.
@@ -1485,11 +1453,11 @@ WHERE
     &lt;/details&gt;
     &lt;p&gt;There is no way to do this without downtime.
 &lt;/div&gt;
-&lt;div data-pg-versions=&quot;11 12&quot;&gt;
+&lt;div data-pg-versions="11 12"&gt;
     &lt;p&gt;
-        &lt;mark class=&quot;good&quot;&gt;
+        &lt;mark class="good"&gt;
             Since PostgreSQL 11
-            &lt;a href=&quot;https://brandur.org/postgres-default&quot;&gt;
+            &lt;a href="https://brandur.org/postgres-default"&gt;
                 this is safe.
             &lt;/a&gt;
         &lt;/mark&gt;
@@ -1502,10 +1470,10 @@ WHERE
         <code>
             ALTER TABLE table ALTER column SET NOT NULL;
         </code>
-<pre><code>&lt;div data-pg-versions=&quot;9.5 9.6 10 11&quot;&gt;
+<pre><code>&lt;div data-pg-versions="9.5 9.6 10 11"&gt;
     &lt;p&gt;
     &lt;details&gt;
-        &lt;summary&gt;&lt;mark class=&quot;warning&quot;&gt;This is unsafe.&lt;/summary&gt;
+        &lt;summary&gt;&lt;mark class="warning"&gt;This is unsafe.&lt;/summary&gt;
         &lt;p&gt;This will cause a full table scan.
         &lt;p&gt;An &lt;code&gt;ACCESS_EXCLUSIVE&lt;/code&gt; lock is acquired during this.
         &lt;p&gt;This blocks &lt;strong&gt;all&lt;/strong&gt; queries.
@@ -1515,8 +1483,8 @@ WHERE
     &lt;ol&gt;
         &lt;li&gt;
             &lt;code&gt;
-                SET statement_timeout = &quot;3000&quot;;&lt;br&gt;
-                SET lock_timeout = &quot;3000&quot;;&lt;br&gt;
+                SET statement_timeout = "3000";&lt;br&gt;
+                SET lock_timeout = "3000";&lt;br&gt;
                 ALTER TABLE table
                 ADD CONSTRAINT ck_constraint_name
                 CHECK (column IS NOT NULL)
@@ -1524,18 +1492,18 @@ WHERE
             &lt;/code&gt;
         &lt;li&gt;
             &lt;code&gt;
-                SET statement_timeout = &quot;0&quot;;&lt;br&gt;
-                SET lock_timeout = &quot;0&quot;;&lt;br&gt;
+                SET statement_timeout = "0";&lt;br&gt;
+                SET lock_timeout = "0";&lt;br&gt;
                 VALIDATE CONSTRAINT ck_constraint_name;
             &lt;/code&gt;
     &lt;/ol&gt;
 
     &lt;p&gt;&lt;small&gt;&lt;mark&gt;Upgrading to PostgreSQL 12 allows the suboptimal constraint to be replaced.&lt;/mark&gt;&lt;/small&gt;
 &lt;/div&gt;
-&lt;div data-pg-versions=&quot;12&quot;&gt;
+&lt;div data-pg-versions="12"&gt;
     &lt;p&gt;
     &lt;details&gt;
-        &lt;summary&gt;&lt;mark class=&quot;warning&quot;&gt;This is unsafe.&lt;/summary&gt;
+        &lt;summary&gt;&lt;mark class="warning"&gt;This is unsafe.&lt;/summary&gt;
         &lt;p&gt;An &lt;code&gt;ACCESS_EXCLUSIVE&lt;/code&gt; lock is acquired during this.
         &lt;p&gt;This blocks &lt;strong&gt;all&lt;/strong&gt; queries.
         &lt;p&gt;A full table scan is required which takes a &lt;em&gt;long&lt;/em&gt; time.
@@ -1545,8 +1513,8 @@ WHERE
     &lt;ol&gt;
         &lt;li&gt;
             &lt;code&gt;
-                SET statement_timeout = &quot;3000&quot;;&lt;br&gt;
-                SET lock_timeout = &quot;3000&quot;;&lt;br&gt;
+                SET statement_timeout = "3000";&lt;br&gt;
+                SET lock_timeout = "3000";&lt;br&gt;
                 ALTER TABLE table
                 ADD CONSTRAINT ck_constraint_name
                 CHECK (column IS NOT NULL)
@@ -1554,8 +1522,8 @@ WHERE
             &lt;/code&gt;
         &lt;li&gt;
             &lt;code&gt;
-                SET statement_timeout = &quot;0&quot;;&lt;br&gt;
-                SET lock_timeout = &quot;0&quot;;&lt;br&gt;
+                SET statement_timeout = "0";&lt;br&gt;
+                SET lock_timeout = "0";&lt;br&gt;
                 VALIDATE CONSTRAINT ck_constraint_name;
             &lt;/code&gt;
         &lt;li&gt;
@@ -1564,8 +1532,8 @@ WHERE
             &lt;/code&gt;
         &lt;li&gt;
             &lt;code&gt;
-                SET statement_timeout = &quot;3000&quot;;&lt;br&gt;
-                SET lock_timeout = &quot;3000&quot;;&lt;br&gt;
+                SET statement_timeout = "3000";&lt;br&gt;
+                SET lock_timeout = "3000";&lt;br&gt;
                 ALTER TABLE table DROP CONSTRAINT ck_constraint_name;
             &lt;/code&gt;
 &lt;/div&gt;
@@ -1581,10 +1549,10 @@ WHERE
         <code>
             CREATE UNIQUE INDEX name_idx ON table (column);
         </code>
-<pre><code>&lt;div data-pg-versions=&quot;9.5 9.6 10 11 12&quot;&gt;
+<pre><code>&lt;div data-pg-versions="9.5 9.6 10 11 12"&gt;
     &lt;p&gt;
         &lt;details&gt;
-            &lt;summary&gt;&lt;mark class=&quot;warning&quot;&gt;This is unsafe.&lt;/summary&gt;
+            &lt;summary&gt;&lt;mark class="warning"&gt;This is unsafe.&lt;/summary&gt;
             &lt;p&gt;A &lt;code&gt;SHARE&lt;/code&gt; lock is acquired for this operation.
             &lt;p&gt;This blocks &lt;strong&gt;writes&lt;/strong&gt; on the table.
             &lt;p&gt;A full table scan is required which takes a &lt;em&gt;long&lt;/em&gt; time.
@@ -1595,8 +1563,8 @@ WHERE
     &lt;ol&gt;
         &lt;li&gt;
             &lt;code&gt;
-                SET statement_timeout = &quot;0&quot;;&lt;br&gt;
-                SET lock_timeout = &quot;0&quot;;&lt;br&gt;
+                SET statement_timeout = "0";&lt;br&gt;
+                SET lock_timeout = "0";&lt;br&gt;
                 CREATE INDEX CONCURRENTLY name_idx ON table (column);
             &lt;/code&gt;
         &lt;li&gt;Check the index was created successfully:
@@ -1707,8 +1675,8 @@ WHERE
 <pre><code class="language-terminal">vacuumdb --all --full --freeze
 </code></pre>
 <p>List total table sizes (including indexes):</p>
-<pre><code class="language-sql">SELECT nspname || '.' || relname AS &quot;relation&quot;,
-    pg_size_pretty(pg_total_relation_size(C.oid)) AS &quot;total_size&quot;
+<pre><code class="language-sql">SELECT nspname || '.' || relname AS "relation",
+    pg_size_pretty(pg_total_relation_size(C.oid)) AS "total_size"
   FROM pg_class C
   LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
   WHERE nspname NOT IN ('pg_catalog', 'information_schema')
@@ -1734,7 +1702,7 @@ WHERE
 <li><a href="https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf">ip cheat sheat</a> (pdf)</li>
 <li>A check list of <a href="https://github.com/jlevy/the-art-of-command-line">things to know about the command line</a></li>
 </ul>
-<h2 id="development"><a class="header" href="#development">Development</a></h2>
+<h2 id="development-1"><a class="header" href="#development-1">Development</a></h2>
 <ul>
 <li><a href="https://direnv.net/">direnv</a> - manage environment variables per-project</li>
 <li><a href="https://fishshell.com/">fish</a>/<a href="http://xiki.org/">xiki</a> - alternative shells</li>
@@ -1750,7 +1718,7 @@ WHERE
 </ul>
 <h2 id="shell-1"><a class="header" href="#shell-1">Shell</a></h2>
 <ul>
-<li>Consider an alias like <code>alias q=&quot;ls | grep --color -i&quot;</code>.</li>
+<li>Consider an alias like <code>alias q="ls | grep --color -i"</code>.</li>
 <li>The <code>history</code> command (<code>history search</code>).</li>
 <li>Process management: &amp; fg bg jobs kill disown nohup (CTRL+C/Z).</li>
 <li><code>kill -SIGSTOP</code> and <code>kill -SIGCONT</code> for pause/resume.</li>
@@ -1775,7 +1743,7 @@ MAKEFLAGS += --no-builtin-rules
 .DEFAULT: help
 help: Makefile
 #       Find all double comments and treat them as docstrings
-        @echo &quot;make &lt;command&gt;&quot;
+        @echo "make &lt;command&gt;"
         @sed -n 's/^##//p' $&lt;
 
 ##     watch:  Hot-reload web-app server.
@@ -1794,7 +1762,7 @@ $(VERBOSE).SILENT:
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="systemd-files"><a class="header" href="#systemd-files">Systemd Files</a></h1>
 <blockquote>
-<p>&quot;The only thing more complicated and confusing than systemd is the planet's ecosystem.&quot; - Me</p>
+<p>"The only thing more complicated and confusing than systemd is the planet's ecosystem." - Me</p>
 </blockquote>
 <p>This page is currently useless.</p>
 <p>For example, create <code>/etc/systemd/system/my-ssh-monitor.service</code></p>
@@ -1828,7 +1796,7 @@ WantedBy=default.target
 <p>There <a href="https://unix.stackexchange.com/a/4132">difference between a shell, terminal, console and command line</a>.</p>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">Fish</th><th style="text-align: left">Bash</th></tr></thead><tbody>
 <tr><td style="text-align: left">Alt-L : ls</td><td style="text-align: left"></td></tr>
-<tr><td style="text-align: left">Alt-P : append &quot;| less&quot;</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">Alt-P : append "| less"</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">Alt-V : edit command in editor</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">Alt-W : what is the current command?</td><td style="text-align: left"></td></tr>
 <tr><td style="text-align: left">history</td><td style="text-align: left">history</td></tr>
@@ -1860,11 +1828,11 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub &lt;host&gt;
 <li><code>host</code> can be <code>localhost</code> which means <code>sshserver</code> or a remote host.</li>
 </ul>
 <p><img src="linux/./ssh-local-forward.png" alt="" title="SSH Local Forwarding Diagram" /></p>
-<p>Requests to a remote port are sent to a &quot;local&quot; port:</p>
+<p>Requests to a remote port are sent to a "local" port:</p>
 <ul>
 <li>The default <code>bind</code> address is <code>localhost</code> on <code>sshserver</code>.
 (Changing this requires <code>GatewayPorts</code> in <code>sshd_config</code>.)</li>
-<li>The &quot;local&quot; port can be on your device or another <code>host</code>.</li>
+<li>The "local" port can be on your device or another <code>host</code>.</li>
 </ul>
 <p><img src="linux/./ssh-remote-forward.png" alt="" title="SSH Local Forwarding Diagram" /></p>
 <p>To cancel port forwarding:</p>
@@ -1948,16 +1916,16 @@ AllowUsers qasim
 </ul>
 <p>Create a <a href="https://www.vagrantup.com/docs/vagrantfile/">merging custom Vagrantfile</a> in <code>~/vagrant.d/</code>.</p>
 <p>Many applications inside the virtual machine will bind to <code>localhost</code> making them difficult to connect to from the host. We can configure a SOCKS5 proxy with SSH, and use a new profile of Firefox which always connect via that proxy.</p>
-<pre><code class="language-ruby">config.vm.network &quot;private_network&quot;, ip: &quot;172.16.3.2&quot;
-config.ssh.extra_args = [&quot;-D&quot;, &quot;1632&quot;]
+<pre><code class="language-ruby">config.vm.network "private_network", ip: "172.16.3.2"
+config.ssh.extra_args = ["-D", "1632"]
 </code></pre>
-<p>Using the Firefox extension <a href="https://addons.mozilla.org/en-GB/firefox/addon/smartproxy/">SmartProxy</a>, add the SOCKSv5 Proxy Server (Vagrant; SOCKS5; 127.0.0.1; 1632). Then when browsing to a particular <code>localhost:&lt;port&gt;</code>, click on the toolbar icon and enable &quot;Enable proxy on <code>localhost:&lt;port&gt;</code>&quot;.</p>
+<p>Using the Firefox extension <a href="https://addons.mozilla.org/en-GB/firefox/addon/smartproxy/">SmartProxy</a>, add the SOCKSv5 Proxy Server (Vagrant; SOCKS5; 127.0.0.1; 1632). Then when browsing to a particular <code>localhost:&lt;port&gt;</code>, click on the toolbar icon and enable "Enable proxy on <code>localhost:&lt;port&gt;</code>".</p>
 <p>It is also possible to connect the VM's shared private network directly on <code>172.16.3.2</code>.</p>
 <p>This is easier than forwarding each individual application (which you may not know in advance) with:</p>
-<pre><code class="language-ruby">config.vm.network &quot;forwarded_port&quot;, guest: 8000, host: 8000, host_ip: &quot;127.0.0.1&quot;
+<pre><code class="language-ruby">config.vm.network "forwarded_port", guest: 8000, host: 8000, host_ip: "127.0.0.1"
 </code></pre>
 <p><strong>Issue with vagrant-vbguest</strong></p>
-<pre><code>  if Vagrant.has_plugin?(&quot;vagrant-vbguest&quot;)
+<pre><code>  if Vagrant.has_plugin?("vagrant-vbguest")
     config.vbguest.auto_update = false
   end
 </code></pre>
@@ -2018,6 +1986,7 @@ org.gnome.gedit.desktop
 </ul>
 <p>See comparison: https://opus-codec.org/comparison/</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ffmpeg"><a class="header" href="#ffmpeg">FFMPEG</a></h1>
+<p>ffmpeg cheatsheet: <a href="https://amiaopensource.github.io/ffmprovisr/">https://amiaopensource.github.io/ffmprovisr/</a></p>
 <p>Downcode to x264 1080p (copy audio and subtitles)</p>
 <pre><code class="language-terminal">ffmpeg -i input.wmv \
        -c:v libx264 -preset veryslow -tune film -crf 22 -vf scale=-2:1080 \
@@ -2044,7 +2013,7 @@ org.gnome.gedit.desktop
 </li>
 <li>Open/Closed Principle
 <ul>
-<li>&quot;An object should be open for extension, but closed for modification&quot;</li>
+<li>"An object should be open for extension, but closed for modification"</li>
 <li>This means the design should facilitate new functionality or changes in requirements without modifying existing code</li>
 <li>The object becoming closed means it now has a well-defined interface and may be used by others</li>
 <li>This limits the risk of introducing bugs into already developed &amp; tested code</li>
@@ -2052,12 +2021,12 @@ org.gnome.gedit.desktop
 <li>Violation smells: switch/if-else statements that can be extended</li>
 <li>Implementation notes: use abstraction and interfaces</li>
 <li>Be aware: Pure inheritance introduces coupling if subclasses depend on implementation details of their parent class.</li>
-<li>When to use: You cannot predict the future so &quot;modifications may be done once, maybe twice, but not thrice before I used OCP&quot;</li>
+<li>When to use: You cannot predict the future so "modifications may be done once, maybe twice, but not thrice before I used OCP"</li>
 </ul>
 </li>
 <li>Liskov Substitution Principle
 <ul>
-<li>&quot;A <em>type</em> may be replaced by its <em>sub-types</em> without causing any harm to the program&quot;</li>
+<li>"A <em>type</em> may be replaced by its <em>sub-types</em> without causing any harm to the program"</li>
 <li>Otherwise <a href="https://softwareengineering.stackexchange.com/questions/170222/what-can-go-wrong-if-the-liskov-substitution-principle-is-violated">your method must alter its behaviour</a> by investigating the type of object it has been given</li>
 <li>It <a href="https://stefanroock.wordpress.com/2010/11/08/the-liskov-substitution-principle-lsp-in-duck-typed-programming-languages/">works slightly differently in dynamic languages</a>.</li>
 </ul>
@@ -2077,7 +2046,7 @@ org.gnome.gedit.desktop
 <p>Starting point: <a href="https://www.youtube.com/watch?v=3MNVP9-hglc">https://www.youtube.com/watch?v=3MNVP9-hglc</a></p>
 <p>Inheritance is difficult with Liskov's substitution principle anyway.</p>
 <h2 id="law-of-demeter"><a class="header" href="#law-of-demeter">Law of Demeter</a></h2>
-<p>The <em>principle of least knowledge</em>, in particular for OOD, says to loosely couple the design by having objects only talk to their immediate &quot;friends&quot;.</p>
+<p>The <em>principle of least knowledge</em>, in particular for OOD, says to loosely couple the design by having objects only talk to their immediate "friends".</p>
 <p>Code Smell: <code>self.friend.internal_variable.dobla()</code></p>
 <p>Better: <code>self.friend.dobla()</code></p>
 <h2 id="tech-debt"><a class="header" href="#tech-debt">Tech Debt</a></h2>
@@ -2149,7 +2118,7 @@ things. The following will likely not confirm to what you think:</p>
 </ul>
 <h2 id="how-to-mock"><a class="header" href="#how-to-mock">How to Mock</a></h2>
 <p>Don't. Ref: <a href="https://www.youtube.com/watch?v=Xu5EhKVZdV8">https://www.youtube.com/watch?v=Xu5EhKVZdV8</a></p>
-<p>https://www.youtube.com/watch?v=3MNVP9-hglc &quot;The End Of Object Inheritance &amp; The Beginning Of A New Modularity&quot; here?</p>
+<p>https://www.youtube.com/watch?v=3MNVP9-hglc "The End Of Object Inheritance &amp; The Beginning Of A New Modularity" here?</p>
 <p>How to Test: <a href="https://www.destroyallsoftware.com/talks/boundaries">https://www.destroyallsoftware.com/talks/boundaries</a></p>
 <p>Imperative shell = integration tests of the shell which tie together all the dependencies (no logic; no code paths to test) - that's what they're good at.</p>
 <p>Functional core = unit-tests of all that messy logic (that's what they're good at)</p>
@@ -2211,7 +2180,7 @@ things. The following will likely not confirm to what you think:</p>
 <li>Allow fields to be explicitly specified, e.g. with a <code>?fields[]=age</code> query parameter.</li>
 <li>Handle filtering, sorting and searching on collections via query parameters, e.g. <code>/people?q=john&amp;state=active&amp;sort[]=name,-date</code>. (i.e. not hierarchical sub-paths)</li>
 <li>Consider aliasing query common parameters as a sub-resource path.</li>
-<li>Avoid envelopes - HTTP already has them. For example, for pagination use links-in-headers, e.g. <code>Link: &lt;https://example.com/v1/people?page=3&gt;; rel=&quot;next&quot;, &lt;https://example.com/v1/people?page=50&gt;; rel=&quot;last&quot;</code> (first, last, next, previous), and a custom HTTP header for the total count like <code>X-Total-Count</code> .</li>
+<li>Avoid envelopes - HTTP already has them. For example, for pagination use links-in-headers, e.g. <code>Link: &lt;https://example.com/v1/people?page=3&gt;; rel="next", &lt;https://example.com/v1/people?page=50&gt;; rel="last"</code> (first, last, next, previous), and a custom HTTP header for the total count like <code>X-Total-Count</code> .</li>
 <li>How to paginate exactly?</li>
 <li>Use POST/PUT/PATCH appropriately.</li>
 <li>Use POST on collections to insert. Use PUT (idempotent) on specific resource path to create/update, and PATCH for partial updates.</li>
@@ -2252,24 +2221,24 @@ things. The following will likely not confirm to what you think:</p>
 <p>Originally described by Roy Fielding in his <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">dissertation</a> in 2000</p>
 </div>
 <div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
-<p>The exact meanings of words like &quot;representation&quot; are described in Fielding's <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#tab_5_1">REST data elements table</a></p>
+<p>The exact meanings of words like "representation" are described in Fielding's <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#tab_5_1">REST data elements table</a></p>
 </div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="agile"><a class="header" href="#agile">&quot;Agile&quot;</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="agile"><a class="header" href="#agile">"Agile"</a></h1>
 <ul>
 <li><a href="http://agileforall.com/wp-content/uploads/2012/01/Story-Splitting-Flowchart.pdf">Split stories into vertical slices</a> to deliver fast</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="refactoring"><a class="header" href="#refactoring">Refactoring</a></h1>
 <p>Notes from <em>Refactoring: Improving the Design of Existing Code, Second Edition</em>.</p>
 <blockquote>
-<p>&quot;The whole purpose of refactoring is to make us program faster, producing more value with less effort.&quot;<br />
+<p>"The whole purpose of refactoring is to make us program faster, producing more value with less effort."<br />
 Refactoring p56, Martin Fowler</p>
 </blockquote>
 <blockquote>
-<p>&quot;for each desired change, make the change easy (warning: this may be hard), then make the easy change&quot;<br />
+<p>"for each desired change, make the change easy (warning: this may be hard), then make the easy change"<br />
 Kent Beck, Twitter</p>
 </blockquote>
 <blockquote>
-<p>paraphrasing: going 20 miles north, 100 miles east on the motorway and back down is faster than going 100 miles east through the woods. &quot;sometimes you need to say, 'wait, I need to ceck the map and find the quickest route'.&quot;</p>
+<p>paraphrasing: going 20 miles north, 100 miles east on the motorway and back down is faster than going 100 miles east through the woods. "sometimes you need to say, 'wait, I need to ceck the map and find the quickest route'."</p>
 <p>Refactoring p51, Jessica Kerr</p>
 </blockquote>
 <h2 id="key-ideas"><a class="header" href="#key-ideas">Key Ideas</a></h2>
@@ -2280,7 +2249,7 @@ Kent Beck, Twitter</p>
 <li>(When you succumbed to the temptation of making a larger multi-step refactoring in one go and the tests fail, simply revert the code and do the smaller steps!)</li>
 <li>The rule of three: the first time you just do it, the second time you wince but you do it anyway, and the third time you refactor.</li>
 <li>Design Stamina Hypothesis.</li>
-<li>Two hats: two mutually exclusive activities of &quot;adding functionality&quot; and &quot;refactoring&quot;. The former mostly involves adding new tests and getting them to work, the latter doesn't need new tests to be added (unless you find some were missing).</li>
+<li>Two hats: two mutually exclusive activities of "adding functionality" and "refactoring". The former mostly involves adding new tests and getting them to work, the latter doesn't need new tests to be added (unless you find some were missing).</li>
 <li>The distinct types of <em>opportunistic</em> refactoring (following the boy-scout principle):
 <ul>
 <li>Preparatory refactoring - making it easier to add a feature</li>
@@ -2289,7 +2258,7 @@ Kent Beck, Twitter</p>
 </ul>
 </li>
 </ul>
-<p>Don't justify refactoring in terms of &quot;clean code&quot;, &quot;good engineering practice&quot;, or other moral reasons. Instead, communicate with the core economic benefits: it makes us faster to add features and faster to fix bugs.</p>
+<p>Don't justify refactoring in terms of "clean code", "good engineering practice", or other moral reasons. Instead, communicate with the core economic benefits: it makes us faster to add features and faster to fix bugs.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="documentation"><a class="header" href="#documentation">Documentation</a></h1>
 <p>This: <a href="https://www.divio.com/blog/documentation/">https://www.divio.com/blog/documentation/</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="estimating"><a class="header" href="#estimating">Estimating</a></h1>
@@ -2310,7 +2279,6 @@ Kent Beck, Twitter</p>
 <p><a href="https://www.cosmicpython.com/">https://www.cosmicpython.com/</a></p>
 <p><a href="https://abdullin.com/post/event-sourcing-specifications/">https://abdullin.com/post/event-sourcing-specifications/</a></p>
 <p><a href="https://dzone.com/articles/cqrs-is-an-anti-pattern-for-ddd">https://dzone.com/articles/cqrs-is-an-anti-pattern-for-ddd</a></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="cpu"><a class="header" href="#cpu">CPU</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sorting"><a class="header" href="#sorting">Sorting</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="avoid-using-makefiles-as-a-script-runner"><a class="header" href="#avoid-using-makefiles-as-a-script-runner">Avoid using Makefiles as a Script Runner</a></h1>
@@ -2337,7 +2305,7 @@ Kent Beck, Twitter</p>
 <p>SQLAlchemy maps much more directly onto</p>
 <h3 id="joins"><a class="header" href="#joins">Joins</a></h3>
 <p>Let's do a simple join:</p>
-<pre><code class="language-python">Books.objects.filter(author__name=&quot;django&quot;)
+<pre><code class="language-python">Books.objects.filter(author__name="django")
 </code></pre>
 <p>It's not obvious at all that a join is happening.</p>
 <h3 id="aggregates"><a class="header" href="#aggregates">Aggregates</a></h3>
@@ -2393,9 +2361,9 @@ if len(results) &gt; 2:
 <h2 id="transactions-are-a-mess"><a class="header" href="#transactions-are-a-mess">Transactions are a mess</a></h2>
 <p>Though in Django 3.2, they finally added <code>transaction(durable=True)</code>, the whole transaction system is opaque.</p>
 <h2 id="its-not-ddd-compatible"><a class="header" href="#its-not-ddd-compatible">It's not DDD-compatible</a></h2>
-<p>Django forces you to define your models in the root of an &quot;app&quot;, while with a good code structure the database models will be hidden away.</p>
+<p>Django forces you to define your models in the root of an "app", while with a good code structure the database models will be hidden away.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="read-modify-write-patterns-in-python"><a class="header" href="#read-modify-write-patterns-in-python">Read-Modify-Write Patterns in Python</a></h1>
-<p>Read-Modify-Write can cause &quot;lost updates&quot;. Solutions, in order of preference:</p>
+<p>Read-Modify-Write can cause "lost updates". Solutions, in order of preference:</p>
 <ol>
 <li>Use calculated updates</li>
 <li>Use optimistic row-level locks (version column)</li>
@@ -2459,7 +2427,7 @@ def save(
 
 # Usage
 book_out, book_update = get_locked_by_id(session, 1)
-book_update.name = &quot;Super Book&quot;
+book_update.name = "Super Book"
 save(session, book_out, book_update)
 </code></pre>
 <ul>
@@ -2567,19 +2535,19 @@ save(session, book_out, book_update)
 <p><a href="https://www.youtube.com/watch?v=S1bJpsS27Qk">https://www.youtube.com/watch?v=S1bJpsS27Qk</a> (configuring VyOS - open source router) #router</p>
 </li>
 <li>
-<p><a href="https://www.youtube.com/watch?v=wf-BqAjZb8M">https://www.youtube.com/watch?v=wf-BqAjZb8M</a> (&quot;Beyond PEP8&quot; @Raymond Hettinger) #python</p>
+<p><a href="https://www.youtube.com/watch?v=wf-BqAjZb8M">https://www.youtube.com/watch?v=wf-BqAjZb8M</a> ("Beyond PEP8" @Raymond Hettinger) #python</p>
 </li>
 <li>
-<p><a href="https://www.youtube.com/watch?v=9zinZmE3Ogk">https://www.youtube.com/watch?v=9zinZmE3Ogk</a> (&quot;Keynote on Concurrency&quot; @Raymond Hettinger) #python</p>
+<p><a href="https://www.youtube.com/watch?v=9zinZmE3Ogk">https://www.youtube.com/watch?v=9zinZmE3Ogk</a> ("Keynote on Concurrency" @Raymond Hettinger) #python</p>
 </li>
 <li>
-<p><a href="https://www.youtube.com/watch?v=EiOglTERPEo">https://www.youtube.com/watch?v=EiOglTERPEo</a> (&quot;Super Considered Super&quot; @Raymond Hettinger) #python</p>
+<p><a href="https://www.youtube.com/watch?v=EiOglTERPEo">https://www.youtube.com/watch?v=EiOglTERPEo</a> ("Super Considered Super" @Raymond Hettinger) #python</p>
 </li>
 <li>
-<p>Once: <a href="https://www.youtube.com/watch?v=T-TwcmT6Rcw">https://www.youtube.com/watch?v=T-TwcmT6Rcw</a> (&quot;Dataclasses&quot; @Raymond Hettinger) #python</p>
+<p>Once: <a href="https://www.youtube.com/watch?v=T-TwcmT6Rcw">https://www.youtube.com/watch?v=T-TwcmT6Rcw</a> ("Dataclasses" @Raymond Hettinger) #python</p>
 </li>
 <li>
-<p>Once: <a href="https://www.youtube.com/watch?v=p33CVV29OG8">https://www.youtube.com/watch?v=p33CVV29OG8</a> (&quot;Modern Dictionaries&quot; @Raymond Hettinger) #python</p>
+<p>Once: <a href="https://www.youtube.com/watch?v=p33CVV29OG8">https://www.youtube.com/watch?v=p33CVV29OG8</a> ("Modern Dictionaries" @Raymond Hettinger) #python</p>
 </li>
 <li>
 <p><a href="https://software-carpentry.org/lessons/">https://software-carpentry.org/lessons/</a> #learning</p>
@@ -2594,16 +2562,16 @@ save(session, book_out, book_update)
 <p><a href="https://www.obeythetestinggoat.com/book/preface.html">https://www.obeythetestinggoat.com/book/preface.html</a> #tdd #book</p>
 </li>
 <li>
-<p><a href="https://www.youtube.com/watch?v=DJtef410XaM">https://www.youtube.com/watch?v=DJtef410XaM</a> (&quot;The Clean Architecture in Python&quot; @Brandon Rhodes) #architecture #python</p>
+<p><a href="https://www.youtube.com/watch?v=DJtef410XaM">https://www.youtube.com/watch?v=DJtef410XaM</a> ("The Clean Architecture in Python" @Brandon Rhodes) #architecture #python</p>
 </li>
 <li>
-<p><a href="https://www.youtube.com/watch?v=PpyPa92r44s">https://www.youtube.com/watch?v=PpyPa92r44s</a> (&quot;Practical Design Patterns in Docker Networking&quot;) #docker #networking</p>
+<p><a href="https://www.youtube.com/watch?v=PpyPa92r44s">https://www.youtube.com/watch?v=PpyPa92r44s</a> ("Practical Design Patterns in Docker Networking") #docker #networking</p>
 </li>
 <li>
-<p><a href="https://www.youtube.com/watch?v=sSm2dRarhPo">https://www.youtube.com/watch?v=sSm2dRarhPo</a> (&quot;Microservices + Events + Docker = A PerfectTrio&quot;) #DDD #microservices #architecture</p>
+<p><a href="https://www.youtube.com/watch?v=sSm2dRarhPo">https://www.youtube.com/watch?v=sSm2dRarhPo</a> ("Microservices + Events + Docker = A PerfectTrio") #DDD #microservices #architecture</p>
 </li>
 <li>
-<p>https://www.youtube.com/watch?v=KVKufdTphKs (&quot;Python's Infamous GIL&quot; @Larry Hastings PyCon 2015) #python</p>
+<p>https://www.youtube.com/watch?v=KVKufdTphKs ("Python's Infamous GIL" @Larry Hastings PyCon 2015) #python</p>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="talk-notes"><a class="header" href="#talk-notes">Talk Notes</a></h1>
@@ -2624,11 +2592,11 @@ save(session, book_out, book_update)
 <li>A symptom of coupling - testing combinations of parameters</li>
 <li>In DDD the deeper you go into a program, the closer to policies you should get. The shell should be mechanisms.</li>
 <li>Isolated, simple data structures are passed across boundaries.</li>
-<li>&quot;An imperative shell, that wraps and uses, your functional core&quot;</li>
-<li>Procedural code: &quot;output as you run&quot;; functional code: stages producing data, that outputs at the end.</li>
-<li>The biggest advantage of functional programming is that you can <em>see the data</em> between stages. &quot;Show code and hide models and I will be mystified; show models and hide code and it will be obvious&quot;</li>
+<li>"An imperative shell, that wraps and uses, your functional core"</li>
+<li>Procedural code: "output as you run"; functional code: stages producing data, that outputs at the end.</li>
+<li>The biggest advantage of functional programming is that you can <em>see the data</em> between stages. "Show code and hide models and I will be mystified; show models and hide code and it will be obvious"</li>
 <li>By working in stages - linking simple programs together - you can picture the output of each stage. It continually surfaces the result which can be easily checked. <strong>Our minds can picture the data easily.</strong></li>
-<li>&quot;The coder can concentrate on one section of the program at a time, without the overall detailed program continually intruding&quot;</li>
+<li>"The coder can concentrate on one section of the program at a time, without the overall detailed program continually intruding"</li>
 <li>Immutable data structures lead to distributed computing: if you modify memory, you cannot move that code to another machine, but if you just accept data and return data then you can move that to another machine.</li>
 <li>A function that takes an opaque, complex data structure is actually a disguised method.</li>
 <li>Brief Python-specific details at the very end (generators, iterators, context managers).</li>
@@ -2653,7 +2621,7 @@ save(session, book_out, book_update)
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="the-cultural-history-of-programming"><a class="header" href="#the-cultural-history-of-programming">The Cultural History of Programming</a></h1>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Magnetic-core_memory">Magnetic-Core Memory</a> used as RAM between 1955-1975 is the source of the term &quot;core memory&quot; or &quot;core dumps&quot;. </li>
+<li><a href="https://en.wikipedia.org/wiki/Magnetic-core_memory">Magnetic-Core Memory</a> used as RAM between 1955-1975 is the source of the term "core memory" or "core dumps".</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><ul>
 <li>
@@ -2669,16 +2637,16 @@ save(session, book_out, book_update)
 <p>gdb, python-dbg - Look at stack traces live</p>
 </li>
 <li>
-<p>TIL: <a href="https://news.ycombinator.com/item?id=17083879">https://news.ycombinator.com/item?id=17083879</a> &quot;My registrar suspended my domain because an abusive user was using a subdomain for phishing&quot;</p>
+<p>TIL: <a href="https://news.ycombinator.com/item?id=17083879">https://news.ycombinator.com/item?id=17083879</a> "My registrar suspended my domain because an abusive user was using a subdomain for phishing"</p>
 </li>
 <li>
 <p>Make Vim respect XDG - <a href="https://tlvince.com/vim-respect-xdg">https://tlvince.com/vim-respect-xdg</a></p>
 </li>
 <li>
-<p>Write scripts, just flipping write them! <a href="https://www.youtube.com/watch?v=Jd8ulMb6_ls">https://www.youtube.com/watch?v=Jd8ulMb6_ls</a> &quot;Solve Your Problem with Sloppy Python&quot; @Larry Hastings</p>
+<p>Write scripts, just flipping write them! <a href="https://www.youtube.com/watch?v=Jd8ulMb6_ls">https://www.youtube.com/watch?v=Jd8ulMb6_ls</a> "Solve Your Problem with Sloppy Python" @Larry Hastings</p>
 </li>
 <li>
-<p>A product manager can buy software from their team, but they can also buy information like, &quot;Is X possible?&quot; or &quot;How many points to build Y?&quot; or &quot;How much support would be reduced if we did Z?&quot;.</p>
+<p>A product manager can buy software from their team, but they can also buy information like, "Is X possible?" or "How many points to build Y?" or "How much support would be reduced if we did Z?".</p>
 </li>
 <li>
 <p>Fira code for this ligatures: <a href="https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e">https://medium.com/@docodemore/an-alternative-to-operator-mono-font-6e5d040e1c7e</a></p>
@@ -2690,13 +2658,13 @@ save(session, book_out, book_update)
 <p>camelCase, PascalCase, snake_case, kebab-case, CAPS_CASE.</p>
 </li>
 <li>
-<p>Sudoers:<code>pccuser ALL=(ALL:ALL) NOPASSWD:/path/to/command &quot;&quot;</code>
+<p>Sudoers:<code>pccuser ALL=(ALL:ALL) NOPASSWD:/path/to/command ""</code>
 pcuser = user or %group we are giving permission to
 ALL= is the host (ALL works unless you are sharing file across hosts)
 (ALL:ALL) is (user-we-can-command-as:group-we-can-command-as), i.e. sudo -u user -g group. If omitted only root. Can use just (ALL)
 NOPASSWD: is tags
-command may be &quot;ALL&quot;.
-&quot;&quot; prevents command parameters (do not use when specifying parameters)</p>
+command may be "ALL".
+"" prevents command parameters (do not use when specifying parameters)</p>
 <p>-&gt; User Host = (Runas) Command</p>
 <ul>
 <li>Example (placed after NO-NOPASSWD): <code>%wheel ALL=(root) NOPASSWD:/usr/bin/pacmatic -Syu</code></li>
@@ -2708,14 +2676,14 @@ command may be &quot;ALL&quot;.
 </ul>
 <h2 id="python-ecosystem"><a class="header" href="#python-ecosystem">Python Ecosystem</a></h2>
 <ul>
-<li>stdlib 3.7 dataclasses (<a href="https://www.youtube.com/watch?v=T-TwcmT6Rcw">https://www.youtube.com/watch?v=T-TwcmT6Rcw</a> &quot;Dataclasses&quot; @Raymond Hettinger)
+<li>stdlib 3.7 dataclasses (<a href="https://www.youtube.com/watch?v=T-TwcmT6Rcw">https://www.youtube.com/watch?v=T-TwcmT6Rcw</a> "Dataclasses" @Raymond Hettinger)
 <ul>
 <li>previously and still alternatively: attrs lib (has validators, converters and a few other features)</li>
 </ul>
 </li>
-<li>pipenv (<a href="https://www.youtube.com/watch?v=GBQAKldqgZs">https://www.youtube.com/watch?v=GBQAKldqgZs</a> &quot;Pipenv&quot; @Kenneth Reitz)</li>
+<li>pipenv (<a href="https://www.youtube.com/watch?v=GBQAKldqgZs">https://www.youtube.com/watch?v=GBQAKldqgZs</a> "Pipenv" @Kenneth Reitz)</li>
 <li>pytest</li>
-<li>typing: (mypy or pyre, MonkeyType) (<a href="https://www.youtube.com/watch?v=pMgmKJyWKn8">https://www.youtube.com/watch?v=pMgmKJyWKn8</a> &quot;Real World&quot; @Carl Meyer)</li>
+<li>typing: (mypy or pyre, MonkeyType) (<a href="https://www.youtube.com/watch?v=pMgmKJyWKn8">https://www.youtube.com/watch?v=pMgmKJyWKn8</a> "Real World" @Carl Meyer)</li>
 <li>Instagram 2018 1.5mil lines of Python</li>
 <li>linting complete: <a href="https://jeffknupp.com/blog/2016/12/09/how-python-linters-will-save-your-large-python-project/">https://jeffknupp.com/blog/2016/12/09/how-python-linters-will-save-your-large-python-project/</a>
 <ul>
@@ -2748,7 +2716,7 @@ command may be &quot;ALL&quot;.
 <p>How to apologise(!). <a href="https://www.thecut.com/2017/06/these-apology-critics-want-to-teach-you-how-to-say-sorry.html">Source</a></p>
 </li>
 <li>
-<p>An expression of regret, i.e. &quot;I'm sorry&quot;</p>
+<p>An expression of regret, i.e. "I'm sorry"</p>
 </li>
 <li>
 <p>An explanation (but not a justification)</p>
@@ -2766,7 +2734,7 @@ command may be &quot;ALL&quot;.
 <p>A request for forgiveness (least importance)</p>
 </li>
 </ul>
-<p>Don't say: &quot;IF&quot;, &quot;I regret&quot;, Don't use passive voice. Say how you're going to make sure this doesn't happen again.</p>
+<p>Don't say: "IF", "I regret", Don't use passive voice. Say how you're going to make sure this doesn't happen again.</p>
 
                     </main>
 

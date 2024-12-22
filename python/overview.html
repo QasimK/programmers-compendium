@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Principles - The Programmer&#x27;s Compendium</title>
+        <title>Python Overview - The Programmer&#x27;s Compendium</title>
 
 
         <!-- Custom HTML head -->
@@ -155,72 +155,79 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="principles"><a class="header" href="#principles">Principles</a></h1>
-<p>These guiding principles reduce bugs and increase implementation speed of new features or modifications.</p>
-<p>Remember the scope and context of the project. Is it a script? Is it huge? Is it one-off? Is it mission-critical?</p>
-<h2 id="yagnikiss"><a class="header" href="#yagnikiss">YAGNI/KISS</a></h2>
-<p><em>You aren't gonna need it</em>/<em>keep it simple stupid</em> tells you <em>when</em> to do something. The other principles tell you <em>how</em> to do something.</p>
-<h2 id="solid"><a class="header" href="#solid">SOLID</a></h2>
-<p><a href="https://wayback.archive.org/web/20170204020312/https://lostechies.com/derickbailey/2009/02/11/solid-development-principles-in-motivational-pictures/">SOLID</a> applies to object-orientated programming.</p>
+                        <h1 id="python"><a class="header" href="#python">Python</a></h1>
 <ul>
-<li>Single Responsibility Principle
+<li>Use <a href="https://pypi.org/project/pipx/">pipx</a> to install environment management tools and scripts. (Execute binaries installed in isolated virtual environments.)</li>
+<li>Use <a href="https://pdm-project.org/">pdm</a> to manage packaging and dependencies.</li>
+<li>Use a <a href="https://www.bitecode.dev/p/happiness-is-a-good-pythonstartup">PYTHONSTARTUP</a></li>
+</ul>
+<p>Hey, there's already a <a href="http://docs.python-guide.org/en/latest/">Hitchhiker's Guide to Python</a>! This is quite comprehensive on the Python <em>development</em> basics.</p>
+<h2 id="libraries"><a class="header" href="#libraries">Libraries</a></h2>
+<h3 id="linting"><a class="header" href="#linting">Linting</a></h3>
 <ul>
-<li>Domain-dependent</li>
-<li>Think about who - the role - that will be causing what changes and isolate that code together</li>
-<li>Higher cohesion (object has greater focus)</li>
-<li>Lower coupling (object does not connect to or require knowledge of other object)</li>
+<li>ruff</li>
+<li>mypy</li>
+<li>vulture</li>
+<li>bandit/dodgy/safety</li>
+<li><a href="https://github.com/seddonym/layer_linter">Layer Linter</a> (not tried)</li>
 </ul>
-</li>
-<li>Open/Closed Principle
+<h3 id="development"><a class="header" href="#development">Development</a></h3>
 <ul>
-<li>"An object should be open for extension, but closed for modification"</li>
-<li>This means the design should facilitate new functionality or changes in requirements without modifying existing code</li>
-<li>The object becoming closed means it now has a well-defined interface and may be used by others</li>
-<li>This limits the risk of introducing bugs into already developed &amp; tested code</li>
-<li>In a dynamic language it also means you don't dynamically reach into and modify an object</li>
-<li>Violation smells: switch/if-else statements that can be extended</li>
-<li>Implementation notes: use abstraction and interfaces</li>
-<li>Be aware: Pure inheritance introduces coupling if subclasses depend on implementation details of their parent class.</li>
-<li>When to use: You cannot predict the future so "modifications may be done once, maybe twice, but not thrice before I used OCP"</li>
+<li><a href="https://github.com/rayking99/cqd">cqd</a> for debugging (<code>PYTHONSTARTUP</code> it)</li>
+<li><a href="https://github.com/cool-RR/pysnooper">pysnooper</a> - line-by-line print debugging</li>
 </ul>
-</li>
-<li>Liskov Substitution Principle
+<h3 id="libraries-1"><a class="header" href="#libraries-1">Libraries</a></h3>
 <ul>
-<li>"A <em>type</em> may be replaced by its <em>sub-types</em> without causing any harm to the program"</li>
-<li>Otherwise <a href="https://softwareengineering.stackexchange.com/questions/170222/what-can-go-wrong-if-the-liskov-substitution-principle-is-violated">your method must alter its behaviour</a> by investigating the type of object it has been given</li>
-<li>It <a href="https://stefanroock.wordpress.com/2010/11/08/the-liskov-substitution-principle-lsp-in-duck-typed-programming-languages/">works slightly differently in dynamic languages</a>.</li>
+<li><a href="https://passlib.readthedocs.io/">passlib</a> - high-level secrets library</li>
+<li><a href="https://boltons.readthedocs.io/en/latest/">boltons</a> - "boltons should be buitins" (stdlib additions)</li>
+<li><a href="https://github.com/spulec/freezegun">freezegun</a></li>
 </ul>
-</li>
-<li>Interface Segregation Principle
+<h3 id="pandas"><a class="header" href="#pandas">Pandas</a></h3>
+<p>Understanding <a href="https://towardsdatascience.com/understanding-settingwithcopywarning-7142952a01fa">SettingWithCopyWarning</a>.</p>
+<p>Raising it as an error (<code>setup.cfg</code>)</p>
+<pre><code class="language-ini">[tool:pytest]
+filterwarnings =
+    error::pandas.core.common.SettingWithCopyWarning
+    error::FutureWarning
+</code></pre>
+<h2 id="gotchas"><a class="header" href="#gotchas">Gotchas</a></h2>
+<p>Probably the last one you will learn:</p>
+<pre><code class="language-py">x = [1,2,3,4]
+lambdas = [
+   lambda: x[i]
+   for i in range(4)
+]
+
+[f() for f in lambdas]
+</code></pre>
+<h2 id="gil"><a class="header" href="#gil">GIL</a></h2>
 <ul>
-<li>???</li>
+<li>The GIL is required to run bytecode, but not when waiting on I/O - Python can switch to different thread.</li>
+<li>CPython has macros to release and re-aquire GIL which can be used if extension does not need to run python bytecode/do any kind of ref-count changes (e.g. sleep, read/write files, network socket, <code>numpy</code>).</li>
+<li>The GIL cannot be shared in CPU-bound code. CPU-bound "check" every 100 ticks to allow switching.</li>
+<li>I/O doesn't often block unless you are flushing - OS buffers</li>
+<li>Threads/Processes result in CPU context switches, while async does not.</li>
 </ul>
-</li>
-<li>Dependency Inversion Principle
-<ul>
-<li>???</li>
-</ul>
-</li>
-</ul>
-<h2 id="composition-over-inheritance"><a class="header" href="#composition-over-inheritance">Composition over Inheritance</a></h2>
-<p>Starting point: <a href="https://www.youtube.com/watch?v=3MNVP9-hglc">https://www.youtube.com/watch?v=3MNVP9-hglc</a></p>
-<p>Inheritance is difficult with Liskov's substitution principle anyway.</p>
-<h2 id="law-of-demeter"><a class="header" href="#law-of-demeter">Law of Demeter</a></h2>
-<p>The <em>principle of least knowledge</em>, in particular for OOD, says to loosely couple the design by having objects only talk to their immediate "friends".</p>
-<p>Code Smell: <code>self.friend.internal_variable.dobla()</code></p>
-<p>Better: <code>self.friend.dobla()</code></p>
-<h2 id="tech-debt"><a class="header" href="#tech-debt">Tech Debt</a></h2>
-<p>TBD: <a href="https://engineering.riotgames.com/news/taxonomy-tech-debt">https://engineering.riotgames.com/news/taxonomy-tech-debt</a></p>
+<p>Pure CPU: Process &lt;---&gt; Threads &lt;---&gt; Async: Pure I/O (Many "Connections"/Slow I/O).</p>
+<p>Async I/O clearly delineates the context switch locations, in theory.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Processes</th><th style="text-align: left">Threads</th><th style="text-align: left">Async I/O</th></tr></thead><tbody>
+<tr><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left">No CPU Context Switches</td></tr>
+<tr><td style="text-align: left"></td><td style="text-align: left">Shared memory can result in race conditions.</td><td style="text-align: left">No race conditions.. usually.</td></tr>
+<tr><td style="text-align: left"></td><td style="text-align: left"></td><td style="text-align: left">No dead locks.. usually.</td></tr>
+<tr><td style="text-align: left">Costly.</td><td style="text-align: left">Each thread has its own stack.</td><td style="text-align: left">Shared Stack. Uses an executor pool to run sync tasks in a background thread (this uses additional resources)</td></tr>
+</tbody></table>
+</div>
+<p>Python 2 -&gt; 3: Strings/Bytes, Print, Super() - new style classes, division.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../domains/encoding.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../recipes/postgres.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../software-development/design-patterns.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../python/profiling.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -230,11 +237,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../domains/encoding.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../recipes/postgres.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../software-development/design-patterns.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../python/profiling.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
