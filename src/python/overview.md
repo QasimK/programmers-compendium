@@ -62,15 +62,13 @@ lambdas = [
 - I/O doesn't often block unless you are flushing - OS buffers
 - Threads/Processes result in CPU context switches, while async does not.
 
-Pure CPU: Process \<---> Threads \<---> Async: Pure I/O (Many "Connections"/Slow I/O).
+CPU-bound : Process ←→ Threads ←→ Async : I/O-bound.
 
 Async I/O clearly delineates the context switch locations, in theory.
 
-| Processes | Threads | Async I/O |
-| :--- | :--- | :--- |
-|  |  | No CPU Context Switches |
-|  | Shared memory can result in race conditions. | No race conditions.. usually. |
-|  |  | No dead locks.. usually. |
-| Costly. | Each thread has its own stack. | Shared Stack. Uses an executor pool to run sync tasks in a background thread (this uses additional resources) |
-
-Python 2 -> 3: Strings/Bytes, Print, Super() - new style classes, division.
+|                 | Processes | Threads             | Async I/O         |
+|-----------------|-----------|---------------------|-------------------|
+| Context Switch  | Yes       | Yes                 | No                |
+| Race Conditions | Unlikely  | Yes (shared memory) | Unlikely          |
+| Dead Locks      | Unlikely  | Yes                 | Unlikely          |
+| Memory          | High      | Medium, new stack   | Low, shared stack |
